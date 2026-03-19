@@ -1,7 +1,7 @@
 # Page snapshot
 
 ```yaml
-- generic [active] [ref=e1]:
+- generic [ref=e1]:
   - region "Notifications alt+T"
   - generic [ref=e2]:
     - generic [ref=e5]:
@@ -47,106 +47,77 @@
         - navigation "breadcrumb" [ref=e60]:
           - list [ref=e61]:
             - listitem [ref=e62]:
-              - link "Dashboard" [ref=e63] [cursor=pointer]:
-                - /url: /dashboard
+              - link "Usage" [ref=e63] [cursor=pointer]:
+                - /url: /usage
                 - img [ref=e64]
-                - generic [ref=e68]: Dashboard
+                - generic [ref=e68]: Usage
             - listitem [ref=e69]:
               - img [ref=e70]
             - listitem [ref=e72]:
               - link "Overview" [disabled] [ref=e73]:
-                - img [ref=e74]
-                - generic [ref=e79]: Overview
-        - generic [ref=e80]:
-          - link "Playground" [ref=e81] [cursor=pointer]:
+                - generic [ref=e74]: Overview
+        - generic [ref=e75]:
+          - link "Playground" [active] [ref=e76] [cursor=pointer]:
             - /url: https://playground.shunyalabs.ai/
-            - generic [ref=e82]:
-              - img [ref=e83]
-              - generic [ref=e93]: Playground
-          - link "Docs" [ref=e94] [cursor=pointer]:
+            - generic [ref=e77]:
+              - img [ref=e78]
+              - generic [ref=e88]: Playground
+          - link "Docs" [ref=e89] [cursor=pointer]:
             - /url: https://docs.shunyalabs.ai/
-            - generic [ref=e95]:
-              - img [ref=e96]
-              - generic [ref=e98]: Docs
-          - button "Saira Automation" [ref=e99] [cursor=pointer]:
+            - generic [ref=e90]:
+              - img [ref=e91]
+              - generic [ref=e93]: Docs
+          - button "Saira Automation" [ref=e94] [cursor=pointer]:
             - text: Saira Automation
             - img
-      - generic [ref=e104]:
+      - generic [ref=e99]:
+        - generic [ref=e101]:
+          - heading "Usage Analytics" [level=2] [ref=e103]
+          - paragraph [ref=e104]: Monitor your API usage and track consumption over time
         - generic [ref=e106]:
-          - heading "Saira's Dashboard" [level=2] [ref=e108]
-          - paragraph [ref=e109]: Overview of your account and quick actions to get started
-        - generic [ref=e110]:
-          - generic [ref=e111]:
+          - generic [ref=e108]:
+            - generic [ref=e109]:
+              - generic [ref=e110]: Date range
+              - button "Feb 17, 2026 - Mar 19, 2026" [ref=e111] [cursor=pointer]:
+                - img
+                - text: Feb 17, 2026 - Mar 19, 2026
             - generic [ref=e112]:
-              - generic [ref=e114]:
-                - img [ref=e116]
-                - generic [ref=e118]:
-                  - generic [ref=e119]: API Keys
-                  - generic [ref=e120]: API Keys
-                  - generic [ref=e121]: Generate an API key
-              - link "Generate API key" [ref=e124] [cursor=pointer]:
-                - /url: /api-keys
-                - button "Generate API key" [ref=e125]: Generate
-            - generic [ref=e126]:
-              - generic [ref=e128]:
-                - img [ref=e130]
-                - generic [ref=e132]:
-                  - generic [ref=e133]: Balance
-                  - generic [ref=e134]: $198.44
-                  - generic [ref=e135]: Credit remaining
-              - button "Add credits to wallet" [ref=e138] [cursor=pointer]: Add Credit
-            - generic [ref=e139]:
-              - generic [ref=e141]:
-                - img [ref=e143]
-                - generic [ref=e145]:
-                  - generic [ref=e146]: Your Plan
-                  - generic [ref=e147]: Pay as you go
-                  - generic [ref=e148]: Upgrade your plan to receive better rates
-              - link "Upgrade plan" [ref=e151] [cursor=pointer]:
-                - /url: /billing
-                - button "Upgrade plan" [ref=e152]: Upgrade
-          - generic [ref=e153]:
-            - generic [ref=e154]:
-              - heading "Explore Playground" [level=2] [ref=e155]
-              - paragraph [ref=e156]: Test and experiment with our APIs in real-time
-            - link "Speech to Text" [ref=e158] [cursor=pointer]:
-              - /url: https://playground.shunyalabs.ai/
-              - generic [ref=e160]:
-                - img [ref=e161]
-                - generic [ref=e164]:
-                  - generic [ref=e165]: Speech to Text
-                  - img [ref=e166]
-          - generic [ref=e170]:
-            - heading "Documentation" [level=2] [ref=e172]
-            - paragraph [ref=e173]: Everything you need to build, including API references and quickstarts
-            - generic [ref=e174]:
-              - link "Transcribe audio" [ref=e175] [cursor=pointer]:
-                - /url: https://docs.shunyalabs.ai//batch/quickstart
-                - generic [ref=e177]:
-                  - img [ref=e178]
-                  - generic [ref=e181]:
-                    - generic [ref=e182]: Transcribe audio
-                    - img [ref=e183]
-              - link "See Features" [ref=e187] [cursor=pointer]:
-                - /url: https://docs.shunyalabs.ai//features/overview
-                - generic [ref=e189]:
-                  - img [ref=e190]
-                  - generic [ref=e192]:
-                    - generic [ref=e193]: See Features
-                    - img [ref=e194]
-          - generic [ref=e198]:
-            - generic [ref=e199]:
-              - heading "Usage" [level=2] [ref=e201]
-              - paragraph
-            - link "Usage Overview" [ref=e202] [cursor=pointer]:
-              - /url: /usage/overview
-              - generic [ref=e204]:
-                - generic [ref=e205]: Usage Overview
-                - img [ref=e206]
-            - link "Logs" [ref=e209] [cursor=pointer]:
-              - /url: /usage/logs
-              - generic [ref=e211]:
-                - generic [ref=e212]: Logs
-                - img [ref=e213]
-  - alert [ref=e216]
+              - generic [ref=e113]: Show by
+              - combobox [ref=e114]:
+                - generic: Day
+                - img
+            - generic [ref=e115]:
+              - generic [ref=e116]: Metric
+              - combobox [ref=e117]:
+                - generic: Requests
+                - img
+          - button "Confirm" [ref=e119] [cursor=pointer]
+        - generic [ref=e121]:
+          - generic [ref=e123]: requests
+          - img "Line chart showing usage over time" [ref=e129]:
+            - generic [ref=e134]:
+              - generic [ref=e136]: Feb 23
+              - generic [ref=e138]: Feb 25
+              - generic [ref=e140]: Feb 27
+              - generic [ref=e142]: Mar 3
+              - generic [ref=e144]: Mar 4
+              - generic [ref=e146]: Mar 5
+              - generic [ref=e148]: Mar 6
+              - generic [ref=e150]: Mar 7
+              - generic [ref=e152]: Mar 8
+              - generic [ref=e154]: Mar 9
+              - generic [ref=e156]: Mar 10
+              - generic [ref=e158]: Mar 11
+              - generic [ref=e160]: Mar 12
+              - generic [ref=e162]: Mar 14
+              - generic [ref=e164]: Mar 16
+              - generic [ref=e166]: Mar 18
+            - generic [ref=e168]:
+              - generic [ref=e170]: "0"
+              - generic [ref=e172]: "5"
+              - generic [ref=e174]: "10"
+              - generic [ref=e176]: "15"
+              - generic [ref=e178]: "20"
+  - alert [ref=e181]
+  - generic [ref=e182]: "0"
 ```
