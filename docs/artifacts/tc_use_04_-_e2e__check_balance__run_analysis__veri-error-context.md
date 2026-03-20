@@ -78,9 +78,9 @@
           - generic [ref=e108]:
             - generic [ref=e109]:
               - generic [ref=e110]: Date range
-              - button "Feb 17, 2026 - Mar 19, 2026" [ref=e111] [cursor=pointer]:
+              - button "Feb 18, 2026 - Mar 20, 2026" [ref=e111] [cursor=pointer]:
                 - img
-                - text: Feb 17, 2026 - Mar 19, 2026
+                - text: Feb 18, 2026 - Mar 20, 2026
             - generic [ref=e112]:
               - generic [ref=e113]: Show by
               - combobox [ref=e114]:
@@ -96,9 +96,9 @@
           - generic [ref=e123]: requests
           - img "Line chart showing usage over time" [ref=e129]:
             - generic [ref=e134]:
-              - generic [ref=e136]: Feb 23
-              - generic [ref=e138]: Feb 25
-              - generic [ref=e140]: Feb 27
+              - generic [ref=e136]: Feb 20
+              - generic [ref=e138]: Feb 24
+              - generic [ref=e140]: Feb 26
               - generic [ref=e142]: Mar 3
               - generic [ref=e144]: Mar 4
               - generic [ref=e146]: Mar 5
@@ -106,18 +106,17 @@
               - generic [ref=e150]: Mar 7
               - generic [ref=e152]: Mar 8
               - generic [ref=e154]: Mar 9
-              - generic [ref=e156]: Mar 10
-              - generic [ref=e158]: Mar 11
-              - generic [ref=e160]: Mar 12
-              - generic [ref=e162]: Mar 14
-              - generic [ref=e164]: Mar 16
-              - generic [ref=e166]: Mar 18
-            - generic [ref=e168]:
-              - generic [ref=e170]: "0"
-              - generic [ref=e172]: "5"
-              - generic [ref=e174]: "10"
-              - generic [ref=e176]: "15"
-              - generic [ref=e178]: "20"
-  - alert [ref=e181]
-  - generic [ref=e182]: "0"
+              - generic [ref=e156]: Mar 11
+              - generic [ref=e158]: Mar 13
+              - generic [ref=e160]: Mar 15
+              - generic [ref=e162]: Mar 17
+              - generic [ref=e164]: Mar 19
+            - generic [ref=e166]:
+              - generic [ref=e168]: "0"
+              - generic [ref=e170]: "5"
+              - generic [ref=e172]: "10"
+              - generic [ref=e174]: "15"
+              - generic [ref=e176]: "20"
+  - alert [ref=e179]
+  - generic [ref=e180]: "0"
 ```
