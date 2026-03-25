@@ -1,0 +1,152 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - region "Notifications alt+T"
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - img "Shunya Labs Logo" [ref=e11]
+      - generic [ref=e13]:
+        - generic [ref=e14]: Overview
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "Dashboard" [ref=e17] [cursor=pointer]:
+              - /url: /dashboard
+              - img [ref=e18]
+              - generic [ref=e23]: Dashboard
+          - listitem [ref=e24]:
+            - button "Usage" [ref=e25]:
+              - img [ref=e26]
+              - generic [ref=e30]: Usage
+              - img [ref=e31]
+          - listitem [ref=e33]:
+            - link "API Keys" [ref=e34] [cursor=pointer]:
+              - /url: /api-keys
+              - img [ref=e35]
+              - generic [ref=e37]: API Keys
+          - listitem [ref=e38]:
+            - link "Billing" [ref=e39] [cursor=pointer]:
+              - /url: /billing
+              - img [ref=e40]
+              - generic [ref=e42]: Billing
+          - listitem [ref=e43]:
+            - link "Contact Us" [ref=e44] [cursor=pointer]:
+              - /url: /feedback
+              - img [ref=e45]
+              - generic [ref=e48]: Contact Us
+          - listitem [ref=e49]:
+            - link "Settings" [ref=e50] [cursor=pointer]:
+              - /url: /settings
+              - img [ref=e51]
+              - generic [ref=e54]: Settings
+      - button "Toggle Sidebar" [ref=e55]
+    - main [ref=e56]:
+      - generic [ref=e57]:
+        - navigation "breadcrumb" [ref=e60]:
+          - list [ref=e61]:
+            - listitem [ref=e62]:
+              - link "Dashboard" [ref=e63] [cursor=pointer]:
+                - /url: /dashboard
+                - img [ref=e64]
+                - generic [ref=e68]: Dashboard
+            - listitem [ref=e69]:
+              - img [ref=e70]
+            - listitem [ref=e72]:
+              - link "Overview" [disabled] [ref=e73]:
+                - img [ref=e74]
+                - generic [ref=e79]: Overview
+        - generic [ref=e80]:
+          - link "Playground" [ref=e81] [cursor=pointer]:
+            - /url: https://playground.shunyalabs.ai/
+            - generic [ref=e82]:
+              - img [ref=e83]
+              - generic [ref=e93]: Playground
+          - link "Docs" [active] [ref=e94] [cursor=pointer]:
+            - /url: https://docs.shunyalabs.ai/
+            - generic [ref=e95]:
+              - img [ref=e96]
+              - generic [ref=e98]: Docs
+          - button "Saira Automation" [ref=e99] [cursor=pointer]:
+            - text: Saira Automation
+            - img
+      - generic [ref=e104]:
+        - generic [ref=e106]:
+          - heading "Saira's Dashboard" [level=2] [ref=e108]
+          - paragraph [ref=e109]: Overview of your account and quick actions to get started
+        - generic [ref=e110]:
+          - generic [ref=e111]:
+            - generic [ref=e112]:
+              - generic [ref=e114]:
+                - img [ref=e116]
+                - generic [ref=e118]:
+                  - generic [ref=e119]: API Keys
+                  - generic [ref=e120]: API Keys
+                  - generic [ref=e121]: Generate an API key
+              - link "Generate API key" [ref=e124] [cursor=pointer]:
+                - /url: /api-keys
+                - button "Generate API key" [ref=e125]: Generate
+            - generic [ref=e126]:
+              - generic [ref=e128]:
+                - img [ref=e130]
+                - generic [ref=e132]:
+                  - generic [ref=e133]: Balance
+                  - generic [ref=e134]: $197.98
+                  - generic [ref=e135]: Credit remaining
+              - button "Add credits to wallet" [ref=e138] [cursor=pointer]: Add Credit
+            - generic [ref=e139]:
+              - generic [ref=e141]:
+                - img [ref=e143]
+                - generic [ref=e145]:
+                  - generic [ref=e146]: Your Plan
+                  - generic [ref=e147]: Pay as you go
+                  - generic [ref=e148]: Upgrade your plan to receive better rates
+              - link "Upgrade plan" [ref=e151] [cursor=pointer]:
+                - /url: /billing
+                - button "Upgrade plan" [ref=e152]: Upgrade
+          - generic [ref=e153]:
+            - generic [ref=e154]:
+              - heading "Explore Playground" [level=2] [ref=e155]
+              - paragraph [ref=e156]: Test and experiment with our APIs in real-time
+            - link "Speech to Text" [ref=e158] [cursor=pointer]:
+              - /url: https://playground.shunyalabs.ai/
+              - generic [ref=e160]:
+                - img [ref=e161]
+                - generic [ref=e164]:
+                  - generic [ref=e165]: Speech to Text
+                  - img [ref=e166]
+          - generic [ref=e170]:
+            - heading "Documentation" [level=2] [ref=e172]
+            - paragraph [ref=e173]: Everything you need to build, including API references and quickstarts
+            - generic [ref=e174]:
+              - link "Transcribe audio" [ref=e175] [cursor=pointer]:
+                - /url: https://docs.shunyalabs.ai//batch/quickstart
+                - generic [ref=e177]:
+                  - img [ref=e178]
+                  - generic [ref=e181]:
+                    - generic [ref=e182]: Transcribe audio
+                    - img [ref=e183]
+              - link "See Features" [ref=e187] [cursor=pointer]:
+                - /url: https://docs.shunyalabs.ai//features/overview
+                - generic [ref=e189]:
+                  - img [ref=e190]
+                  - generic [ref=e192]:
+                    - generic [ref=e193]: See Features
+                    - img [ref=e194]
+          - generic [ref=e198]:
+            - generic [ref=e199]:
+              - heading "Usage" [level=2] [ref=e201]
+              - paragraph
+            - link "Usage Overview" [ref=e202] [cursor=pointer]:
+              - /url: /usage/overview
+              - generic [ref=e204]:
+                - generic [ref=e205]: Usage Overview
+                - img [ref=e206]
+            - link "Logs" [ref=e209] [cursor=pointer]:
+              - /url: /usage/logs
+              - generic [ref=e211]:
+                - generic [ref=e212]: Logs
+                - img [ref=e213]
+  - alert [ref=e216]
+```
