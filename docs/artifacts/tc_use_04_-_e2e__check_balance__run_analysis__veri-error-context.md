@@ -78,9 +78,9 @@
           - generic [ref=e108]:
             - generic [ref=e109]:
               - generic [ref=e110]: Date range
-              - button "Feb 25, 2026 - Mar 27, 2026" [ref=e111] [cursor=pointer]:
+              - button "Feb 26, 2026 - Mar 28, 2026" [ref=e111] [cursor=pointer]:
                 - img
-                - text: Feb 25, 2026 - Mar 27, 2026
+                - text: Feb 26, 2026 - Mar 28, 2026
             - generic [ref=e112]:
               - generic [ref=e113]: Show by
               - combobox [ref=e114]:
@@ -112,10 +112,10 @@
               - generic [ref=e162]: Mar 27
             - generic [ref=e164]:
               - generic [ref=e166]: "0"
-              - generic [ref=e168]: "4"
-              - generic [ref=e170]: "8"
-              - generic [ref=e172]: "12"
-              - generic [ref=e174]: "16"
+              - generic [ref=e168]: "3"
+              - generic [ref=e170]: "6"
+              - generic [ref=e172]: "9"
+              - generic [ref=e174]: "12"
   - alert [ref=e177]
   - generic [ref=e178]: "0"
 ```
