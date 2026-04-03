@@ -78,9 +78,9 @@
           - generic [ref=e108]:
             - generic [ref=e109]:
               - generic [ref=e110]: Date range
-              - button "Mar 3, 2026 - Apr 2, 2026" [ref=e111] [cursor=pointer]:
+              - button "Mar 4, 2026 - Apr 3, 2026" [ref=e111] [cursor=pointer]:
                 - img
-                - text: Mar 3, 2026 - Apr 2, 2026
+                - text: Mar 4, 2026 - Apr 3, 2026
             - generic [ref=e112]:
               - generic [ref=e113]: Show by
               - combobox [ref=e114]:
@@ -96,28 +96,27 @@
           - generic [ref=e123]: requests
           - img "Line chart showing usage over time" [ref=e129]:
             - generic [ref=e134]:
-              - generic [ref=e136]: Mar 3
-              - generic [ref=e138]: Mar 5
-              - generic [ref=e140]: Mar 7
-              - generic [ref=e142]: Mar 9
-              - generic [ref=e144]: Mar 11
-              - generic [ref=e146]: Mar 13
-              - generic [ref=e148]: Mar 15
-              - generic [ref=e150]: Mar 17
-              - generic [ref=e152]: Mar 19
-              - generic [ref=e154]: Mar 21
-              - generic [ref=e156]: Mar 23
-              - generic [ref=e158]: Mar 25
-              - generic [ref=e160]: Mar 27
-              - generic [ref=e162]: Mar 29
-              - generic [ref=e164]: Mar 31
-              - generic [ref=e166]: Apr 2
-            - generic [ref=e168]:
-              - generic [ref=e170]: "0"
-              - generic [ref=e172]: "3"
-              - generic [ref=e174]: "6"
-              - generic [ref=e176]: "9"
-              - generic [ref=e178]: "12"
-  - alert [ref=e181]
-  - generic [ref=e182]: "0"
+              - generic [ref=e136]: Mar 5
+              - generic [ref=e138]: Mar 7
+              - generic [ref=e140]: Mar 9
+              - generic [ref=e142]: Mar 11
+              - generic [ref=e144]: Mar 13
+              - generic [ref=e146]: Mar 15
+              - generic [ref=e148]: Mar 17
+              - generic [ref=e150]: Mar 19
+              - generic [ref=e152]: Mar 21
+              - generic [ref=e154]: Mar 23
+              - generic [ref=e156]: Mar 25
+              - generic [ref=e158]: Mar 27
+              - generic [ref=e160]: Mar 29
+              - generic [ref=e162]: Mar 31
+              - generic [ref=e164]: Apr 2
+            - generic [ref=e166]:
+              - generic [ref=e168]: "0"
+              - generic [ref=e170]: "3"
+              - generic [ref=e172]: "6"
+              - generic [ref=e174]: "9"
+              - generic [ref=e176]: "12"
+  - alert [ref=e179]
+  - generic [ref=e180]: "0"
 ```
