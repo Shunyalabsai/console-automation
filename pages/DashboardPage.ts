@@ -40,7 +40,7 @@ export class DashboardPage extends BasePage {
   readonly playgroundHeading = (popup: Page) => popup.getByRole('heading', { name: 'API Playground' });
   readonly docsQuickstartHeading = (popup: Page) => popup.getByRole('heading', { name: 'Quickstart' });
   readonly speechFeaturesHeading = (popup: Page) => popup.getByRole('heading', { name: 'Speech Intelligence Features' });
-  readonly docsWelcomeHeading = (popup: Page) => popup.getByRole('heading', { name: 'Shunyalabs Speech-to-Text' });
+  readonly docsWelcomeHeading = (popup: Page) => popup.getByRole('heading', { name: 'Build with ShunyaLabs' });
 
   constructor(page: Page) {
     super(page);
