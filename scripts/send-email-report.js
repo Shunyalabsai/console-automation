@@ -44,6 +44,18 @@ function main() {
   }
 
   const data = JSON.parse(fs.readFileSync(LATEST_PATH, 'utf8'));
+  const failCount = data.summary.failed + (data.summary.timedOut || 0);
+
+  // Only send email if the last run had failures
+  if (failCount === 0) {
+    console.log('\n✅ Last run passed with 0 failures — no email needed.');
+    console.log(`   Pass rate: ${data.passRate}% | Total: ${data.summary.total} | Passed: ${data.summary.passed}`);
+    console.log('   Skipping email report.\n');
+    return;
+  }
+
+  console.log(`\n⚠️  Last run had ${failCount} failure(s) — sending email report...`);
+
   let todayRuns = 1;
   if (fs.existsSync(HISTORY_PATH)) {
     try {
