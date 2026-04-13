@@ -1,0 +1,123 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - region "Notifications alt+T"
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - img "Shunya Labs Logo" [ref=e11]
+      - generic [ref=e13]:
+        - generic [ref=e14]: Overview
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "Dashboard" [ref=e17] [cursor=pointer]:
+              - /url: /dashboard
+              - img [ref=e18]
+              - generic [ref=e23]: Dashboard
+          - listitem [ref=e24]:
+            - button "Usage" [ref=e25]:
+              - img [ref=e26]
+              - generic [ref=e30]: Usage
+              - img [ref=e31]
+          - listitem [ref=e33]:
+            - link "API Keys" [ref=e34] [cursor=pointer]:
+              - /url: /api-keys
+              - img [ref=e35]
+              - generic [ref=e37]: API Keys
+          - listitem [ref=e38]:
+            - link "Billing" [ref=e39] [cursor=pointer]:
+              - /url: /billing
+              - img [ref=e40]
+              - generic [ref=e42]: Billing
+          - listitem [ref=e43]:
+            - link "Contact Us" [ref=e44] [cursor=pointer]:
+              - /url: /feedback
+              - img [ref=e45]
+              - generic [ref=e48]: Contact Us
+          - listitem [ref=e49]:
+            - link "Settings" [ref=e50] [cursor=pointer]:
+              - /url: /settings
+              - img [ref=e51]
+              - generic [ref=e54]: Settings
+      - button "Toggle Sidebar" [ref=e55]
+    - main [ref=e56]:
+      - generic [ref=e57]:
+        - navigation "breadcrumb" [ref=e60]:
+          - list [ref=e61]:
+            - listitem [ref=e62]:
+              - link "Usage" [ref=e63] [cursor=pointer]:
+                - /url: /usage
+                - img [ref=e64]
+                - generic [ref=e68]: Usage
+            - listitem [ref=e69]:
+              - img [ref=e70]
+            - listitem [ref=e72]:
+              - link "Overview" [disabled] [ref=e73]:
+                - generic [ref=e74]: Overview
+        - generic [ref=e75]:
+          - link "Playground" [active] [ref=e76] [cursor=pointer]:
+            - /url: https://playground.shunyalabs.ai/
+            - generic [ref=e77]:
+              - img [ref=e78]
+              - generic [ref=e88]: Playground
+          - link "Docs" [ref=e89] [cursor=pointer]:
+            - /url: https://docs.shunyalabs.ai/
+            - generic [ref=e90]:
+              - img [ref=e91]
+              - generic [ref=e93]: Docs
+          - button "Saira Automation" [ref=e94] [cursor=pointer]:
+            - text: Saira Automation
+            - img
+      - generic [ref=e99]:
+        - generic [ref=e101]:
+          - heading "Usage Analytics" [level=2] [ref=e103]
+          - paragraph [ref=e104]: Monitor your API usage and track consumption over time
+        - generic [ref=e106]:
+          - generic [ref=e108]:
+            - generic [ref=e109]:
+              - generic [ref=e110]: Date range
+              - button "Mar 14, 2026 - Apr 13, 2026" [ref=e111] [cursor=pointer]:
+                - img
+                - text: Mar 14, 2026 - Apr 13, 2026
+            - generic [ref=e112]:
+              - generic [ref=e113]: Show by
+              - combobox [ref=e114]:
+                - generic: Day
+                - img
+            - generic [ref=e115]:
+              - generic [ref=e116]: Metric
+              - combobox [ref=e117]:
+                - generic: Requests
+                - img
+          - button "Confirm" [ref=e119] [cursor=pointer]
+        - generic [ref=e121]:
+          - generic [ref=e123]: requests
+          - img "Line chart showing usage over time" [ref=e129]:
+            - generic [ref=e134]:
+              - generic [ref=e136]: Mar 14
+              - generic [ref=e138]: Mar 16
+              - generic [ref=e140]: Mar 18
+              - generic [ref=e142]: Mar 20
+              - generic [ref=e144]: Mar 22
+              - generic [ref=e146]: Mar 24
+              - generic [ref=e148]: Mar 26
+              - generic [ref=e150]: Mar 28
+              - generic [ref=e152]: Mar 30
+              - generic [ref=e154]: Apr 1
+              - generic [ref=e156]: Apr 3
+              - generic [ref=e158]: Apr 5
+              - generic [ref=e160]: Apr 7
+              - generic [ref=e162]: Apr 9
+              - generic [ref=e164]: Apr 11
+              - generic [ref=e166]: Apr 13
+            - generic [ref=e168]:
+              - generic [ref=e170]: "0"
+              - generic [ref=e172]: "2"
+              - generic [ref=e174]: "4"
+              - generic [ref=e176]: "6"
+              - generic [ref=e178]: "8"
+  - alert [ref=e181]
+  - generic [ref=e182]: "0"
+```
