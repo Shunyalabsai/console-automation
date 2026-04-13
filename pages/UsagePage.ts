@@ -1,5 +1,8 @@
 import { Page, expect } from '@playwright/test';
+import path from 'path';
 import { BasePage } from './BasePage';
+
+const AUDIO_FIXTURE = path.resolve(__dirname, '..', 'fixtures', 'audio', 'doctor.mp3');
 
 export class UsagePage extends BasePage {
   // ──────── Dashboard ────────
@@ -28,14 +31,17 @@ export class UsagePage extends BasePage {
   readonly logoutMenuItem = this.page.getByRole('menuitem', { name: 'Log out' });
 
   // ──────── Playground Popup Elements ────────
-  customerSupportHeading(popup: Page) {
-    return popup.getByRole('heading', { name: 'Customer Support Call' });
+  uploadAudioHeading(popup: Page) {
+    return popup.getByRole('heading', { name: 'Upload Your Audio' });
+  }
+  audioFileInput(popup: Page) {
+    return popup.locator('input[type="file"][accept="audio/*"]');
   }
   runAnalysisButton(popup: Page) {
     return popup.getByRole('button', { name: 'Run Analysis' });
   }
-  analysisOutput(popup: Page) {
-    return popup.getByText('thank you for calling');
+  transcriptPlaceholder(popup: Page) {
+    return popup.getByText('Select audio above and run analysis to see the transcript here');
   }
 
   constructor(page: Page) {
@@ -122,18 +128,20 @@ export class UsagePage extends BasePage {
   async runCustomerSupportAnalysis(popup: Page): Promise<void> {
     await popup.waitForLoadState('networkidle');
 
-    // Select Customer Support Call scenario
-    const heading = this.customerSupportHeading(popup);
-    await expect(heading).toBeVisible({ timeout: 15000 });
-    await heading.click();
+    // Verify Upload section is ready
+    await expect(this.uploadAudioHeading(popup)).toBeVisible({ timeout: 15000 });
+
+    // Upload audio file directly to the hidden file input
+    await this.audioFileInput(popup).setInputFiles(AUDIO_FIXTURE);
 
     // Click Run Analysis
     const button = this.runAnalysisButton(popup);
     await expect(button).toBeVisible({ timeout: 10000 });
+    await expect(button).toBeEnabled({ timeout: 10000 });
     await button.click();
 
-    // Wait for transcription output (API call takes time)
-    await expect(this.analysisOutput(popup)).toBeVisible({ timeout: 60000 });
+    // Wait for transcription output — placeholder text disappears once transcript arrives
+    await expect(this.transcriptPlaceholder(popup)).toBeHidden({ timeout: 90000 });
   }
 
   // ──────── Date Helpers ────────
