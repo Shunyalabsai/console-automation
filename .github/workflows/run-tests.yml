@@ -76,6 +76,12 @@ jobs:
             echo "Dashboard data pushed."
           fi
 
+      # Auto-send email report if this run had any failures.
+      # The script itself skips sending when pass rate is 100% / failures = 0.
+      - name: Send failure email (auto)
+        if: always()
+        run: node scripts/send-email-report.js
+
       - name: Upload test report
         if: always()
         uses: actions/upload-artifact@v4
