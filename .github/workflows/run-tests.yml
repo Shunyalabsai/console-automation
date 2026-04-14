@@ -58,9 +58,11 @@ jobs:
           CI: true
 
       - name: Generate dashboard data
+        if: always()
         run: node scripts/generate-dashboard.js
 
       - name: Commit and push dashboard data
+        if: always()
         run: |
           set -e
           git config user.name "github-actions[bot]"
