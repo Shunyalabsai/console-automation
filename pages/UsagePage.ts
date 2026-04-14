@@ -97,6 +97,7 @@ export class UsagePage extends BasePage {
     return this.getBalance();
   }
 
+
   // ──────── Usage Chart ────────
 
   async isChartRendered(): Promise<boolean> {
@@ -133,6 +134,17 @@ export class UsagePage extends BasePage {
 
     // Upload audio file directly to the hidden file input
     await this.audioFileInput(popup).setInputFiles(AUDIO_FIXTURE);
+
+    // Enable paid features so the balance deduction is visible at dashboard's
+    // 2-decimal precision (transcript-only costs fractions of a cent).
+    // These four are confirmed free-to-toggle (no paywall modal).
+    const features = ['Speaker Diarization', 'Sentiment Analysis', 'Emotion Diarization', 'Summarisation'];
+    for (const feature of features) {
+      const btn = popup.getByRole('button', { name: feature, exact: true });
+      if (await btn.isVisible().catch(() => false)) {
+        await btn.click();
+      }
+    }
 
     // Click Run Analysis
     const button = this.runAnalysisButton(popup);
