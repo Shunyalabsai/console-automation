@@ -85,9 +85,9 @@
           - generic [ref=e112]:
             - generic [ref=e113]:
               - generic [ref=e114]: Date Range
-              - button "Apr 9, 2026 - Apr 16, 2026" [ref=e115] [cursor=pointer]:
+              - button "Apr 10, 2026 - Apr 17, 2026" [ref=e115] [cursor=pointer]:
                 - img
-                - text: Apr 9, 2026 - Apr 16, 2026
+                - text: Apr 10, 2026 - Apr 17, 2026
             - button "Submit" [ref=e116] [cursor=pointer]:
               - img
               - text: Submit
@@ -256,7 +256,7 @@
           - generic [ref=e294]:
             - generic [ref=e295]: 10 row(s) total.
             - generic [ref=e296]:
-              - generic [ref=e297]: Page 1 of 11
+              - generic [ref=e297]: Page 1 of 9
               - generic [ref=e298]:
                 - button "Go to first page" [disabled]:
                   - img
