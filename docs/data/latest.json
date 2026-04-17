@@ -1,7 +1,7 @@
 {
-  "id": "0806e5d6-0601-4b74-9421-83a1373d876e",
-  "startedAt": "2026-04-17T21:55:16.488Z",
-  "durationMs": 183256.153,
+  "id": "2fe5a4a4-7bce-40a5-8792-db0fb0d49b78",
+  "startedAt": "2026-04-17T22:55:09.564Z",
+  "durationMs": 157019.027,
   "summary": {
     "total": 42,
     "passed": 42,
@@ -72,7 +72,7 @@
     {
       "title": "TC_API_01 - Verify API Keys page loads from dashboard",
       "status": "passed",
-      "durationMs": 3526,
+      "durationMs": 3154,
       "file": "api-keys.spec.ts",
       "module": "api-keys",
       "moduleLabel": "API Keys",
@@ -82,7 +82,7 @@
     {
       "title": "TC_API_02 - Verify Create a new API key button is visible",
       "status": "passed",
-      "durationMs": 3528,
+      "durationMs": 3058,
       "file": "api-keys.spec.ts",
       "module": "api-keys",
       "moduleLabel": "API Keys",
@@ -92,7 +92,7 @@
     {
       "title": "TC_API_03 - Verify clicking Create opens key name form",
       "status": "passed",
-      "durationMs": 3256,
+      "durationMs": 2602,
       "file": "api-keys.spec.ts",
       "module": "api-keys",
       "moduleLabel": "API Keys",
@@ -102,7 +102,7 @@
     {
       "title": "TC_API_04 - E2E: Create key, copy, verify with date, deactivate, verify deactivated",
       "status": "passed",
-      "durationMs": 8650,
+      "durationMs": 8188,
       "file": "api-keys.spec.ts",
       "module": "api-keys",
       "moduleLabel": "API Keys",
@@ -112,7 +112,7 @@
     {
       "title": "TC_BILL_01 - Verify Billing Overview page loads from dashboard",
       "status": "passed",
-      "durationMs": 4964,
+      "durationMs": 3485,
       "file": "billing.spec.ts",
       "module": "billing",
       "moduleLabel": "Billing",
@@ -122,7 +122,7 @@
     {
       "title": "TC_BILL_02 - Verify Your Plan section shows Pay as you go with upgrade text",
       "status": "passed",
-      "durationMs": 2609,
+      "durationMs": 2359,
       "file": "billing.spec.ts",
       "module": "billing",
       "moduleLabel": "Billing",
@@ -132,7 +132,7 @@
     {
       "title": "TC_BILL_03 - Verify Plans heading is visible",
       "status": "passed",
-      "durationMs": 4821,
+      "durationMs": 4590,
       "file": "billing.spec.ts",
       "module": "billing",
       "moduleLabel": "Billing",
@@ -142,7 +142,7 @@
     {
       "title": "TC_BILL_04 - Verify Pay as you go plan card with Active badge and features",
       "status": "passed",
-      "durationMs": 4529,
+      "durationMs": 3178,
       "file": "billing.spec.ts",
       "module": "billing",
       "moduleLabel": "Billing",
@@ -152,7 +152,7 @@
     {
       "title": "TC_BILL_05 - Verify Volume plan card with $500 price and features",
       "status": "passed",
-      "durationMs": 3421,
+      "durationMs": 4148,
       "file": "billing.spec.ts",
       "module": "billing",
       "moduleLabel": "Billing",
@@ -162,7 +162,7 @@
     {
       "title": "TC_BILL_06 - Verify Enterprise plan card with custom pricing and all features",
       "status": "passed",
-      "durationMs": 3362,
+      "durationMs": 4148,
       "file": "billing.spec.ts",
       "module": "billing",
       "moduleLabel": "Billing",
@@ -172,7 +172,7 @@
     {
       "title": "TC_BILL_07 - Verify Transaction History section is visible",
       "status": "passed",
-      "durationMs": 4387,
+      "durationMs": 4185,
       "file": "billing.spec.ts",
       "module": "billing",
       "moduleLabel": "Billing",
@@ -182,7 +182,7 @@
     {
       "title": "TC_BILL_08 - Verify View detailed pricing link opens Shunya Labs Plans page in new tab",
       "status": "passed",
-      "durationMs": 4725,
+      "durationMs": 3971,
       "file": "billing.spec.ts",
       "module": "billing",
       "moduleLabel": "Billing",
@@ -192,7 +192,7 @@
     {
       "title": "TC_BILL_09 - Verify View payment history opens Stripe billing portal in new tab",
       "status": "passed",
-      "durationMs": 8619,
+      "durationMs": 8099,
       "file": "billing.spec.ts",
       "module": "billing",
       "moduleLabel": "Billing",
@@ -202,7 +202,7 @@
     {
       "title": "TC_CONT_01 - Verify Contact Us page loads from dashboard",
       "status": "passed",
-      "durationMs": 3890,
+      "durationMs": 3077,
       "file": "contact-us.spec.ts",
       "module": "contact-us",
       "moduleLabel": "Contact Us",
@@ -212,7 +212,7 @@
     {
       "title": "TC_CONT_02 - Verify Message field is visible",
       "status": "passed",
-      "durationMs": 3243,
+      "durationMs": 2570,
       "file": "contact-us.spec.ts",
       "module": "contact-us",
       "moduleLabel": "Contact Us",
@@ -222,7 +222,7 @@
     {
       "title": "TC_CONT_03 - Verify Submit button is visible",
       "status": "passed",
-      "durationMs": 3782,
+      "durationMs": 3012,
       "file": "contact-us.spec.ts",
       "module": "contact-us",
       "moduleLabel": "Contact Us",
@@ -232,7 +232,7 @@
     {
       "title": "TC_CONT_04 - E2E: Fill message, submit, and verify success notification",
       "status": "passed",
-      "durationMs": 3441,
+      "durationMs": 3233,
       "file": "contact-us.spec.ts",
       "module": "contact-us",
       "moduleLabel": "Contact Us",
@@ -242,7 +242,7 @@
     {
       "title": "TC_DASH_01 - Verify dashboard heading and subtitle are visible",
       "status": "passed",
-      "durationMs": 3152,
+      "durationMs": 2648,
       "file": "dashboard.spec.ts",
       "module": "dashboard",
       "moduleLabel": "Dashboard",
@@ -252,7 +252,7 @@
     {
       "title": "TC_DASH_02 - Verify API Keys section is displayed on dashboard",
       "status": "passed",
-      "durationMs": 3117,
+      "durationMs": 2756,
       "file": "dashboard.spec.ts",
       "module": "dashboard",
       "moduleLabel": "Dashboard",
@@ -262,7 +262,7 @@
     {
       "title": "TC_DASH_03 - Verify Your Plan section is displayed on dashboard",
       "status": "passed",
-      "durationMs": 3586,
+      "durationMs": 2425,
       "file": "dashboard.spec.ts",
       "module": "dashboard",
       "moduleLabel": "Dashboard",
@@ -272,7 +272,7 @@
     {
       "title": "TC_DASH_04 - Verify Explore Playground section is visible",
       "status": "passed",
-      "durationMs": 3635,
+      "durationMs": 2939,
       "file": "dashboard.spec.ts",
       "module": "dashboard",
       "moduleLabel": "Dashboard",
@@ -282,7 +282,7 @@
     {
       "title": "TC_DASH_05 - Verify Documentation section is visible",
       "status": "passed",
-      "durationMs": 3620,
+      "durationMs": 2831,
       "file": "dashboard.spec.ts",
       "module": "dashboard",
       "moduleLabel": "Dashboard",
@@ -302,7 +302,7 @@
     {
       "title": "TC_DASH_07 - Verify Speech to Text link opens API Playground in new tab",
       "status": "passed",
-      "durationMs": 4482,
+      "durationMs": 3374,
       "file": "dashboard.spec.ts",
       "module": "dashboard",
       "moduleLabel": "Dashboard",
@@ -312,7 +312,7 @@
     {
       "title": "TC_DASH_08 - Verify Transcribe audio link opens Docs Quickstart in new tab",
       "status": "passed",
-      "durationMs": 3959,
+      "durationMs": 3110,
       "file": "dashboard.spec.ts",
       "module": "dashboard",
       "moduleLabel": "Dashboard",
@@ -322,7 +322,7 @@
     {
       "title": "TC_DASH_09 - Verify See Features link opens Speech Intelligence Features in new tab",
       "status": "passed",
-      "durationMs": 3386,
+      "durationMs": 3015,
       "file": "dashboard.spec.ts",
       "module": "dashboard",
       "moduleLabel": "Dashboard",
@@ -332,7 +332,7 @@
     {
       "title": "TC_DASH_10 - Verify Usage Overview link navigates to Usage Analytics page",
       "status": "passed",
-      "durationMs": 4062,
+      "durationMs": 3127,
       "file": "dashboard.spec.ts",
       "module": "dashboard",
       "moduleLabel": "Dashboard",
@@ -342,7 +342,7 @@
     {
       "title": "TC_DASH_11 - Verify Dashboard link navigates back from Usage",
       "status": "passed",
-      "durationMs": 3268,
+      "durationMs": 2501,
       "file": "dashboard.spec.ts",
       "module": "dashboard",
       "moduleLabel": "Dashboard",
@@ -352,7 +352,7 @@
     {
       "title": "TC_DASH_12 - Verify Logs link navigates to Usage Logs page",
       "status": "passed",
-      "durationMs": 4153,
+      "durationMs": 3251,
       "file": "dashboard.spec.ts",
       "module": "dashboard",
       "moduleLabel": "Dashboard",
@@ -362,7 +362,7 @@
     {
       "title": "TC_DASH_13 - Verify Playground nav link opens API Playground in new tab",
       "status": "passed",
-      "durationMs": 3588,
+      "durationMs": 3188,
       "file": "dashboard.spec.ts",
       "module": "dashboard",
       "moduleLabel": "Dashboard",
@@ -372,7 +372,7 @@
     {
       "title": "TC_DASH_14 - Verify Docs nav link opens Shunya Labs Docs in new tab",
       "status": "passed",
-      "durationMs": 4093,
+      "durationMs": 3073,
       "file": "dashboard.spec.ts",
       "module": "dashboard",
       "moduleLabel": "Dashboard",
@@ -382,7 +382,7 @@
     {
       "title": "TC_DASH_15 - Verify user menu opens and navigates to Settings",
       "status": "passed",
-      "durationMs": 3806,
+      "durationMs": 3681,
       "file": "dashboard.spec.ts",
       "module": "dashboard",
       "moduleLabel": "Dashboard",
@@ -392,7 +392,7 @@
     {
       "title": "TC_DASH_16 - Verify Settings page shows Personal Information section",
       "status": "passed",
-      "durationMs": 3323,
+      "durationMs": 3701,
       "file": "dashboard.spec.ts",
       "module": "dashboard",
       "moduleLabel": "Dashboard",
@@ -402,7 +402,7 @@
     {
       "title": "TC_DASH_17 - Verify Settings page shows Current Plan section",
       "status": "passed",
-      "durationMs": 4327,
+      "durationMs": 3509,
       "file": "dashboard.spec.ts",
       "module": "dashboard",
       "moduleLabel": "Dashboard",
@@ -412,7 +412,7 @@
     {
       "title": "TC_SET_01 - Verify Settings page loads from dashboard with profile fields",
       "status": "passed",
-      "durationMs": 3477,
+      "durationMs": 2866,
       "file": "settings.spec.ts",
       "module": "settings",
       "moduleLabel": "Settings",
@@ -422,7 +422,7 @@
     {
       "title": "TC_SET_02 - Verify Save Changes button is visible",
       "status": "passed",
-      "durationMs": 2954,
+      "durationMs": 2720,
       "file": "settings.spec.ts",
       "module": "settings",
       "moduleLabel": "Settings",
@@ -432,7 +432,7 @@
     {
       "title": "TC_SET_03 - E2E: Update profile, verify on dashboard, restore original",
       "status": "passed",
-      "durationMs": 7267,
+      "durationMs": 5773,
       "file": "settings.spec.ts",
       "module": "settings",
       "moduleLabel": "Settings",
@@ -442,7 +442,7 @@
     {
       "title": "TC_USE_01 - Verify Usage Analytics page loads from dashboard",
       "status": "passed",
-      "durationMs": 1191,
+      "durationMs": 865,
       "file": "usage.spec.ts",
       "module": "usage",
       "moduleLabel": "Usage",
@@ -452,7 +452,7 @@
     {
       "title": "TC_USE_02 - Verify date range and metric filters are visible",
       "status": "passed",
-      "durationMs": 1482,
+      "durationMs": 1197,
       "file": "usage.spec.ts",
       "module": "usage",
       "moduleLabel": "Usage",
@@ -462,7 +462,7 @@
     {
       "title": "TC_USE_03 - Verify Usage Logs page loads",
       "status": "passed",
-      "durationMs": 1303,
+      "durationMs": 1014,
       "file": "usage.spec.ts",
       "module": "usage",
       "moduleLabel": "Usage",
@@ -472,7 +472,7 @@
     {
       "title": "TC_USE_04 - E2E: Check balance, run analysis, verify balance update, usage count, logs, and billing deduction",
       "status": "passed",
-      "durationMs": 13077,
+      "durationMs": 11991,
       "file": "usage.spec.ts",
       "module": "usage",
       "moduleLabel": "Usage",
@@ -482,7 +482,7 @@
     {
       "title": "TC_LOGOUT_01 - Verify user can log out and is redirected to sign-in",
       "status": "passed",
-      "durationMs": 3882,
+      "durationMs": 3064,
       "file": "z-logout.spec.ts",
       "module": "z-logout",
       "moduleLabel": "Logout",
