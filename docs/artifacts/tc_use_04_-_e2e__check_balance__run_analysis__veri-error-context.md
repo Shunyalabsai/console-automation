@@ -1,0 +1,270 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - region "Notifications alt+T"
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - img "Shunya Labs Logo" [ref=e11]
+      - generic [ref=e13]:
+        - generic [ref=e14]: Overview
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "Dashboard" [ref=e17] [cursor=pointer]:
+              - /url: /dashboard
+              - img [ref=e18]
+              - generic [ref=e23]: Dashboard
+          - listitem [ref=e24]:
+            - button "Usage" [ref=e25]:
+              - img [ref=e26]
+              - generic [ref=e30]: Usage
+              - img [ref=e31]
+          - listitem [ref=e33]:
+            - link "API Keys" [ref=e34] [cursor=pointer]:
+              - /url: /api-keys
+              - img [ref=e35]
+              - generic [ref=e37]: API Keys
+          - listitem [ref=e38]:
+            - link "Billing" [ref=e39] [cursor=pointer]:
+              - /url: /billing
+              - img [ref=e40]
+              - generic [ref=e42]: Billing
+          - listitem [ref=e43]:
+            - link "Contact Us" [ref=e44] [cursor=pointer]:
+              - /url: /feedback
+              - img [ref=e45]
+              - generic [ref=e48]: Contact Us
+          - listitem [ref=e49]:
+            - link "Settings" [ref=e50] [cursor=pointer]:
+              - /url: /settings
+              - img [ref=e51]
+              - generic [ref=e54]: Settings
+      - button "Toggle Sidebar" [ref=e55]
+    - main [ref=e56]:
+      - generic [ref=e57]:
+        - navigation "breadcrumb" [ref=e60]:
+          - list [ref=e61]:
+            - listitem [ref=e62]:
+              - link "Usage" [ref=e63] [cursor=pointer]:
+                - /url: /usage
+                - img [ref=e64]
+                - generic [ref=e68]: Usage
+            - listitem [ref=e69]:
+              - img [ref=e70]
+            - listitem [ref=e72]:
+              - link "Logs" [disabled] [ref=e73]:
+                - generic [ref=e74]: Logs
+        - generic [ref=e75]:
+          - link "Playground" [ref=e76] [cursor=pointer]:
+            - /url: https://playground.shunyalabs.ai/
+            - generic [ref=e77]:
+              - img [ref=e78]
+              - generic [ref=e88]: Playground
+          - link "Docs" [ref=e89] [cursor=pointer]:
+            - /url: https://docs.shunyalabs.ai/
+            - generic [ref=e90]:
+              - img [ref=e91]
+              - generic [ref=e93]: Docs
+          - button "Saira Automation" [ref=e94] [cursor=pointer]:
+            - text: Saira Automation
+            - img
+      - generic [ref=e99]:
+        - generic [ref=e101]:
+          - generic [ref=e102]:
+            - heading "Usage Logs" [level=2] [ref=e103]
+            - button "Refresh" [ref=e105] [cursor=pointer]:
+              - img
+              - text: Refresh
+          - paragraph [ref=e106]: View detailed audit history of API and Playground requests
+        - generic [ref=e107]:
+          - generic [ref=e108]:
+            - generic [ref=e109]: Filters
+            - generic [ref=e110]: Select filters to view logs. Click Submit to apply.
+          - generic [ref=e112]:
+            - generic [ref=e113]:
+              - generic [ref=e114]: Date Range
+              - button "Apr 12, 2026 - Apr 19, 2026" [ref=e115] [cursor=pointer]:
+                - img
+                - text: Apr 12, 2026 - Apr 19, 2026
+            - button "Submit" [ref=e116] [cursor=pointer]:
+              - img
+              - text: Submit
+        - generic [ref=e118]:
+          - table [ref=e122]:
+            - rowgroup [ref=e123]:
+              - row "Request ID Date + Time Key Name Service Status Credits Ref ID" [ref=e124]:
+                - columnheader "Request ID" [ref=e125]
+                - columnheader "Date + Time" [ref=e126]
+                - columnheader "Key Name" [ref=e127]
+                - columnheader "Service" [ref=e128]
+                - columnheader "Status" [ref=e129]
+                - columnheader "Credits" [ref=e130]
+                - columnheader "Ref ID" [ref=e131]
+            - rowgroup [ref=e132]:
+              - row "7ab851eb-e791-42c8-9b29-905e3fba0afc Apr 18, 2026, 06:03:55 AM *******ound /v1/transcriptions 200 0.0178 —" [ref=e133]:
+                - cell "7ab851eb-e791-42c8-9b29-905e3fba0afc" [ref=e134]:
+                  - generic [ref=e136]: 7ab851eb-e791-42c8-9b29-905e3fba0afc
+                - cell "Apr 18, 2026, 06:03:55 AM" [ref=e137]:
+                  - generic [ref=e138]: Apr 18, 2026, 06:03:55 AM
+                - cell "*******ound" [ref=e139]:
+                  - generic [ref=e140]: "*******ound"
+                - cell "/v1/transcriptions" [ref=e141]:
+                  - generic [ref=e142]: /v1/transcriptions
+                - cell "200" [ref=e143]:
+                  - generic [ref=e144]: "200"
+                - cell "0.0178" [ref=e145]:
+                  - generic [ref=e146]: "0.0178"
+                - cell "—" [ref=e147]:
+                  - generic [ref=e148]: —
+              - row "8b849435-0614-4f38-940e-006db619284e Apr 17, 2026, 08:49:09 AM *******ound /v1/transcriptions 200 0.0178 —" [ref=e149]:
+                - cell "8b849435-0614-4f38-940e-006db619284e" [ref=e150]:
+                  - generic [ref=e152]: 8b849435-0614-4f38-940e-006db619284e
+                - cell "Apr 17, 2026, 08:49:09 AM" [ref=e153]:
+                  - generic [ref=e154]: Apr 17, 2026, 08:49:09 AM
+                - cell "*******ound" [ref=e155]:
+                  - generic [ref=e156]: "*******ound"
+                - cell "/v1/transcriptions" [ref=e157]:
+                  - generic [ref=e158]: /v1/transcriptions
+                - cell "200" [ref=e159]:
+                  - generic [ref=e160]: "200"
+                - cell "0.0178" [ref=e161]:
+                  - generic [ref=e162]: "0.0178"
+                - cell "—" [ref=e163]:
+                  - generic [ref=e164]: —
+              - row "50ba8d19-7ac7-4efd-9cfb-ca6e3a20eb00 Apr 15, 2026, 05:53:47 AM *******ound /v1/transcriptions 200 0.0020 —" [ref=e165]:
+                - cell "50ba8d19-7ac7-4efd-9cfb-ca6e3a20eb00" [ref=e166]:
+                  - generic [ref=e168]: 50ba8d19-7ac7-4efd-9cfb-ca6e3a20eb00
+                - cell "Apr 15, 2026, 05:53:47 AM" [ref=e169]:
+                  - generic [ref=e170]: Apr 15, 2026, 05:53:47 AM
+                - cell "*******ound" [ref=e171]:
+                  - generic [ref=e172]: "*******ound"
+                - cell "/v1/transcriptions" [ref=e173]:
+                  - generic [ref=e174]: /v1/transcriptions
+                - cell "200" [ref=e175]:
+                  - generic [ref=e176]: "200"
+                - cell "0.0020" [ref=e177]:
+                  - generic [ref=e178]: "0.0020"
+                - cell "—" [ref=e179]:
+                  - generic [ref=e180]: —
+              - row "5735aa74-faca-4891-8f99-c19bb6edd81f Apr 14, 2026, 10:03:19 AM *******ound /v1/transcriptions 200 0.0012 —" [ref=e181]:
+                - cell "5735aa74-faca-4891-8f99-c19bb6edd81f" [ref=e182]:
+                  - generic [ref=e184]: 5735aa74-faca-4891-8f99-c19bb6edd81f
+                - cell "Apr 14, 2026, 10:03:19 AM" [ref=e185]:
+                  - generic [ref=e186]: Apr 14, 2026, 10:03:19 AM
+                - cell "*******ound" [ref=e187]:
+                  - generic [ref=e188]: "*******ound"
+                - cell "/v1/transcriptions" [ref=e189]:
+                  - generic [ref=e190]: /v1/transcriptions
+                - cell "200" [ref=e191]:
+                  - generic [ref=e192]: "200"
+                - cell "0.0012" [ref=e193]:
+                  - generic [ref=e194]: "0.0012"
+                - cell "—" [ref=e195]:
+                  - generic [ref=e196]: —
+              - row "5735aa74-faca-4891-8f99-c19bb6edd81f Apr 14, 2026, 10:03:19 AM *******ound /v1/transcriptions 200 0.0012 —" [ref=e197]:
+                - cell "5735aa74-faca-4891-8f99-c19bb6edd81f" [ref=e198]:
+                  - generic [ref=e200]: 5735aa74-faca-4891-8f99-c19bb6edd81f
+                - cell "Apr 14, 2026, 10:03:19 AM" [ref=e201]:
+                  - generic [ref=e202]: Apr 14, 2026, 10:03:19 AM
+                - cell "*******ound" [ref=e203]:
+                  - generic [ref=e204]: "*******ound"
+                - cell "/v1/transcriptions" [ref=e205]:
+                  - generic [ref=e206]: /v1/transcriptions
+                - cell "200" [ref=e207]:
+                  - generic [ref=e208]: "200"
+                - cell "0.0012" [ref=e209]:
+                  - generic [ref=e210]: "0.0012"
+                - cell "—" [ref=e211]:
+                  - generic [ref=e212]: —
+              - row "5735aa74-faca-4891-8f99-c19bb6edd81f Apr 14, 2026, 10:03:19 AM *******ound /v1/transcriptions 200 0.0020 —" [ref=e213]:
+                - cell "5735aa74-faca-4891-8f99-c19bb6edd81f" [ref=e214]:
+                  - generic [ref=e216]: 5735aa74-faca-4891-8f99-c19bb6edd81f
+                - cell "Apr 14, 2026, 10:03:19 AM" [ref=e217]:
+                  - generic [ref=e218]: Apr 14, 2026, 10:03:19 AM
+                - cell "*******ound" [ref=e219]:
+                  - generic [ref=e220]: "*******ound"
+                - cell "/v1/transcriptions" [ref=e221]:
+                  - generic [ref=e222]: /v1/transcriptions
+                - cell "200" [ref=e223]:
+                  - generic [ref=e224]: "200"
+                - cell "0.0020" [ref=e225]:
+                  - generic [ref=e226]: "0.0020"
+                - cell "—" [ref=e227]:
+                  - generic [ref=e228]: —
+              - row "5735aa74-faca-4891-8f99-c19bb6edd81f Apr 14, 2026, 10:03:18 AM *******ound /v1/transcriptions 200 0.0047 —" [ref=e229]:
+                - cell "5735aa74-faca-4891-8f99-c19bb6edd81f" [ref=e230]:
+                  - generic [ref=e232]: 5735aa74-faca-4891-8f99-c19bb6edd81f
+                - cell "Apr 14, 2026, 10:03:18 AM" [ref=e233]:
+                  - generic [ref=e234]: Apr 14, 2026, 10:03:18 AM
+                - cell "*******ound" [ref=e235]:
+                  - generic [ref=e236]: "*******ound"
+                - cell "/v1/transcriptions" [ref=e237]:
+                  - generic [ref=e238]: /v1/transcriptions
+                - cell "200" [ref=e239]:
+                  - generic [ref=e240]: "200"
+                - cell "0.0047" [ref=e241]:
+                  - generic [ref=e242]: "0.0047"
+                - cell "—" [ref=e243]:
+                  - generic [ref=e244]: —
+              - row "797c13c3-13ba-49fa-b538-0dfd42c2972e Apr 13, 2026, 07:19:45 AM *******ound /v1/audio/speech 200 0.0006 —" [ref=e245]:
+                - cell "797c13c3-13ba-49fa-b538-0dfd42c2972e" [ref=e246]:
+                  - generic [ref=e248]: 797c13c3-13ba-49fa-b538-0dfd42c2972e
+                - cell "Apr 13, 2026, 07:19:45 AM" [ref=e249]:
+                  - generic [ref=e250]: Apr 13, 2026, 07:19:45 AM
+                - cell "*******ound" [ref=e251]:
+                  - generic [ref=e252]: "*******ound"
+                - cell "/v1/audio/speech" [ref=e253]:
+                  - generic [ref=e254]: /v1/audio/speech
+                - cell "200" [ref=e255]:
+                  - generic [ref=e256]: "200"
+                - cell "0.0006" [ref=e257]:
+                  - generic [ref=e258]: "0.0006"
+                - cell "—" [ref=e259]:
+                  - generic [ref=e260]: —
+              - row "c741b63e-a5b8-43b8-bda1-1e57e866bc38 Apr 13, 2026, 07:19:39 AM *******ound /v1/audio/speech 200 0.0006 —" [ref=e261]:
+                - cell "c741b63e-a5b8-43b8-bda1-1e57e866bc38" [ref=e262]:
+                  - generic [ref=e264]: c741b63e-a5b8-43b8-bda1-1e57e866bc38
+                - cell "Apr 13, 2026, 07:19:39 AM" [ref=e265]:
+                  - generic [ref=e266]: Apr 13, 2026, 07:19:39 AM
+                - cell "*******ound" [ref=e267]:
+                  - generic [ref=e268]: "*******ound"
+                - cell "/v1/audio/speech" [ref=e269]:
+                  - generic [ref=e270]: /v1/audio/speech
+                - cell "200" [ref=e271]:
+                  - generic [ref=e272]: "200"
+                - cell "0.0006" [ref=e273]:
+                  - generic [ref=e274]: "0.0006"
+                - cell "—" [ref=e275]:
+                  - generic [ref=e276]: —
+              - row "616ce14f-7847-458c-b7f6-57b044ebcb3d Apr 13, 2026, 07:02:49 AM *******ound /v1/transcriptions 200 0.0007 —" [ref=e277]:
+                - cell "616ce14f-7847-458c-b7f6-57b044ebcb3d" [ref=e278]:
+                  - generic [ref=e280]: 616ce14f-7847-458c-b7f6-57b044ebcb3d
+                - cell "Apr 13, 2026, 07:02:49 AM" [ref=e281]:
+                  - generic [ref=e282]: Apr 13, 2026, 07:02:49 AM
+                - cell "*******ound" [ref=e283]:
+                  - generic [ref=e284]: "*******ound"
+                - cell "/v1/transcriptions" [ref=e285]:
+                  - generic [ref=e286]: /v1/transcriptions
+                - cell "200" [ref=e287]:
+                  - generic [ref=e288]: "200"
+                - cell "0.0007" [ref=e289]:
+                  - generic [ref=e290]: "0.0007"
+                - cell "—" [ref=e291]:
+                  - generic [ref=e292]: —
+          - generic [ref=e294]:
+            - generic [ref=e295]: 10 row(s) total.
+            - generic [ref=e296]:
+              - generic [ref=e297]: Page 1 of 5
+              - generic [ref=e298]:
+                - button "Go to first page" [disabled]:
+                  - img
+                - button "Go to previous page" [disabled]:
+                  - img
+                - button "Go to next page" [ref=e299] [cursor=pointer]:
+                  - img
+                - button "Go to last page" [ref=e300] [cursor=pointer]:
+                  - img
+  - alert [ref=e301]
+```
