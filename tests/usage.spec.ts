@@ -34,9 +34,13 @@ test.describe('Usage Module — Analytics, Logs & Billing Verification', () => {
     await usagePage.navigateToDashboard();
     await usagePage.getBalance();
 
-    // ── Step 2: Navigate to Logs and capture initial log count for today ──
+    // ── Step 2: Navigate to Logs and capture the top-most log's Request ID ──
+    // A new transcription run creates a log that appears at the top of the
+    // table, so we verify the top Request ID changes rather than counting
+    // date-text occurrences (the page shows the date once per header, not
+    // once per row, which made the count unreliable).
     await usagePage.navigateToUsageLogs();
-    const initialLogCount = await usagePage.getLogEntriesCountForToday();
+    const initialLatestLogId = await usagePage.getLatestLogRequestId();
 
     // ── Step 3: Open Playground and run analysis (upload + intelligence features) ──
     await usagePage.navigateToUsageOverview();
@@ -56,12 +60,13 @@ test.describe('Usage Module — Analytics, Logs & Billing Verification', () => {
       { message: 'Expected usage chart to render with data', timeout: 20000, intervals: [2000, 3000, 5000, 5000] }
     ).toBeTruthy();
 
-    // ── Step 6: Navigate to Logs and verify new entry with today's date ──
-    // Poll logs page until a new entry appears (backend processing delay)
+    // ── Step 6: Navigate to Logs and verify a new log entry appeared ──
+    // Poll until the top Request ID changes (= new transcription log was
+    // prepended to the table).
     await expect.poll(
-      async () => await usagePage.getLogEntriesCountWithReload(),
-      { message: `Expected log count to increase from ${initialLogCount}`, timeout: 30000, intervals: [3000, 5000, 5000, 5000, 5000] }
-    ).toBeGreaterThan(initialLogCount);
+      async () => await usagePage.getLatestLogRequestIdWithReload(),
+      { message: `Expected a new log entry on top (initial Request ID: ${initialLatestLogId})`, timeout: 60000, intervals: [3000, 5000, 5000, 5000, 5000, 10000, 10000] }
+    ).not.toBe(initialLatestLogId);
 
     // ── Step 7: Capture the cost from logs ──
     const logCost = await usagePage.getLatestLogCost();

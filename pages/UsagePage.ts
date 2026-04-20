@@ -190,6 +190,22 @@ export class UsagePage extends BasePage {
     return this.getLogEntriesCountForToday();
   }
 
+  /** Get the Request ID (UUID in first column) of the top-most log entry. */
+  async getLatestLogRequestId(): Promise<string> {
+    const firstRow = this.page.locator('table tbody tr').first();
+    await expect(firstRow).toBeVisible({ timeout: 15000 });
+    const idCell = firstRow.locator('td').first();
+    return (await idCell.textContent())?.trim() || '';
+  }
+
+  /** Reload logs page and return top row Request ID — for expect.poll() usage. */
+  async getLatestLogRequestIdWithReload(): Promise<string> {
+    await this.page.goto('/usage/logs', { waitUntil: 'domcontentloaded' });
+    await expect(this.usageLogsHeading).toBeVisible({ timeout: 15000 });
+    await this.page.waitForTimeout(1000);
+    return this.getLatestLogRequestId();
+  }
+
   async getLatestLogCost(): Promise<number> {
     // Cost displayed as decimal like "0.0091"
     const costElement = this.page.getByText(/^0\.\d+$/).first();
