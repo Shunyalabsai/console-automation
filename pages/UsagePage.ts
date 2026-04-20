@@ -6,7 +6,7 @@ const AUDIO_FIXTURE = path.resolve(__dirname, '..', 'fixtures', 'audio', 'doctor
 
 export class UsagePage extends BasePage {
   // ──────── Dashboard ────────
-  readonly dashboardHeading = this.page.getByRole('heading', { name: "Saira's Dashboard" });
+  readonly dashboardHeading = this.page.getByRole('heading', { name: /'s Dashboard$/ });
 
   // ──────── Usage Analytics Page ────────
   readonly usageAnalyticsHeading = this.page.getByRole('heading', { name: 'Usage Analytics' });
@@ -27,7 +27,7 @@ export class UsagePage extends BasePage {
   readonly navLogs = this.page.getByRole('link', { name: 'Logs' });
 
   // ──────── User Menu ────────
-  readonly userMenuButton = this.page.getByRole('button', { name: 'Saira Automation' });
+  readonly userMenuButton = this.page.getByRole('button', { name: /^Saira/ });
   readonly logoutMenuItem = this.page.getByRole('menuitem', { name: 'Log out' });
 
   // ──────── Playground Popup Elements ────────

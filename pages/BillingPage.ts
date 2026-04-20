@@ -53,7 +53,7 @@ export class BillingPage extends BasePage {
   readonly stripePortalLink = (popup: Page) => popup.getByRole('link', { name: 'Shunya Labs Inc', exact: true });
 
   // ──────── User Menu ────────
-  readonly userMenuButton = this.page.getByRole('button', { name: 'Saira Automation' });
+  readonly userMenuButton = this.page.getByRole('button', { name: /^Saira/ });
   readonly logoutMenuItem = this.page.getByRole('menuitem', { name: 'Log out' });
 
   constructor(page: Page) {

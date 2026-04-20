@@ -3,7 +3,7 @@ import { BasePage } from './BasePage';
 
 export class DashboardPage extends BasePage {
   // ──────── Dashboard Heading & Subtitle ────────
-  readonly dashboardHeading = this.page.getByRole('heading', { name: "Saira's Dashboard" });
+  readonly dashboardHeading = this.page.getByRole('heading', { name: /'s Dashboard$/ });
   readonly dashboardSubtitle = this.page.getByText('Overview of your account and');
 
   // ──────── API Keys Section ────────
@@ -32,7 +32,7 @@ export class DashboardPage extends BasePage {
   readonly navDocs = this.page.getByRole('link', { name: 'Docs' });
 
   // ──────── User Menu ────────
-  readonly userMenuButton = this.page.getByRole('button', { name: 'Saira Automation' });
+  readonly userMenuButton = this.page.getByRole('button', { name: /^Saira/ });
   readonly settingsMenuItem = this.page.getByRole('menuitem', { name: 'Settings' });
   readonly logoutMenuItem = this.page.getByRole('menuitem', { name: 'Log out' });
 

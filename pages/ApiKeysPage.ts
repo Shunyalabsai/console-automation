@@ -33,7 +33,7 @@ export class ApiKeysPage extends BasePage {
   readonly deactivatedOnColumn = this.page.getByText('Deactivated on');
 
   // ──────── User Menu ────────
-  readonly userMenuButton = this.page.getByRole('button', { name: 'Saira Automation' });
+  readonly userMenuButton = this.page.getByRole('button', { name: /^Saira/ });
   readonly logoutMenuItem = this.page.getByRole('menuitem', { name: 'Log out' });
 
   constructor(page: Page) {

@@ -14,7 +14,7 @@ export class ContactUsPage extends BasePage {
   readonly successNotification = this.page.getByRole('region', { name: 'Notifications alt+T' }).getByRole('listitem');
 
   // ──────── User Menu ────────
-  readonly userMenuButton = this.page.getByRole('button', { name: 'Saira Automation' });
+  readonly userMenuButton = this.page.getByRole('button', { name: /^Saira/ });
   readonly logoutMenuItem = this.page.getByRole('menuitem', { name: 'Log out' });
 
   constructor(page: Page) {
