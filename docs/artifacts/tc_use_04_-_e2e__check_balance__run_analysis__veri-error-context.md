@@ -85,9 +85,9 @@
           - generic [ref=e112]:
             - generic [ref=e113]:
               - generic [ref=e114]: Date Range
-              - button "Apr 12, 2026 - Apr 19, 2026" [ref=e115] [cursor=pointer]:
+              - button "Apr 13, 2026 - Apr 20, 2026" [ref=e115] [cursor=pointer]:
                 - img
-                - text: Apr 12, 2026 - Apr 19, 2026
+                - text: Apr 13, 2026 - Apr 20, 2026
             - button "Submit" [ref=e116] [cursor=pointer]:
               - img
               - text: Submit
@@ -178,34 +178,34 @@
                   - generic [ref=e210]: "0.0012"
                 - cell "—" [ref=e211]:
                   - generic [ref=e212]: —
-              - row "5735aa74-faca-4891-8f99-c19bb6edd81f Apr 14, 2026, 10:03:19 AM *******ound /v1/transcriptions 200 0.0020 —" [ref=e213]:
+              - row "5735aa74-faca-4891-8f99-c19bb6edd81f Apr 14, 2026, 10:03:18 AM *******ound /v1/transcriptions 200 0.0047 —" [ref=e213]:
                 - cell "5735aa74-faca-4891-8f99-c19bb6edd81f" [ref=e214]:
                   - generic [ref=e216]: 5735aa74-faca-4891-8f99-c19bb6edd81f
-                - cell "Apr 14, 2026, 10:03:19 AM" [ref=e217]:
-                  - generic [ref=e218]: Apr 14, 2026, 10:03:19 AM
+                - cell "Apr 14, 2026, 10:03:18 AM" [ref=e217]:
+                  - generic [ref=e218]: Apr 14, 2026, 10:03:18 AM
                 - cell "*******ound" [ref=e219]:
                   - generic [ref=e220]: "*******ound"
                 - cell "/v1/transcriptions" [ref=e221]:
                   - generic [ref=e222]: /v1/transcriptions
                 - cell "200" [ref=e223]:
                   - generic [ref=e224]: "200"
-                - cell "0.0020" [ref=e225]:
-                  - generic [ref=e226]: "0.0020"
+                - cell "0.0047" [ref=e225]:
+                  - generic [ref=e226]: "0.0047"
                 - cell "—" [ref=e227]:
                   - generic [ref=e228]: —
-              - row "5735aa74-faca-4891-8f99-c19bb6edd81f Apr 14, 2026, 10:03:18 AM *******ound /v1/transcriptions 200 0.0047 —" [ref=e229]:
+              - row "5735aa74-faca-4891-8f99-c19bb6edd81f Apr 14, 2026, 10:03:19 AM *******ound /v1/transcriptions 200 0.0020 —" [ref=e229]:
                 - cell "5735aa74-faca-4891-8f99-c19bb6edd81f" [ref=e230]:
                   - generic [ref=e232]: 5735aa74-faca-4891-8f99-c19bb6edd81f
-                - cell "Apr 14, 2026, 10:03:18 AM" [ref=e233]:
-                  - generic [ref=e234]: Apr 14, 2026, 10:03:18 AM
+                - cell "Apr 14, 2026, 10:03:19 AM" [ref=e233]:
+                  - generic [ref=e234]: Apr 14, 2026, 10:03:19 AM
                 - cell "*******ound" [ref=e235]:
                   - generic [ref=e236]: "*******ound"
                 - cell "/v1/transcriptions" [ref=e237]:
                   - generic [ref=e238]: /v1/transcriptions
                 - cell "200" [ref=e239]:
                   - generic [ref=e240]: "200"
-                - cell "0.0047" [ref=e241]:
-                  - generic [ref=e242]: "0.0047"
+                - cell "0.0020" [ref=e241]:
+                  - generic [ref=e242]: "0.0020"
                 - cell "—" [ref=e243]:
                   - generic [ref=e244]: —
               - row "797c13c3-13ba-49fa-b538-0dfd42c2972e Apr 13, 2026, 07:19:45 AM *******ound /v1/audio/speech 200 0.0006 —" [ref=e245]:
@@ -256,7 +256,7 @@
           - generic [ref=e294]:
             - generic [ref=e295]: 10 row(s) total.
             - generic [ref=e296]:
-              - generic [ref=e297]: Page 1 of 5
+              - generic [ref=e297]: Page 1 of 2
               - generic [ref=e298]:
                 - button "Go to first page" [disabled]:
                   - img
