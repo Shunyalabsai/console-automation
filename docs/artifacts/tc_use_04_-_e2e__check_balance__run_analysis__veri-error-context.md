@@ -1,0 +1,332 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - region "Notifications alt+T"
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - img "Shunya Labs Logo" [ref=e11]
+      - generic [ref=e13]:
+        - generic [ref=e14]: Overview
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "Dashboard" [ref=e17] [cursor=pointer]:
+              - /url: /dashboard
+              - img [ref=e18]
+              - generic [ref=e23]: Dashboard
+          - listitem [ref=e24]:
+            - button "Usage" [ref=e25]:
+              - img [ref=e26]
+              - generic [ref=e30]: Usage
+              - img [ref=e31]
+          - listitem [ref=e33]:
+            - link "API Keys" [ref=e34] [cursor=pointer]:
+              - /url: /api-keys
+              - img [ref=e35]
+              - generic [ref=e37]: API Keys
+          - listitem [ref=e38]:
+            - link "Billing" [ref=e39] [cursor=pointer]:
+              - /url: /billing
+              - img [ref=e40]
+              - generic [ref=e42]: Billing
+          - listitem [ref=e43]:
+            - link "Contact Us" [ref=e44] [cursor=pointer]:
+              - /url: /feedback
+              - img [ref=e45]
+              - generic [ref=e48]: Contact Us
+          - listitem [ref=e49]:
+            - link "Settings" [ref=e50] [cursor=pointer]:
+              - /url: /settings
+              - img [ref=e51]
+              - generic [ref=e54]: Settings
+      - button "Toggle Sidebar" [ref=e55]
+    - main [ref=e56]:
+      - generic [ref=e57]:
+        - navigation "breadcrumb" [ref=e60]:
+          - list [ref=e61]:
+            - listitem [ref=e62]:
+              - link "Dashboard" [ref=e63] [cursor=pointer]:
+                - /url: /dashboard
+                - img [ref=e64]
+                - generic [ref=e68]: Dashboard
+            - listitem [ref=e69]:
+              - img [ref=e70]
+            - listitem [ref=e72]:
+              - link "Billing" [disabled] [ref=e73]:
+                - img [ref=e74]
+                - generic [ref=e77]: Billing
+        - generic [ref=e78]:
+          - link "Playground" [ref=e79] [cursor=pointer]:
+            - /url: https://playground.shunyalabs.ai/
+            - generic [ref=e80]:
+              - img [ref=e81]
+              - generic [ref=e91]: Playground
+          - link "Docs" [ref=e92] [cursor=pointer]:
+            - /url: https://docs.shunyalabs.ai/
+            - generic [ref=e93]:
+              - img [ref=e94]
+              - generic [ref=e96]: Docs
+          - button "Saira Automation" [ref=e97] [cursor=pointer]:
+            - text: Saira Automation
+            - img
+      - generic [ref=e102]:
+        - heading "Billing - Overview" [level=1] [ref=e104]
+        - generic [ref=e105]:
+          - generic [ref=e106]:
+            - generic [ref=e108]:
+              - img [ref=e110]
+              - generic [ref=e112]:
+                - generic [ref=e113]: Balance
+                - generic [ref=e114]: $196.74
+                - paragraph [ref=e115]: Credit remaining
+            - button "Add credits to wallet" [ref=e118] [cursor=pointer]: Add Credit
+          - generic [ref=e121]:
+            - img [ref=e123]
+            - generic [ref=e125]:
+              - generic [ref=e126]: Your Plan
+              - generic [ref=e127]: Pay as you go
+              - generic [ref=e128]: Upgrade your plan to receive better rates
+        - generic [ref=e129]:
+          - generic [ref=e130]:
+            - button "Add to credit balance" [ref=e131] [cursor=pointer]
+            - button "Auto recharge settings" [ref=e132] [cursor=pointer]
+          - generic [ref=e133]:
+            - generic [ref=e134]:
+              - img [ref=e135]
+              - generic [ref=e137]:
+                - paragraph [ref=e138]: Auto recharge is off
+                - paragraph [ref=e139]: When your credit balance reaches $0, your API requests will stop working. Enable automatic recharge to automatically keep your credit balance topped up.
+            - button "Setup auto recharge" [ref=e140] [cursor=pointer]
+        - generic [ref=e141]:
+          - generic [ref=e142]:
+            - heading "Plans" [level=2] [ref=e143]
+            - link "View detailed pricing" [ref=e144] [cursor=pointer]:
+              - /url: https://www.shunyalabs.ai/pricing
+              - text: View detailed pricing
+              - img
+          - generic [ref=e145]:
+            - generic [ref=e147]:
+              - generic [ref=e148]:
+                - heading "Pay as you go Active" [level=5] [ref=e149]:
+                  - generic [ref=e150]: Pay as you go
+                  - generic [ref=e151]: Active
+                - generic [ref=e152]: Flexible top ups
+                - paragraph [ref=e154]: Add credits anytime, in any amount-no minimums required.
+              - list [ref=e157]:
+                - listitem [ref=e158]:
+                  - img [ref=e160]
+                  - generic [ref=e162]: Industry leading speech to text foundation models
+                - listitem [ref=e163]:
+                  - img [ref=e165]
+                  - generic [ref=e167]: Advanced intelligence features
+                - listitem [ref=e168]:
+                  - img [ref=e170]
+                  - generic [ref=e172]: Custom voice agent orchestrations
+            - generic [ref=e175]:
+              - generic [ref=e176]:
+                - heading "Volume" [level=5] [ref=e177]:
+                  - generic [ref=e178]: Volume
+                - generic [ref=e179]: $500
+                - generic [ref=e180]: Prepaid credits for the year with up to 10% lower rates on all services. Credits are redeemed against actual usage.
+              - generic [ref=e182]:
+                - list [ref=e183]:
+                  - listitem [ref=e184]:
+                    - img [ref=e186]
+                    - generic [ref=e188]: Industry leading speech to text foundation models
+                  - listitem [ref=e189]:
+                    - img [ref=e191]
+                    - generic [ref=e193]: Advanced intelligence features
+                - button "Upgrade" [ref=e194] [cursor=pointer]
+            - generic [ref=e196]:
+              - generic [ref=e197]:
+                - heading "Enterprise" [level=5] [ref=e198]:
+                  - generic [ref=e199]: Enterprise
+                - generic [ref=e200]: Custom pricing
+                - generic [ref=e201]: For businesses with large volumes, data or deployment requirements, or support needs.
+              - generic [ref=e203]:
+                - list [ref=e204]:
+                  - listitem [ref=e205]:
+                    - img [ref=e207]
+                    - generic [ref=e209]: Access all models with our best discounts
+                  - listitem [ref=e210]:
+                    - img [ref=e212]
+                    - generic [ref=e214]: Access to custom-trained speech-to-text models and intelligence features
+                  - listitem [ref=e215]:
+                    - img [ref=e217]
+                    - generic [ref=e219]: Custom voice agent orchestrations
+                  - listitem [ref=e220]:
+                    - img [ref=e222]
+                    - generic [ref=e224]: Highest concurrency support
+                  - listitem [ref=e225]:
+                    - img [ref=e227]
+                    - generic [ref=e229]: Self-hosted deployment options
+                  - listitem [ref=e230]:
+                    - img [ref=e232]
+                    - generic [ref=e234]: Dedicated SLAs and support
+                - button "Contact Sales" [ref=e235] [cursor=pointer]
+        - generic [ref=e236]:
+          - generic [ref=e237]:
+            - heading "Transaction History" [level=2] [ref=e238]
+            - generic [ref=e239]:
+              - generic [ref=e240]:
+                - button "All" [ref=e241]
+                - button "Credits" [ref=e242]
+                - button "Debits" [ref=e243]
+              - button "View payment history" [ref=e244] [cursor=pointer]: Manage Billing
+          - generic [ref=e246]:
+            - table [ref=e250]:
+              - rowgroup [ref=e251]:
+                - row "Date Type Amount Description Status" [ref=e252]:
+                  - columnheader "Date" [ref=e253]
+                  - columnheader "Type" [ref=e254]
+                  - columnheader "Amount" [ref=e255]
+                  - columnheader "Description" [ref=e256]
+                  - columnheader "Status" [ref=e257]
+              - rowgroup [ref=e258]:
+                - 'row "Apr 20, 2026 Debit -$0.017775 API usage: /v1/transcriptions Completed" [ref=e259]':
+                  - cell "Apr 20, 2026" [ref=e260]:
+                    - generic [ref=e261]: Apr 20, 2026
+                  - cell "Debit" [ref=e262]:
+                    - generic [ref=e263]:
+                      - img [ref=e264]
+                      - generic [ref=e267]: Debit
+                  - cell "-$0.017775" [ref=e268]:
+                    - generic [ref=e269]: "-$0.017775"
+                  - 'cell "API usage: /v1/transcriptions" [ref=e270]':
+                    - generic [ref=e272]: "API usage: /v1/transcriptions"
+                  - cell "Completed" [ref=e273]:
+                    - generic [ref=e274]: Completed
+                - 'row "Apr 18, 2026 Debit -$0.017775 API usage: /v1/transcriptions Completed" [ref=e275]':
+                  - cell "Apr 18, 2026" [ref=e276]:
+                    - generic [ref=e277]: Apr 18, 2026
+                  - cell "Debit" [ref=e278]:
+                    - generic [ref=e279]:
+                      - img [ref=e280]
+                      - generic [ref=e283]: Debit
+                  - cell "-$0.017775" [ref=e284]:
+                    - generic [ref=e285]: "-$0.017775"
+                  - 'cell "API usage: /v1/transcriptions" [ref=e286]':
+                    - generic [ref=e288]: "API usage: /v1/transcriptions"
+                  - cell "Completed" [ref=e289]:
+                    - generic [ref=e290]: Completed
+                - 'row "Apr 17, 2026 Debit -$0.017775 API usage: /v1/transcriptions Completed" [ref=e291]':
+                  - cell "Apr 17, 2026" [ref=e292]:
+                    - generic [ref=e293]: Apr 17, 2026
+                  - cell "Debit" [ref=e294]:
+                    - generic [ref=e295]:
+                      - img [ref=e296]
+                      - generic [ref=e299]: Debit
+                  - cell "-$0.017775" [ref=e300]:
+                    - generic [ref=e301]: "-$0.017775"
+                  - 'cell "API usage: /v1/transcriptions" [ref=e302]':
+                    - generic [ref=e304]: "API usage: /v1/transcriptions"
+                  - cell "Completed" [ref=e305]:
+                    - generic [ref=e306]: Completed
+                - 'row "Apr 15, 2026 Debit -$0.001975 API usage: /v1/transcriptions Completed" [ref=e307]':
+                  - cell "Apr 15, 2026" [ref=e308]:
+                    - generic [ref=e309]: Apr 15, 2026
+                  - cell "Debit" [ref=e310]:
+                    - generic [ref=e311]:
+                      - img [ref=e312]
+                      - generic [ref=e315]: Debit
+                  - cell "-$0.001975" [ref=e316]:
+                    - generic [ref=e317]: "-$0.001975"
+                  - 'cell "API usage: /v1/transcriptions" [ref=e318]':
+                    - generic [ref=e320]: "API usage: /v1/transcriptions"
+                  - cell "Completed" [ref=e321]:
+                    - generic [ref=e322]: Completed
+                - 'row "Apr 14, 2026 Debit -$0.001185 API usage: /v1/transcriptions Completed" [ref=e323]':
+                  - cell "Apr 14, 2026" [ref=e324]:
+                    - generic [ref=e325]: Apr 14, 2026
+                  - cell "Debit" [ref=e326]:
+                    - generic [ref=e327]:
+                      - img [ref=e328]
+                      - generic [ref=e331]: Debit
+                  - cell "-$0.001185" [ref=e332]:
+                    - generic [ref=e333]: "-$0.001185"
+                  - 'cell "API usage: /v1/transcriptions" [ref=e334]':
+                    - generic [ref=e336]: "API usage: /v1/transcriptions"
+                  - cell "Completed" [ref=e337]:
+                    - generic [ref=e338]: Completed
+                - 'row "Apr 14, 2026 Debit -$0.001975 API usage: /v1/transcriptions Completed" [ref=e339]':
+                  - cell "Apr 14, 2026" [ref=e340]:
+                    - generic [ref=e341]: Apr 14, 2026
+                  - cell "Debit" [ref=e342]:
+                    - generic [ref=e343]:
+                      - img [ref=e344]
+                      - generic [ref=e347]: Debit
+                  - cell "-$0.001975" [ref=e348]:
+                    - generic [ref=e349]: "-$0.001975"
+                  - 'cell "API usage: /v1/transcriptions" [ref=e350]':
+                    - generic [ref=e352]: "API usage: /v1/transcriptions"
+                  - cell "Completed" [ref=e353]:
+                    - generic [ref=e354]: Completed
+                - 'row "Apr 14, 2026 Debit -$0.001185 API usage: /v1/transcriptions Completed" [ref=e355]':
+                  - cell "Apr 14, 2026" [ref=e356]:
+                    - generic [ref=e357]: Apr 14, 2026
+                  - cell "Debit" [ref=e358]:
+                    - generic [ref=e359]:
+                      - img [ref=e360]
+                      - generic [ref=e363]: Debit
+                  - cell "-$0.001185" [ref=e364]:
+                    - generic [ref=e365]: "-$0.001185"
+                  - 'cell "API usage: /v1/transcriptions" [ref=e366]':
+                    - generic [ref=e368]: "API usage: /v1/transcriptions"
+                  - cell "Completed" [ref=e369]:
+                    - generic [ref=e370]: Completed
+                - 'row "Apr 14, 2026 Debit -$0.00474 API usage: /v1/transcriptions Completed" [ref=e371]':
+                  - cell "Apr 14, 2026" [ref=e372]:
+                    - generic [ref=e373]: Apr 14, 2026
+                  - cell "Debit" [ref=e374]:
+                    - generic [ref=e375]:
+                      - img [ref=e376]
+                      - generic [ref=e379]: Debit
+                  - cell "-$0.00474" [ref=e380]:
+                    - generic [ref=e381]: "-$0.00474"
+                  - 'cell "API usage: /v1/transcriptions" [ref=e382]':
+                    - generic [ref=e384]: "API usage: /v1/transcriptions"
+                  - cell "Completed" [ref=e385]:
+                    - generic [ref=e386]: Completed
+                - 'row "Apr 13, 2026 Debit -$0.000619 API usage: /v1/audio/speech Completed" [ref=e387]':
+                  - cell "Apr 13, 2026" [ref=e388]:
+                    - generic [ref=e389]: Apr 13, 2026
+                  - cell "Debit" [ref=e390]:
+                    - generic [ref=e391]:
+                      - img [ref=e392]
+                      - generic [ref=e395]: Debit
+                  - cell "-$0.000619" [ref=e396]:
+                    - generic [ref=e397]: "-$0.000619"
+                  - 'cell "API usage: /v1/audio/speech" [ref=e398]':
+                    - generic [ref=e400]: "API usage: /v1/audio/speech"
+                  - cell "Completed" [ref=e401]:
+                    - generic [ref=e402]: Completed
+                - 'row "Apr 13, 2026 Debit -$0.000619 API usage: /v1/audio/speech Completed" [ref=e403]':
+                  - cell "Apr 13, 2026" [ref=e404]:
+                    - generic [ref=e405]: Apr 13, 2026
+                  - cell "Debit" [ref=e406]:
+                    - generic [ref=e407]:
+                      - img [ref=e408]
+                      - generic [ref=e411]: Debit
+                  - cell "-$0.000619" [ref=e412]:
+                    - generic [ref=e413]: "-$0.000619"
+                  - 'cell "API usage: /v1/audio/speech" [ref=e414]':
+                    - generic [ref=e416]: "API usage: /v1/audio/speech"
+                  - cell "Completed" [ref=e417]:
+                    - generic [ref=e418]: Completed
+            - generic [ref=e420]:
+              - generic [ref=e421]: 50 row(s) total.
+              - generic [ref=e422]:
+                - generic [ref=e423]: Page 1 of 5
+                - generic [ref=e424]:
+                  - button "Go to first page" [disabled]:
+                    - img
+                  - button "Go to previous page" [disabled]:
+                    - img
+                  - button "Go to next page" [ref=e425] [cursor=pointer]:
+                    - img
+                  - button "Go to last page" [ref=e426] [cursor=pointer]:
+                    - img
+  - alert [ref=e427]
+```
