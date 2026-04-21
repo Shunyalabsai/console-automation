@@ -28,7 +28,7 @@ test.describe('Usage Module — Analytics, Logs & Billing Verification', () => {
   // ──────── E2E: Full Usage Verification Flow ────────
 
   test('TC_USE_04 - E2E: Check balance, run analysis, verify balance update, usage count, logs, and billing deduction', async () => {
-    test.setTimeout(180000); // 3 minutes for this complex flow
+    test.setTimeout(300000); // 5 minutes — billing posting can lag by a minute+
 
     // ── Step 1: Navigate to Dashboard (sanity check balance card renders) ──
     await usagePage.navigateToDashboard();

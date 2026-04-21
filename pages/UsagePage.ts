@@ -129,15 +129,27 @@ export class UsagePage extends BasePage {
   async runCustomerSupportAnalysis(popup: Page): Promise<void> {
     await popup.waitForLoadState('networkidle');
 
-    // Verify Upload section is ready
+    // ── Verify Upload section is ready ──
     await expect(this.uploadAudioHeading(popup)).toBeVisible({ timeout: 15000 });
 
-    // Upload audio file directly to the hidden file input
+    // ── Attach audio file to the hidden file input ──
     await this.audioFileInput(popup).setInputFiles(AUDIO_FIXTURE);
 
-    // Enable paid features so the balance deduction is visible at dashboard's
-    // 2-decimal precision (transcript-only costs fractions of a cent).
-    // These four are confirmed free-to-toggle (no paywall modal).
+    // ── Confirm the upload has actually reached the server ──
+    // setInputFiles resolves the instant the file is attached to the DOM
+    // input, but the upload POST is still in flight. The UI mirrors the
+    // server-side upload completion by rendering the filename and a
+    // "Replace File" button. Waiting on both + networkidle guarantees we
+    // don't click Run Analysis on a not-yet-received file.
+    const fileName = path.basename(AUDIO_FIXTURE);
+    await expect(popup.getByText(fileName).first()).toBeVisible({ timeout: 30000 });
+    await expect(popup.getByRole('button', { name: 'Replace File' })).toBeVisible({ timeout: 30000 });
+    await popup.waitForLoadState('networkidle');
+
+    // ── Enable paid features ──
+    // Drives the transcription cost above dashboard's 2-decimal rounding so
+    // the balance deduction is observable. These four are confirmed
+    // free-to-toggle (no paywall modal).
     const features = ['Speaker Diarization', 'Sentiment Analysis', 'Emotion Diarization', 'Summarisation'];
     for (const feature of features) {
       const btn = popup.getByRole('button', { name: feature, exact: true });
@@ -146,14 +158,24 @@ export class UsagePage extends BasePage {
       }
     }
 
-    // Click Run Analysis
-    const button = this.runAnalysisButton(popup);
-    await expect(button).toBeVisible({ timeout: 10000 });
-    await expect(button).toBeEnabled({ timeout: 10000 });
-    await button.click();
+    // ── Trigger analysis ──
+    const runButton = this.runAnalysisButton(popup);
+    await expect(runButton).toBeVisible({ timeout: 10000 });
+    await expect(runButton).toBeEnabled({ timeout: 10000 });
+    await runButton.click();
 
-    // Wait for transcription output — placeholder text disappears once transcript arrives
-    await expect(this.transcriptPlaceholder(popup)).toBeHidden({ timeout: 90000 });
+    // ── Wait for analysis to actually finish ──
+    // The placeholder hiding is a poor completion signal — it disappears
+    // within ~2s of the click while transcription is still running. The
+    // reliable signal is the Run Analysis button itself: while processing,
+    // the button is relabeled "Running..." (so the Run-Analysis locator
+    // goes not-visible). When the button reverts to "Run Analysis" and is
+    // re-enabled, the transcript has fully arrived.
+    await expect(runButton).toBeVisible({ timeout: 180000 });
+    await expect(runButton).toBeEnabled({ timeout: 10000 });
+
+    // Sanity: the placeholder must be gone by the time we're "done".
+    await expect(this.transcriptPlaceholder(popup)).toBeHidden();
   }
 
   // ──────── Date Helpers ────────
@@ -219,21 +241,32 @@ export class UsagePage extends BasePage {
   // ──────── Billing Verification ────────
 
   async assertBillingDeductionForToday(): Promise<void> {
-    // Scroll to Transaction History section
-    const txnHeading = this.page.getByRole('heading', { name: 'Transaction History' });
-    await expect(txnHeading).toBeVisible({ timeout: 10000 });
-    await txnHeading.scrollIntoViewIfNeeded();
-
-    // Verify a Debit entry exists (visible on all viewports)
-    await expect(this.page.getByText('Debit').first()).toBeVisible({ timeout: 10000 });
-
-    // The date span may be hidden via Tailwind's sm:hidden on desktop,
-    // so verify today's date via textContent of the Transaction History container
     const pattern = this.getTodayShortPattern();
-    const sectionText = await txnHeading.locator('..').locator('..').textContent();
-    if (!sectionText?.includes(pattern)) {
-      throw new Error(`Expected billing section to contain today's date "${pattern}" but got: ${sectionText?.substring(0, 200)}`);
-    }
+
+    // The billing backend posts new transcription debits to Transaction
+    // History on a delay (observed ~tens of seconds to a couple minutes
+    // after the API call returns). Poll with reload until the row shows up.
+    await expect
+      .poll(
+        async () => {
+          await this.page.goto('/billing', { waitUntil: 'domcontentloaded' });
+          await this.page.waitForLoadState('networkidle');
+          const txnHeading = this.page.getByRole('heading', { name: 'Transaction History' });
+          await expect(txnHeading).toBeVisible({ timeout: 10000 });
+          await txnHeading.scrollIntoViewIfNeeded();
+          const sectionText = await txnHeading.locator('..').locator('..').textContent();
+          return sectionText?.includes(pattern) ?? false;
+        },
+        {
+          message: `Expected Transaction History to contain today's date "${pattern}"`,
+          timeout: 120000,
+          intervals: [5000, 5000, 10000, 10000, 15000, 15000, 20000, 20000, 20000],
+        },
+      )
+      .toBeTruthy();
+
+    // Verify a Debit entry exists (visible on all viewports) on the final state
+    await expect(this.page.getByText('Debit').first()).toBeVisible({ timeout: 10000 });
   }
 
   async getBillingDeductionAmount(): Promise<number> {
