@@ -1,0 +1,124 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - region "Notifications alt+T"
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - img "Shunya Labs Logo" [ref=e11]
+      - generic [ref=e13]:
+        - generic [ref=e14]: Overview
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "Dashboard" [ref=e17] [cursor=pointer]:
+              - /url: /dashboard
+              - img [ref=e18]
+              - generic [ref=e23]: Dashboard
+          - listitem [ref=e24]:
+            - button "Usage" [ref=e25]:
+              - img [ref=e26]
+              - generic [ref=e30]: Usage
+              - img [ref=e31]
+          - listitem [ref=e33]:
+            - link "API Keys" [ref=e34] [cursor=pointer]:
+              - /url: /api-keys
+              - img [ref=e35]
+              - generic [ref=e37]: API Keys
+          - listitem [ref=e38]:
+            - link "Billing" [ref=e39] [cursor=pointer]:
+              - /url: /billing
+              - img [ref=e40]
+              - generic [ref=e42]: Billing
+          - listitem [ref=e43]:
+            - link "Contact Us" [ref=e44] [cursor=pointer]:
+              - /url: /feedback
+              - img [ref=e45]
+              - generic [ref=e48]: Contact Us
+          - listitem [ref=e49]:
+            - link "Settings" [ref=e50] [cursor=pointer]:
+              - /url: /settings
+              - img [ref=e51]
+              - generic [ref=e54]: Settings
+      - button "Toggle Sidebar" [ref=e55]
+    - main [ref=e56]:
+      - generic [ref=e57]:
+        - navigation "breadcrumb" [ref=e60]:
+          - list [ref=e61]:
+            - listitem [ref=e62]:
+              - link "Dashboard" [ref=e63] [cursor=pointer]:
+                - /url: /dashboard
+                - img [ref=e64]
+                - generic [ref=e68]: Dashboard
+            - listitem [ref=e69]:
+              - img [ref=e70]
+            - listitem [ref=e72]:
+              - link "Settings" [disabled] [ref=e73]:
+                - img [ref=e74]
+                - generic [ref=e77]: Settings
+        - generic [ref=e78]:
+          - link "Playground" [ref=e79] [cursor=pointer]:
+            - /url: https://playground.shunyalabs.ai/
+            - generic [ref=e80]:
+              - img [ref=e81]
+              - generic [ref=e91]: Playground
+          - link "Docs" [ref=e92] [cursor=pointer]:
+            - /url: https://docs.shunyalabs.ai/
+            - generic [ref=e93]:
+              - img [ref=e94]
+              - generic [ref=e96]: Docs
+          - button "Saira Automation Saira Automation" [active] [ref=e97] [cursor=pointer]:
+            - img "Saira Automation" [ref=e100]
+            - text: Saira Automation
+            - img
+      - generic [ref=e105]:
+        - generic [ref=e107]:
+          - heading "Profile" [level=2] [ref=e109]
+          - paragraph [ref=e110]: Manage your account settings
+        - generic [ref=e111]:
+          - generic [ref=e112]:
+            - generic [ref=e113]: Personal Information
+            - generic [ref=e114]: Your basic account details
+          - generic [ref=e116]:
+            - generic [ref=e117]:
+              - img "Saira Automation" [ref=e120]
+              - button "Change photo" [ref=e122] [cursor=pointer]:
+                - img
+                - text: Change photo
+            - generic [ref=e123]:
+              - generic [ref=e124]:
+                - generic [ref=e125]:
+                  - generic [ref=e126]: First name
+                  - textbox "First name" [ref=e127]: Saira
+                - generic [ref=e128]:
+                  - generic [ref=e129]: Last name
+                  - textbox "Last name" [ref=e130]: Automation
+              - generic [ref=e131]:
+                - generic [ref=e132]: Email
+                - textbox "Email" [disabled]: sairaqc+clerk_test@tmail.com
+              - button "Save Changes" [ref=e134] [cursor=pointer]
+        - generic [ref=e135]:
+          - generic [ref=e136]:
+            - generic [ref=e137]: Current Plan
+            - generic [ref=e138]: Your subscription and billing details
+          - generic [ref=e140]:
+            - generic [ref=e141]:
+              - img [ref=e143]
+              - heading "Pay as you go" [level=3] [ref=e146]
+            - link "View plans" [ref=e147] [cursor=pointer]:
+              - /url: /billing
+        - generic [ref=e148]:
+          - generic [ref=e149]:
+            - generic [ref=e150]: Security
+            - generic [ref=e151]: Manage your active sessions
+          - generic [ref=e153]:
+            - paragraph [ref=e155]: You're currently signed in on 12 devices
+            - button "Sign out of other devices" [ref=e156] [cursor=pointer]:
+              - img
+              - text: Sign out of other devices
+        - button "Delete account" [ref=e158] [cursor=pointer]:
+          - img
+          - text: Delete account
+  - alert [ref=e161]
+```
