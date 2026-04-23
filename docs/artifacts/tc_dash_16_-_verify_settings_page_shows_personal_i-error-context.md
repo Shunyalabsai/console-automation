@@ -113,7 +113,7 @@
             - generic [ref=e150]: Security
             - generic [ref=e151]: Manage your active sessions
           - generic [ref=e153]:
-            - paragraph [ref=e155]: You're currently signed in on 12 devices
+            - paragraph [ref=e155]: You're currently signed in on 11 devices
             - button "Sign out of other devices" [ref=e156] [cursor=pointer]:
               - img
               - text: Sign out of other devices
