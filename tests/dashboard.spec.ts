@@ -98,7 +98,16 @@ test.describe('Dashboard Module — Navigation & Section Verification', () => {
 
   test('TC_DASH_16 - Verify Settings page shows Personal Information section', async ({ page }) => {
     await dashboardPage.navigateToSettings();
-    await expect(page.getByText('Personal InformationYour basic account detailsFirst nameLast nameEmailSave')).toBeVisible();
+    // Assert the distinct elements of the Personal Information card rather
+    // than a single concatenated-text match — the section's pieces render in
+    // separate block elements, so textContent has whitespace between them
+    // and any single-string locator is brittle to layout changes.
+    await expect(page.getByText('Personal Information', { exact: true })).toBeVisible();
+    await expect(page.getByText('Your basic account details', { exact: true })).toBeVisible();
+    await expect(page.getByRole('textbox', { name: 'First name' })).toBeVisible();
+    await expect(page.getByRole('textbox', { name: 'Last name' })).toBeVisible();
+    await expect(page.getByRole('textbox', { name: 'Email' })).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Save Changes' })).toBeVisible();
   });
 
   test('TC_DASH_17 - Verify Settings page shows Current Plan section', async ({ page }) => {
