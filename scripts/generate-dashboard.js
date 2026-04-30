@@ -6,7 +6,7 @@
  *
  * Reads:  reports/playwright-report.json
  * Writes: docs/data/latest.json
- *         docs/history/runs.json  (appends, keeps last 100)
+ *         docs/history/runs.json  (appends, keeps last 30 days of runs)
  *         docs/exports/current-run.csv
  *         docs/exports/all-runs-summary.csv
  */
@@ -22,7 +22,11 @@ const HISTORY_PATH = path.join(ROOT, 'docs', 'history', 'runs.json');
 const CSV_CURRENT = path.join(ROOT, 'docs', 'exports', 'current-run.csv');
 const CSV_ALL = path.join(ROOT, 'docs', 'exports', 'all-runs-summary.csv');
 const ARTIFACTS_DIR = path.join(ROOT, 'docs', 'artifacts');
-const MAX_HISTORY = 100;
+const RETENTION_DAYS = 30;
+// Hard upper bound — guards against a misbehaving run loop ballooning the
+// file. At the steady ~6 runs/day cadence, 30 days ≈ 180 entries; 1000
+// leaves comfortable headroom.
+const MAX_HISTORY = 1000;
 
 // ── Module name mapping ──
 const MODULE_MAP = {
@@ -202,6 +206,14 @@ function main() {
   };
 
   history.unshift(runSummary);
+
+  // Drop runs older than RETENTION_DAYS (based on startedAt). Entries
+  // without a parseable startedAt are kept to avoid silent data loss.
+  const cutoff = Date.now() - RETENTION_DAYS * 24 * 60 * 60 * 1000;
+  history = history.filter(r => {
+    const t = Date.parse(r.startedAt);
+    return Number.isNaN(t) || t >= cutoff;
+  });
   if (history.length > MAX_HISTORY) history = history.slice(0, MAX_HISTORY);
 
   fs.mkdirSync(path.dirname(HISTORY_PATH), { recursive: true });
