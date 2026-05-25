@@ -86,5 +86,6 @@ When the server is trusted to run exclusively:
 
 - Disable or remove the scheduled / external triggers for `Run Tests & Update Dashboard` in GitHub, or leave **workflow_dispatch** only for emergencies.
 - Stop any Google Apps Script triggers that call `repository_dispatch` for `run-tests`, if you replace them with cron on the server.
+- **GitHub Pages:** the **Deploy Dashboard to GitHub Pages** workflow also runs on **`push` to `main`** when files under **`docs/**`** change, so dashboard commits from the VM refresh the hosted site without relying on the test workflow in Actions.
 
 Apps Script **web app URLs** for Sheets and email can stay as-is; only the runner location changes.

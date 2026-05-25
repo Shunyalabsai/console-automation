@@ -1,6 +1,12 @@
 name: Deploy Dashboard to GitHub Pages
 
 on:
+  # VM / local automation pushes dashboard commits under docs/** — deploy without running the test workflow in Actions
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/**"
   workflow_run:
     workflows: ["Run Tests & Update Dashboard"]
     types: [completed]
@@ -17,7 +23,7 @@ concurrency:
 
 jobs:
   build:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'push' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
