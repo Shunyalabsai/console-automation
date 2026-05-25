@@ -37,6 +37,16 @@ git fetch origin && git push origin main
 
 Use a **dedicated clone** only for scheduled runs. The pipeline runs `git fetch` / `git reset --mixed origin/main` before staging dashboard paths so it stays aligned with remote `main`; do not mix manual feature work in that clone.
 
+### Playwright without sudo
+
+`npx playwright install --with-deps chromium` needs **sudo** for system packages. If your user has no sudo, use:
+
+```bash
+npx playwright install chromium
+```
+
+The script `scripts/run-automation-machine.sh` does this by default. If Chromium fails at launch with missing libraries, ask an admin to run `sudo npx playwright install-deps chromium` once from the project directory, then you can optionally set `PLAYWRIGHT_WITH_DEPS=true` when running the script.
+
 ## 2. Manual run
 
 ```bash

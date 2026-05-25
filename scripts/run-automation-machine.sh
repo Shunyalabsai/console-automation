@@ -8,6 +8,7 @@
 #
 # Optional env:
 #   AUTOMATION_SKIP_GIT_PUSH=true  — run tests + dashboard + email only
+#   PLAYWRIGHT_WITH_DEPS=true      — run install --with-deps (needs sudo on Linux)
 #
 
 set -euo pipefail
@@ -36,8 +37,13 @@ export CI=true
 echo "==> npm ci"
 npm ci
 
-echo "==> Playwright Chromium + OS deps"
-npx playwright install --with-deps chromium
+if [[ "${PLAYWRIGHT_WITH_DEPS:-}" == "true" ]]; then
+  echo "==> Playwright Chromium + OS deps (sudo may be required)"
+  npx playwright install --with-deps chromium
+else
+  echo "==> Playwright Chromium only (no sudo). Set PLAYWRIGHT_WITH_DEPS=true if an admin pre-installed OS deps."
+  npx playwright install chromium
+fi
 
 echo "==> Playwright tests (failures do not stop the pipeline)"
 set +e
