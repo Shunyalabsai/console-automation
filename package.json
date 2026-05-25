@@ -17,7 +17,8 @@
     "test:usage": "playwright test tests/usage.spec.ts",
     "dashboard:generate": "node scripts/generate-dashboard.js",
     "dashboard:run": "npx playwright test && node scripts/generate-dashboard.js",
-    "dashboard:preview": "npx playwright test && node scripts/generate-dashboard.js && open docs/index.html"
+    "dashboard:preview": "npx playwright test && node scripts/generate-dashboard.js && open docs/index.html",
+    "automation:run": "bash scripts/run-automation-machine.sh"
   },
   "keywords": [],
   "author": "",
