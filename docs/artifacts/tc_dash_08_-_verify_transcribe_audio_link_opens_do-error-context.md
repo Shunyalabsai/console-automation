@@ -93,7 +93,7 @@
                 - img [ref=e133]
                 - generic [ref=e135]:
                   - generic [ref=e136]: Balance
-                  - generic [ref=e137]: $185.69
+                  - generic [ref=e137]: $185.66
                   - generic [ref=e138]: Credit remaining
               - button "Add credits to wallet" [ref=e141] [cursor=pointer]: Add Credit
             - generic [ref=e142]:
