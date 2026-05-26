@@ -1,5 +1,8 @@
 # Running automation on the dedicated server
 
+**Full step-by-step guide (migration, cron, SSH, troubleshooting, reusable prompt):** [vm-automation-migration-guide.md](./vm-automation-migration-guide.md)  
+**Several repos on one VM:** see **Part I** in that guide.
+
 This matches the behaviour of [.github/workflows/run-tests.yml](../.github/workflows/run-tests.yml): install deps, run Playwright, regenerate dashboard files, push `docs/data`, `docs/history`, `docs/exports`, `docs/artifacts` to `main`, then run the failure email script.
 
 ## 1. One-time server setup (your home directory only)
