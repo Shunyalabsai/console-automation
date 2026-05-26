@@ -32,8 +32,9 @@ if [[ "$BRANCH" != "main" ]]; then
   git checkout main
 fi
 
-echo "==> Pull latest main (tests + scripts)"
-git pull --ff-only origin main
+echo "==> Sync to latest origin/main (discard accidental local edits on this clone)"
+git fetch origin main
+git reset --hard origin/main
 
 export CI=true
 

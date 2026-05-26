@@ -38,7 +38,7 @@ Configure **push access** to GitHub from this machine (SSH deploy key or persona
 git fetch origin && git push origin main
 ```
 
-Use a **dedicated clone** only for scheduled runs. Each run starts with **`git pull --ff-only origin main`** so tests/scripts match GitHub; do not mix manual feature work in that clone.
+Use a **dedicated clone** only for scheduled runs. Each run starts with **`git fetch` + `git reset --hard origin/main`** so tests/scripts match GitHub exactly; do not edit files manually in this clone.
 
 ### Playwright without sudo
 
