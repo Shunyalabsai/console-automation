@@ -32,6 +32,9 @@ if [[ "$BRANCH" != "main" ]]; then
   git checkout main
 fi
 
+echo "==> Pull latest main (tests + scripts)"
+git pull --ff-only origin main
+
 export CI=true
 
 echo "==> npm ci"
