@@ -93,7 +93,7 @@
                 - img [ref=e133]
                 - generic [ref=e135]:
                   - generic [ref=e136]: Balance
-                  - generic [ref=e137]: $185.61
+                  - generic [ref=e137]: $185.55
                   - generic [ref=e138]: Credit remaining
               - button "Add credits to wallet" [ref=e141] [cursor=pointer]: Add Credit
             - generic [ref=e142]:
@@ -122,14 +122,14 @@
             - paragraph [ref=e176]: Everything you need to build, including API references and quickstarts
             - generic [ref=e177]:
               - link "Transcribe audio" [ref=e178] [cursor=pointer]:
-                - /url: https://docs.shunyalabs.ai//batch/quickstart
+                - /url: https://docs.shunyalabs.ai//asr/overview
                 - generic [ref=e180]:
                   - img [ref=e181]
                   - generic [ref=e184]:
                     - generic [ref=e185]: Transcribe audio
                     - img [ref=e186]
               - link "See Features" [active] [ref=e190] [cursor=pointer]:
-                - /url: https://docs.shunyalabs.ai//features/overview
+                - /url: https://docs.shunyalabs.ai//asr/features
                 - generic [ref=e192]:
                   - img [ref=e193]
                   - generic [ref=e195]:
