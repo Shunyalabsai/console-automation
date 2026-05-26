@@ -6,7 +6,12 @@ on:
     branches:
       - main
     paths:
-      - "docs/**"
+      # Dashboard data only — not operator docs (e.g. automation-server.md)
+      - "docs/data/**"
+      - "docs/history/**"
+      - "docs/exports/**"
+      - "docs/artifacts/**"
+      - "docs/index.html"
   workflow_run:
     workflows: ["Run Tests & Update Dashboard"]
     types: [completed]
@@ -29,7 +34,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: docs
 
