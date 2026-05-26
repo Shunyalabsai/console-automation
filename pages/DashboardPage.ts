@@ -38,10 +38,10 @@ export class DashboardPage extends BasePage {
 
   // ──────── Popup Page Headings (new tabs) ────────
   readonly playgroundHeading = (popup: Page) => popup.getByRole('heading', { name: 'API Playground' });
-  /** Live docs (2026): /get-started/quickstart */
-  readonly docsQuickstartHeading = (popup: Page) => popup.getByRole('heading', { name: 'Your quickstart' });
-  /** Live docs (2026): See Features → /intelligence/overview */
-  readonly intelligenceLayerHeading = (popup: Page) => popup.getByRole('heading', { name: 'Intelligence Layer' });
+  /** Live docs (2026): Transcribe audio → /asr/overview */
+  readonly asrOverviewHeading = (popup: Page) => popup.getByRole('heading', { name: 'Speech-to-Text (ASR)' });
+  /** Live docs (2026): See Features → /asr/features */
+  readonly asrFeaturesHeading = (popup: Page) => popup.getByRole('heading', { name: 'ASR features' });
   /** Live docs (2026): Docs nav → docs.shunyalabs.ai home */
   readonly docsHomeHeading = (popup: Page) =>
     popup.getByRole('heading', { name: "Voice AI that doesn't stop at English" });
