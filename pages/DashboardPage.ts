@@ -15,10 +15,12 @@ export class DashboardPage extends BasePage {
   // ──────── Explore Playground Section ────────
   readonly explorePlaygroundHeading = this.page.getByRole('heading', { name: 'Explore Playground' });
   readonly speechToTextLink = this.page.getByRole('link', { name: 'Speech to Text' });
+  readonly textToSpeechLink = this.page.getByRole('link', { name: 'Text to Speech' });
 
   // ──────── Documentation Section ────────
   readonly documentationHeading = this.page.getByRole('heading', { name: 'Documentation' });
   readonly transcribeAudioLink = this.page.getByRole('link', { name: 'Transcribe audio' });
+  readonly generateAudioLink = this.page.getByRole('link', { name: 'Generate audio' });
   readonly seeFeaturesLink = this.page.getByRole('link', { name: 'See Features' });
 
   // ──────── Usage Section ────────
@@ -38,9 +40,16 @@ export class DashboardPage extends BasePage {
 
   // ──────── Popup Page Headings (new tabs) ────────
   readonly playgroundHeading = (popup: Page) => popup.getByRole('heading', { name: 'API Playground' });
-  /** Live docs (2026): Transcribe audio → /asr/overview */
+  readonly playgroundTextToSpeechMode = (popup: Page) => popup.getByRole('button', { name: 'Text to Speech' });
+  readonly playgroundSttModeLabel = (popup: Page) => popup.getByText('TRANSCRIPTION MODE');
+  readonly playgroundTtsModeLabel = (popup: Page) => popup.getByText('SYNTHESIS MODE');
+  readonly playgroundTtsEnterText = (popup: Page) => popup.getByText('Enter your Text');
+  readonly playgroundTtsRunSynthesis = (popup: Page) => popup.getByRole('button', { name: 'Run Synthesis' });
+  /** Live docs: Transcribe audio → /asr/overview */
   readonly asrOverviewHeading = (popup: Page) => popup.getByRole('heading', { name: 'Speech-to-Text (ASR)' });
-  /** Live docs (2026): See Features → /asr/features */
+  /** Live docs: Generate audio → /tts/overview */
+  readonly ttsOverviewHeading = (popup: Page) => popup.getByRole('heading', { name: 'Text-to-Speech (TTS)' });
+  /** Live docs: See Features → /asr/features */
   readonly asrFeaturesHeading = (popup: Page) => popup.getByRole('heading', { name: 'ASR features' });
   /** Live docs (2026): Docs nav → docs.shunyalabs.ai home */
   readonly docsHomeHeading = (popup: Page) =>
@@ -78,7 +87,17 @@ export class DashboardPage extends BasePage {
   async clickSpeechToText(): Promise<Page> {
     const popupPromise = this.page.waitForEvent('popup');
     await this.speechToTextLink.click();
-    return await popupPromise;
+    const popup = await popupPromise;
+    await popup.waitForLoadState('domcontentloaded');
+    return popup;
+  }
+
+  async clickTextToSpeech(): Promise<Page> {
+    const popupPromise = this.page.waitForEvent('popup');
+    await this.textToSpeechLink.click();
+    const popup = await popupPromise;
+    await popup.waitForLoadState('domcontentloaded');
+    return popup;
   }
 
   async clickTranscribeAudio(): Promise<Page> {
@@ -87,10 +106,35 @@ export class DashboardPage extends BasePage {
     return await popupPromise;
   }
 
+  async clickGenerateAudio(): Promise<Page> {
+    const popupPromise = this.page.waitForEvent('popup');
+    await this.generateAudioLink.click();
+    return await popupPromise;
+  }
+
   async clickSeeFeatures(): Promise<Page> {
     const popupPromise = this.page.waitForEvent('popup');
     await this.seeFeaturesLink.click();
     return await popupPromise;
+  }
+
+  /** Playground opens on STT by default; switch to TTS for synthesis UI. */
+  async assertPlaygroundTtsMode(popup: Page) {
+    await expect(this.playgroundHeading(popup)).toBeVisible({ timeout: 15000 });
+    await popup.waitForLoadState('networkidle');
+    await expect(this.playgroundTextToSpeechMode(popup)).toBeVisible({ timeout: 15000 });
+    await this.playgroundTextToSpeechMode(popup).click();
+    await popup.waitForLoadState('networkidle');
+    await expect(this.playgroundTtsModeLabel(popup)).toBeVisible({ timeout: 20000 });
+    await expect(this.playgroundTtsEnterText(popup)).toBeVisible();
+    await expect(this.playgroundTtsRunSynthesis(popup)).toBeVisible();
+  }
+
+  async assertPlaygroundSttMode(popup: Page) {
+    await expect(this.playgroundHeading(popup)).toBeVisible({ timeout: 15000 });
+    await popup.waitForLoadState('networkidle');
+    await expect(this.playgroundSttModeLabel(popup)).toBeVisible({ timeout: 15000 });
+    await expect(popup.getByRole('heading', { name: 'Upload Your Audio' })).toBeVisible();
   }
 
   async clickNavPlayground(): Promise<Page> {
@@ -140,10 +184,15 @@ export class DashboardPage extends BasePage {
 
   async assertExplorePlaygroundVisible() {
     await expect(this.explorePlaygroundHeading).toBeVisible();
+    await expect(this.speechToTextLink).toBeVisible();
+    await expect(this.textToSpeechLink).toBeVisible();
   }
 
   async assertDocumentationSectionVisible() {
     await expect(this.documentationHeading).toBeVisible();
+    await expect(this.transcribeAudioLink).toBeVisible();
+    await expect(this.generateAudioLink).toBeVisible();
+    await expect(this.seeFeaturesLink).toBeVisible();
   }
 
   async assertUsageSectionVisible() {

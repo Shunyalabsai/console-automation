@@ -39,9 +39,15 @@ test.describe('Dashboard Module — Navigation & Section Verification', () => {
 
   // ──────── Popup Links (open in new tab) ────────
 
-  test('TC_DASH_07 - Verify Speech to Text link opens API Playground in new tab', async () => {
+  test('TC_DASH_07 - Verify Speech to Text link opens API Playground STT mode in new tab', async () => {
     const popup = await dashboardPage.clickSpeechToText();
-    await expect(dashboardPage.playgroundHeading(popup)).toBeVisible({ timeout: 15000 });
+    await dashboardPage.assertPlaygroundSttMode(popup);
+    await popup.close();
+  });
+
+  test('TC_DASH_18 - Verify Text to Speech link opens API Playground TTS mode in new tab', async () => {
+    const popup = await dashboardPage.clickTextToSpeech();
+    await dashboardPage.assertPlaygroundTtsMode(popup);
     await popup.close();
   });
 
@@ -56,6 +62,14 @@ test.describe('Dashboard Module — Navigation & Section Verification', () => {
     const popup = await dashboardPage.clickSeeFeatures();
     await expect(dashboardPage.docsPageNotFoundHeading(popup)).not.toBeVisible();
     await expect(dashboardPage.asrFeaturesHeading(popup)).toBeVisible({ timeout: 15000 });
+    await popup.close();
+  });
+
+  test('TC_DASH_19 - Verify Generate audio link opens TTS overview docs in new tab', async () => {
+    const popup = await dashboardPage.clickGenerateAudio();
+    await expect(dashboardPage.docsPageNotFoundHeading(popup)).not.toBeVisible();
+    await expect(popup).toHaveURL(/docs\.shunyalabs\.ai\/tts\/overview/);
+    await expect(dashboardPage.ttsOverviewHeading(popup)).toBeVisible({ timeout: 15000 });
     await popup.close();
   });
 
