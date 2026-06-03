@@ -88,6 +88,13 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 .status-dot.skipped{background:var(--muted)}
 .test-title{flex:1;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .test-duration{color:var(--muted);font-size:12px;flex-shrink:0}
+.browser-pills{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+.browser-pill{font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600}
+.browser-pill.passed{background:rgba(34,197,94,.12);color:var(--pass)}
+.browser-pill.failed,.browser-pill.timedOut{background:rgba(239,68,68,.12);color:var(--fail)}
+.browser-pill.skipped{background:rgba(245,158,11,.12);color:var(--warn)}
+.browsers-banner{font-size:13px;color:var(--muted);margin-bottom:16px}
+.browsers-banner strong{color:var(--text)}
 
 /* ── History Tab ── */
 .history-group{margin-bottom:28px}
@@ -312,6 +319,10 @@ function renderCurrentRun(data) {
       </div>
     </div>
 
+    ${data.browsersTested && data.browsersTested.length ? `
+    <p class="browsers-banner">Browsers this run: <strong>${formatBrowsersTested(data.browsersTested)}</strong> — one row per test case; pills show per-browser result.</p>
+    ` : ''}
+
     <!-- Module Results -->
     <div class="module-list">
       <h2>Module Results</h2>
@@ -400,6 +411,19 @@ function renderCharts(data) {
 /* ══════════════════════════════════════════════════════════
    MODULE CARDS
    ══════════════════════════════════════════════════════════ */
+const BROWSER_DISPLAY = { chromium: 'Chromium', chrome: 'Chrome', safari: 'Safari' };
+function formatBrowsersTested(names) {
+  return (names || []).map(n => BROWSER_DISPLAY[n] || n).join(', ');
+}
+function renderBrowserPills(t) {
+  if (!t.browsers || !Object.keys(t.browsers).length) return '';
+  const pills = Object.entries(t.browsers).map(([name, b]) => {
+    const label = (b.label || BROWSER_DISPLAY[name] || name);
+    return `<span class="browser-pill ${b.status}" title="${esc(label)}: ${b.status}">${esc(label)}</span>`;
+  }).join('');
+  return `<div class="browser-pills">${pills}</div>`;
+}
+
 function renderModules(data) {
   const grid = document.getElementById('moduleGrid');
   const grouped = {};
@@ -412,9 +436,13 @@ function renderModules(data) {
     const passed = mod.tests.filter(t => t.status === 'passed').length;
     const failed = mod.tests.filter(t => t.status !== 'passed').length;
     const testRows = mod.tests.map(t => `
-      <div class="test-row">
+      <div class="test-row" style="flex-wrap:wrap">
         <div class="status-dot ${t.status}"></div>
-        <div class="test-title" title="${esc(t.title)}">${esc(t.title)}</div>
+        <div style="flex:1;min-width:0">
+          <div class="test-title" title="${esc(t.title)}">${esc(t.title)}</div>
+          ${renderBrowserPills(t)}
+          ${t.failedBrowsers && t.failedBrowsers.length ? `<div style="font-size:11px;color:var(--fail);margin-top:2px">Failed in: ${t.failedBrowsers.map(formatBrowsersTested).join(', ')}</div>` : ''}
+        </div>
         <div class="test-duration">${formatDuration(t.durationMs)}</div>
       </div>
     `).join('');
@@ -674,6 +702,8 @@ function renderModalTests(tests, filter) {
           <span class="mt-tag">Playwright &middot; ${t.moduleLabel}</span>
           <span>${formatDuration(t.durationMs)}</span>
         </div>
+        ${renderBrowserPills(t)}
+        ${t.failedBrowsers && t.failedBrowsers.length ? `<div class="mt-error" style="margin-top:6px">Failed in: ${t.failedBrowsers.map(formatBrowsersTested).join(', ')}</div>` : ''}
         ${t.error ? `<div class="mt-error">${esc(t.error)}</div>` : ''}
         ${attachHtml}
       </div>

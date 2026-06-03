@@ -120,13 +120,16 @@ function buildEmailHTML(data) {
   let failedSection = '';
   if (failCount > 0 && data.tests) {
     const failedTests = data.tests.filter(t => t.status !== 'passed');
-    const failedRows = failedTests.map(t => `
+    const failedRows = failedTests.map(t => {
+      const failedIn = (t.failedBrowsers || []).join(', ') || '—';
+      return `
       <tr>
         <td style="padding:8px 14px;border-bottom:1px solid #f0f0f0;font-size:13px;color:#333">${t.title}</td>
         <td style="padding:8px 14px;border-bottom:1px solid #f0f0f0;font-size:12px;color:#ef4444">${t.moduleLabel}</td>
-        <td style="padding:8px 14px;border-bottom:1px solid #f0f0f0;font-size:12px;color:#666;max-width:250px;word-break:break-word">${(t.error || 'Unknown error').substring(0, 120)}</td>
-      </tr>
-    `).join('');
+        <td style="padding:8px 14px;border-bottom:1px solid #f0f0f0;font-size:12px;color:#b45309">${failedIn}</td>
+        <td style="padding:8px 14px;border-bottom:1px solid #f0f0f0;font-size:12px;color:#666;max-width:220px;word-break:break-word">${(t.error || 'Unknown error').substring(0, 120)}</td>
+      </tr>`;
+    }).join('');
 
     failedSection = `
       <div style="margin:24px 40px 0">
@@ -136,6 +139,7 @@ function buildEmailHTML(data) {
             <tr style="background:#fef2f2">
               <th style="padding:10px 14px;text-align:left;font-size:12px;color:#666;font-weight:600">Test Name</th>
               <th style="padding:10px 14px;text-align:left;font-size:12px;color:#666;font-weight:600">Module</th>
+              <th style="padding:10px 14px;text-align:left;font-size:12px;color:#666;font-weight:600">Failed browser(s)</th>
               <th style="padding:10px 14px;text-align:left;font-size:12px;color:#666;font-weight:600">Error</th>
             </tr>
           </thead>

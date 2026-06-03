@@ -48,15 +48,34 @@ function getModuleKey(filePath) {
   return path.basename(filePath, '.spec.ts');
 }
 
-// ── Recursively extract tests from Playwright suite tree ──
+const BROWSER_LABELS = {
+  chromium: 'Chrome (Chromium)',
+  chrome: 'Chrome',
+  safari: 'Safari',
+};
+
+function browserLabel(name) {
+  return BROWSER_LABELS[name] || name;
+}
+
+function rollupStatus(statuses) {
+  if (statuses.some(s => s === 'failed')) return 'failed';
+  if (statuses.some(s => s === 'timedOut')) return 'timedOut';
+  if (statuses.some(s => s === 'skipped')) return 'skipped';
+  return 'passed';
+}
+
+// ── Recursively extract per-browser runs from Playwright suite tree ──
 function extractTests(suite, tests = []) {
   if (suite.specs) {
     for (const spec of suite.specs) {
       for (const test of spec.tests || []) {
-        for (const result of test.results || []) {
-          // Skip auth setup
-          if (spec.file && spec.file.includes('auth.setup')) continue;
+        if (spec.file && spec.file.includes('auth.setup')) continue;
+        if (test.projectName === 'setup') continue;
 
+        const projectName = test.projectName || 'chromium';
+        let best = null;
+        for (const result of test.results || []) {
           const status = result.status === 'passed' ? 'passed'
             : result.status === 'timedOut' ? 'timedOut'
             : result.status === 'skipped' ? 'skipped'
@@ -73,7 +92,7 @@ function extractTests(suite, tests = []) {
             contentType: a.contentType || '',
           }));
 
-          tests.push({
+          const row = {
             title: spec.title,
             status,
             durationMs: result.duration || 0,
@@ -83,8 +102,11 @@ function extractTests(suite, tests = []) {
             attachments,
             error: errorMsg,
             retry: result.retry || 0,
-          });
+            projectName,
+          };
+          if (!best || row.retry >= best.retry) best = row;
         }
+        if (best) tests.push(best);
       }
     }
   }
@@ -98,6 +120,74 @@ function extractTests(suite, tests = []) {
   return tests;
 }
 
+/** One dashboard row per test case; browsers nested (no duplicate TC rows). */
+function mergeByTestCase(browserRuns) {
+  const byCase = new Map();
+
+  for (const run of browserRuns) {
+    const key = `${run.file}::${run.title}`;
+    if (!byCase.has(key)) {
+      byCase.set(key, {
+        title: run.title,
+        file: run.file,
+        module: run.module,
+        moduleLabel: run.moduleLabel,
+        browsers: {},
+        durationMs: 0,
+      });
+    }
+    const entry = byCase.get(key);
+    entry.browsers[run.projectName] = {
+      label: browserLabel(run.projectName),
+      status: run.status,
+      durationMs: run.durationMs,
+      error: run.error,
+      attachments: run.attachments,
+    };
+    entry.durationMs += run.durationMs;
+  }
+
+  return Array.from(byCase.values()).map(entry => {
+    const browserStatuses = Object.values(entry.browsers).map(b => b.status);
+    const status = rollupStatus(browserStatuses);
+    const failedBrowsers = Object.entries(entry.browsers)
+      .filter(([, b]) => b.status !== 'passed')
+      .map(([name]) => name);
+
+    let error = '';
+    if (status !== 'passed') {
+      error = failedBrowsers
+        .map(name => {
+          const b = entry.browsers[name];
+          const msg = b.error ? b.error.split('\n')[0].substring(0, 200) : b.status;
+          return `${browserLabel(name)}: ${msg}`;
+        })
+        .join(' | ');
+    }
+
+    const attachments = [];
+    for (const [browserName, b] of Object.entries(entry.browsers)) {
+      if (b.status === 'passed') continue;
+      for (const a of b.attachments) {
+        attachments.push({ ...a, browser: browserName });
+      }
+    }
+
+    return {
+      title: entry.title,
+      file: entry.file,
+      module: entry.module,
+      moduleLabel: entry.moduleLabel,
+      status,
+      durationMs: entry.durationMs,
+      browsers: entry.browsers,
+      failedBrowsers,
+      error,
+      attachments,
+    };
+  });
+}
+
 // ── Main ──
 function main() {
   if (!fs.existsSync(REPORT_PATH)) {
@@ -107,18 +197,9 @@ function main() {
   }
 
   const report = JSON.parse(fs.readFileSync(REPORT_PATH, 'utf8'));
-  const allTests = extractTests(report);
-
-  // Keep only the final result for each test (highest retry number)
-  const testMap = new Map();
-  for (const t of allTests) {
-    const key = `${t.file}::${t.title}`;
-    const existing = testMap.get(key);
-    if (!existing || t.retry > existing.retry) {
-      testMap.set(key, t);
-    }
-  }
-  const tests = Array.from(testMap.values());
+  const browserRuns = extractTests(report);
+  const tests = mergeByTestCase(browserRuns);
+  const browsersTested = [...new Set(browserRuns.map(t => t.projectName))].sort();
 
   // Compute summary
   const passed = tests.filter(t => t.status === 'passed').length;
@@ -155,11 +236,12 @@ function main() {
   let artifactCount = 0;
   for (const t of tests) {
     if (t.status === 'passed') continue;
-    const slug = t.title.replace(/[^a-zA-Z0-9_-]/g, '_').substring(0, 50).toLowerCase();
+    const slug = t.title.replace(/[^a-zA-Z0-9_-]/g, '_').substring(0, 40).toLowerCase();
     for (const a of t.attachments) {
       if (!a.sourcePath || !fs.existsSync(a.sourcePath)) continue;
       const ext = path.extname(a.path) || '';
-      const destName = `${slug}-${a.name}${ext}`;
+      const browserPrefix = a.browser ? `${a.browser}-` : '';
+      const destName = `${slug}-${browserPrefix}${a.name}${ext}`;
       const destPath = path.join(ARTIFACTS_DIR, destName);
       try {
         fs.copyFileSync(a.sourcePath, destPath);
@@ -176,12 +258,16 @@ function main() {
     id: runId,
     startedAt,
     durationMs,
+    browsersTested,
     summary: { total, passed, failed, skipped, timedOut },
     passRate,
     modules,
-    tests: tests.map(({ retry, ...rest }) => ({
-      ...rest,
-      attachments: rest.attachments.map(({ sourcePath, ...a }) => a), // remove sourcePath from output
+    tests: tests.map((t) => ({
+      ...t,
+      attachments: t.attachments.map(({ sourcePath, browser, ...a }) => ({
+        ...a,
+        browser,
+      })),
     })),
   };
 
@@ -200,6 +286,7 @@ function main() {
     id: runId,
     startedAt,
     durationMs,
+    browsersTested,
     summary: { total, passed, failed, skipped, timedOut },
     passRate,
     modules,
@@ -221,13 +308,14 @@ function main() {
   console.log('Written:', HISTORY_PATH);
 
   // Write current-run.csv
-  const csvHeader = 'Test ID,Test Name,Module,Status,Duration (ms),Error\n';
+  const csvHeader = 'Test ID,Test Name,Module,Status,Failed Browsers,Duration (ms),Error\n';
   const csvRows = tests.map(t => {
     const titleMatch = t.title.match(/^(TC_\w+_\d+)\s*-\s*(.+)$/);
     const id = titleMatch ? titleMatch[1] : '';
     const name = titleMatch ? titleMatch[2].trim() : t.title;
-    const error = t.error.replace(/"/g, '""').replace(/\n/g, ' ');
-    return `"${id}","${name}","${t.moduleLabel}","${t.status}",${t.durationMs},"${error}"`;
+    const error = (t.error || '').replace(/"/g, '""').replace(/\n/g, ' ');
+    const failedIn = (t.failedBrowsers || []).map(browserLabel).join('; ');
+    return `"${id}","${name}","${t.moduleLabel}","${t.status}","${failedIn}",${t.durationMs},"${error}"`;
   }).join('\n');
 
   fs.mkdirSync(path.dirname(CSV_CURRENT), { recursive: true });
@@ -244,7 +332,8 @@ function main() {
   fs.writeFileSync(CSV_ALL, summaryHeader + summaryRows);
   console.log('Written:', CSV_ALL);
 
-  console.log(`\nDashboard data generated: ${total} tests (${passed} passed, ${failed} failed, ${passRate}% pass rate)`);
+  console.log(`\nDashboard data generated: ${total} test cases (${passed} passed, ${failed} failed, ${passRate}% pass rate)`);
+  console.log(`Browsers: ${browsersTested.map(browserLabel).join(', ')}`);
 }
 
 main();

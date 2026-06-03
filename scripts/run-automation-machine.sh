@@ -41,12 +41,16 @@ export CI=true
 echo "==> npm ci"
 npm ci
 
+# PLAYWRIGHT_BROWSERS in .env — comma-separated: chromium, chrome, safari (default chromium,safari)
+BROWSERS="${PLAYWRIGHT_BROWSERS:-chromium,safari}"
+echo "==> Browsers: $BROWSERS"
+
 if [[ "${PLAYWRIGHT_WITH_DEPS:-}" == "true" ]]; then
-  echo "==> Playwright Chromium + OS deps (sudo may be required)"
-  npx playwright install --with-deps chromium
+  echo "==> Playwright browsers + OS deps (sudo may be required)"
+  npx playwright install --with-deps chromium webkit
 else
-  echo "==> Playwright Chromium only (no sudo). Set PLAYWRIGHT_WITH_DEPS=true if an admin pre-installed OS deps."
-  npx playwright install chromium
+  echo "==> Playwright chromium + webkit (no sudo). Add chrome in PLAYWRIGHT_BROWSERS only if Google Chrome is installed."
+  npx playwright install chromium webkit
 fi
 
 echo "==> Playwright tests (failures do not stop the pipeline)"

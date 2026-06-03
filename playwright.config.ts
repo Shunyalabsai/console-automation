@@ -3,12 +3,45 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
+/** Comma-separated: chromium, chrome, safari (webkit). Default: chromium + safari. */
+const BROWSER_LIST = (process.env.PLAYWRIGHT_BROWSERS || 'chromium,safari')
+  .split(',')
+  .map((b) => b.trim().toLowerCase())
+  .filter(Boolean);
+
+const BROWSER_USE = {
+  chromium: { ...devices['Desktop Chrome'] },
+  chrome: { ...devices['Desktop Chrome'], channel: 'chrome' as const },
+  safari: { ...devices['Desktop Safari'] },
+} as const;
+
+type BrowserName = keyof typeof BROWSER_USE;
+
+const browserProjects = BROWSER_LIST.filter((name): name is BrowserName => {
+  if (!(name in BROWSER_USE)) {
+    console.warn(`[playwright] Unknown browser "${name}" — skipped. Use: chromium, chrome, safari`);
+    return false;
+  }
+  return true;
+}).map((name) => ({
+  name,
+  use: {
+    ...BROWSER_USE[name],
+    storageState: 'playwright/.auth/user.json',
+  },
+  dependencies: ['setup'] as const,
+}));
+
+if (browserProjects.length === 0) {
+  throw new Error('No valid browsers in PLAYWRIGHT_BROWSERS. Example: chromium,safari');
+}
+
 export default defineConfig({
   testDir: './tests',
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: 1,
-  workers: process.env.CI ? 1 : 1,
+  workers: 1,
   reporter: [
     ['html', { outputFolder: 'playwright-report', open: 'never' }],
     ['json', { outputFile: 'reports/playwright-report.json' }],
@@ -33,13 +66,6 @@ export default defineConfig({
       name: 'setup',
       testMatch: '**/auth.setup.ts',
     },
-    {
-      name: 'chromium',
-      use: {
-        ...devices['Desktop Chrome'],
-        storageState: 'playwright/.auth/user.json',
-      },
-      dependencies: ['setup'],
-    },
+    ...browserProjects,
   ],
 });
