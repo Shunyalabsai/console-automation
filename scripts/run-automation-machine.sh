@@ -61,6 +61,18 @@ set -e
 echo "==> Generate dashboard data"
 node scripts/generate-dashboard.js
 
+node -e "
+  const fs = require('fs');
+  const p = 'docs/data/latest.json';
+  if (!fs.existsSync(p)) process.exit(0);
+  const j = JSON.parse(fs.readFileSync(p, 'utf8'));
+  if (!j.browsersTested || j.browsersTested.length < 2) {
+    console.warn('WARN: latest.json missing multi-browser data. Set PLAYWRIGHT_BROWSERS=chromium,safari in .env');
+  } else {
+    console.log('Dashboard includes browsers:', j.browsersTested.join(', '));
+  }
+"
+
 if [[ "${AUTOMATION_SKIP_GIT_PUSH:-}" == "true" ]]; then
   echo "==> Skipping git push (AUTOMATION_SKIP_GIT_PUSH=true)"
 else

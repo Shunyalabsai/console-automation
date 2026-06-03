@@ -3,15 +3,14 @@ import { LoginPage } from '../pages/LoginPage';
 import { TEST_CONFIG } from '../utils/testData';
 import * as path from 'path';
 
-const authFile = path.join(__dirname, '../playwright/.auth/user.json');
-
-setup('authenticate', async ({ page }) => {
+setup('authenticate', async ({ page }, testInfo) => {
   const loginPage = new LoginPage(page);
+  const browserKey = testInfo.project.name.replace(/^setup-/, '') || 'chromium';
+  const authFile = path.join(__dirname, `../playwright/.auth/user-${browserKey}.json`);
 
   await loginPage.login(TEST_CONFIG.credentials.email, TEST_CONFIG.credentials.password);
   await loginPage.assertLoggedIn();
 
-  // Save signed-in state for all subsequent tests
   await page.context().storageState({ path: authFile });
-  console.log('✅ Authentication state saved to:', authFile);
+  console.log(`✅ Authentication state saved (${browserKey}):`, authFile);
 });

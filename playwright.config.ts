@@ -17,24 +17,32 @@ const BROWSER_USE = {
 
 type BrowserName = keyof typeof BROWSER_USE;
 
-const browserProjects = BROWSER_LIST.filter((name): name is BrowserName => {
+const enabledBrowsers = BROWSER_LIST.filter((name): name is BrowserName => {
   if (!(name in BROWSER_USE)) {
     console.warn(`[playwright] Unknown browser "${name}" — skipped. Use: chromium, chrome, safari`);
     return false;
   }
   return true;
-}).map((name) => ({
+});
+
+if (enabledBrowsers.length === 0) {
+  throw new Error('No valid browsers in PLAYWRIGHT_BROWSERS. Example: chromium,safari');
+}
+
+const setupProjects = enabledBrowsers.map((name) => ({
+  name: `setup-${name}`,
+  testMatch: '**/auth.setup.ts',
+  use: { ...BROWSER_USE[name] },
+}));
+
+const browserProjects = enabledBrowsers.map((name) => ({
   name,
   use: {
     ...BROWSER_USE[name],
-    storageState: 'playwright/.auth/user.json',
+    storageState: `playwright/.auth/user-${name}.json`,
   },
-  dependencies: ['setup'] as const,
+  dependencies: [`setup-${name}`] as const,
 }));
-
-if (browserProjects.length === 0) {
-  throw new Error('No valid browsers in PLAYWRIGHT_BROWSERS. Example: chromium,safari');
-}
 
 export default defineConfig({
   testDir: './tests',
@@ -61,11 +69,5 @@ export default defineConfig({
     navigationTimeout: 30000,
     headless: true,
   },
-  projects: [
-    {
-      name: 'setup',
-      testMatch: '**/auth.setup.ts',
-    },
-    ...browserProjects,
-  ],
+  projects: [...setupProjects, ...browserProjects],
 });

@@ -88,13 +88,27 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 .status-dot.skipped{background:var(--muted)}
 .test-title{flex:1;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .test-duration{color:var(--muted);font-size:12px;flex-shrink:0}
-.browser-pills{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
-.browser-pill{font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600}
-.browser-pill.passed{background:rgba(34,197,94,.12);color:var(--pass)}
-.browser-pill.failed,.browser-pill.timedOut{background:rgba(239,68,68,.12);color:var(--fail)}
-.browser-pill.skipped{background:rgba(245,158,11,.12);color:var(--warn)}
-.browsers-banner{font-size:13px;color:var(--muted);margin-bottom:16px}
-.browsers-banner strong{color:var(--text)}
+.browser-pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.browser-pill{font-size:11px;padding:3px 9px;border-radius:6px;font-weight:600;border:1px solid transparent}
+.browser-pill.passed{background:rgba(34,197,94,.18);color:#86efac;border-color:rgba(34,197,94,.35)}
+.browser-pill.failed,.browser-pill.timedOut{background:rgba(239,68,68,.18);color:#fca5a5;border-color:rgba(239,68,68,.35)}
+.browser-pill.skipped{background:rgba(245,158,11,.15);color:var(--warn)}
+.browser-coverage{background:var(--panel);border:1px solid var(--panel-border);border-radius:var(--radius);padding:18px 20px;margin:18px 0}
+.browser-coverage h3{font-size:15px;margin:0 0 14px;font-weight:600}
+.browser-coverage-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.browser-coverage-card{background:var(--panel-soft);border:1px solid var(--panel-border);border-radius:10px;padding:14px 16px}
+.browser-coverage-card .bc-name{font-size:14px;font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.browser-coverage-card .bc-stats{font-size:12px;color:var(--muted);margin-bottom:8px}
+.browser-coverage-card .bc-bar{height:6px;border-radius:3px;background:var(--panel-border);overflow:hidden}
+.browser-coverage-card .bc-bar-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--pass),#16a34a)}
+.browser-coverage-card.bc-warn .bc-bar-fill{background:var(--warn)}
+.browsers-banner{font-size:13px;padding:12px 16px;border-radius:10px;margin-bottom:16px;line-height:1.5}
+.browsers-banner.ok{background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.25);color:#bbf7d0}
+.browsers-banner.warn{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.3);color:#fde68a}
+.browsers-banner strong{color:#fff}
+.test-row .browser-col{flex:0 0 auto;min-width:140px}
+.module-list h2{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.module-list .browser-legend{font-size:12px;color:var(--muted);font-weight:400}
 
 /* ── History Tab ── */
 .history-group{margin-bottom:28px}
@@ -178,6 +192,7 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
     </div>
   </div>
   <div class="header-actions">
+    <span id="browsersHeaderLabel" style="font-size:12px;font-weight:600;padding:4px 10px;border-radius:6px;display:none"></span>
     <span id="runCountLabel" style="font-size:12px;color:var(--accent);font-weight:600;background:var(--accent-soft);padding:4px 10px;border-radius:6px"></span>
     <span id="lastRunLabel"></span>
     <div class="dropdown" id="exportDropdown">
@@ -262,6 +277,7 @@ Promise.all([
       'Last run: ' + formatDate(latestData.startedAt);
     document.getElementById('runCountLabel').textContent =
       'Total Runs: ' + historyData.length;
+    updateBrowsersHeader(latestData);
   } else {
     document.getElementById('currentTab').innerHTML =
       '<div class="empty-state"><h3>No Data Yet</h3><p>Run your tests first: <code>npm run dashboard:run</code></p></div>';
@@ -303,6 +319,10 @@ function renderCurrentRun(data) {
       </div>
     </div>
 
+    ${renderBrowserBanner(data)}
+
+    ${renderBrowserCoveragePanel(data)}
+
     <!-- Charts -->
     <div class="grid chart-grid" style="margin-top:18px">
       <div class="card chart-card">
@@ -319,19 +339,21 @@ function renderCurrentRun(data) {
       </div>
     </div>
 
-    ${data.browsersTested && data.browsersTested.length ? `
-    <p class="browsers-banner">Browsers this run: <strong>${formatBrowsersTested(data.browsersTested)}</strong> — one row per test case; pills show per-browser result.</p>
-    ` : ''}
-
     <!-- Module Results -->
     <div class="module-list">
-      <h2>Module Results</h2>
+      <h2>Module Results <span class="browser-legend" id="moduleBrowserLegend"></span></h2>
       <div class="module-grid" id="moduleGrid"></div>
     </div>
   `;
 
   renderCharts(data);
   renderModules(data);
+  const legend = document.getElementById('moduleBrowserLegend');
+  if (legend) {
+    legend.textContent = hasPerBrowserData(data)
+      ? '✓ Chromium & Safari per test'
+      : '';
+  }
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -413,13 +435,88 @@ function renderCharts(data) {
    ══════════════════════════════════════════════════════════ */
 const BROWSER_DISPLAY = { chromium: 'Chromium', chrome: 'Chrome', safari: 'Safari' };
 function formatBrowsersTested(names) {
-  return (names || []).map(n => BROWSER_DISPLAY[n] || n).join(', ');
+  return (names || []).map(n => BROWSER_DISPLAY[n] || n).join(' + ');
+}
+function hasPerBrowserData(data) {
+  return !!(data.tests && data.tests.some(t => t.browsers && Object.keys(t.browsers).length > 0));
+}
+function getBrowsersTestedList(data) {
+  if (data.browsersTested && data.browsersTested.length) return data.browsersTested;
+  const names = new Set();
+  for (const t of data.tests || []) {
+    if (t.browsers) Object.keys(t.browsers).forEach(n => names.add(n));
+  }
+  return [...names].sort();
+}
+function computeBrowserStats(data) {
+  const browserNames = getBrowsersTestedList(data);
+  if (!browserNames.length || !hasPerBrowserData(data)) return null;
+  const stats = {};
+  for (const name of browserNames) {
+    stats[name] = { label: BROWSER_DISPLAY[name] || name, passed: 0, failed: 0, total: 0 };
+  }
+  for (const t of data.tests || []) {
+    if (!t.browsers) continue;
+    for (const [name, b] of Object.entries(t.browsers)) {
+      if (!stats[name]) stats[name] = { label: BROWSER_DISPLAY[name] || name, passed: 0, failed: 0, total: 0 };
+      stats[name].total++;
+      if (b.status === 'passed') stats[name].passed++;
+      else stats[name].failed++;
+    }
+  }
+  return stats;
+}
+function updateBrowsersHeader(data) {
+  const el = document.getElementById('browsersHeaderLabel');
+  if (!el) return;
+  const names = getBrowsersTestedList(data);
+  if (hasPerBrowserData(data) && names.length) {
+    el.style.display = 'inline-block';
+    el.style.background = 'rgba(139,92,246,.2)';
+    el.style.color = '#c4b5fd';
+    el.textContent = 'Browsers: ' + formatBrowsersTested(names);
+  } else {
+    el.style.display = 'inline-block';
+    el.style.background = 'rgba(245,158,11,.15)';
+    el.style.color = '#fde68a';
+    el.textContent = 'Browsers: not recorded (re-run needed)';
+  }
+}
+function renderBrowserBanner(data) {
+  if (hasPerBrowserData(data)) {
+    const names = formatBrowsersTested(getBrowsersTestedList(data));
+    return `<p class="browsers-banner ok">Each test ran on <strong>${names}</strong>. One row per test case — green pills = passed in that browser, red = failed.</p>`;
+  }
+  return `<p class="browsers-banner warn">This run does not include per-browser results yet. On the VM, set <strong>PLAYWRIGHT_BROWSERS=chromium,safari</strong> in <code>.env</code> and run <code>npm run automation:run</code> so Chromium and Safari show on every test.</p>`;
+}
+function renderBrowserCoveragePanel(data) {
+  const stats = computeBrowserStats(data);
+  if (!stats) return '';
+  const cards = Object.entries(stats).map(([key, st]) => {
+    const pct = st.total > 0 ? Math.round((st.passed / st.total) * 100) : 0;
+    const warn = st.failed > 0 ? ' bc-warn' : '';
+    const icon = st.failed > 0 ? '⚠️' : '✓';
+    return `
+      <div class="browser-coverage-card${warn}">
+        <div class="bc-name">${icon} ${esc(st.label)}</div>
+        <div class="bc-stats"><strong style="color:var(--pass)">${st.passed}</strong> passed · <strong style="color:${st.failed ? 'var(--fail)' : 'var(--muted)'}">${st.failed}</strong> failed · ${st.total} tests</div>
+        <div class="bc-bar"><div class="bc-bar-fill" style="width:${pct}%"></div></div>
+      </div>`;
+  }).join('');
+  return `
+    <div class="browser-coverage">
+      <h3>Browser coverage — this run</h3>
+      <div class="browser-coverage-grid">${cards}</div>
+    </div>`;
 }
 function renderBrowserPills(t) {
-  if (!t.browsers || !Object.keys(t.browsers).length) return '';
+  if (!t.browsers || !Object.keys(t.browsers).length) {
+    return '<div class="browser-pills"><span class="browser-pill skipped" title="Legacy run">No browser data</span></div>';
+  }
   const pills = Object.entries(t.browsers).map(([name, b]) => {
     const label = (b.label || BROWSER_DISPLAY[name] || name);
-    return `<span class="browser-pill ${b.status}" title="${esc(label)}: ${b.status}">${esc(label)}</span>`;
+    const mark = b.status === 'passed' ? '✓' : '✗';
+    return `<span class="browser-pill ${b.status}" title="${esc(label)}: ${b.status}">${mark} ${esc(label)}</span>`;
   }).join('');
   return `<div class="browser-pills">${pills}</div>`;
 }
@@ -436,13 +533,13 @@ function renderModules(data) {
     const passed = mod.tests.filter(t => t.status === 'passed').length;
     const failed = mod.tests.filter(t => t.status !== 'passed').length;
     const testRows = mod.tests.map(t => `
-      <div class="test-row" style="flex-wrap:wrap">
+      <div class="test-row" style="flex-wrap:wrap;align-items:flex-start">
         <div class="status-dot ${t.status}"></div>
-        <div style="flex:1;min-width:0">
+        <div style="flex:1;min-width:180px">
           <div class="test-title" title="${esc(t.title)}">${esc(t.title)}</div>
-          ${renderBrowserPills(t)}
-          ${t.failedBrowsers && t.failedBrowsers.length ? `<div style="font-size:11px;color:var(--fail);margin-top:2px">Failed in: ${t.failedBrowsers.map(formatBrowsersTested).join(', ')}</div>` : ''}
+          ${t.failedBrowsers && t.failedBrowsers.length ? `<div style="font-size:11px;color:var(--fail);margin-top:4px">Failed in: ${t.failedBrowsers.map(formatBrowsersTested).join(', ')}</div>` : ''}
         </div>
+        <div class="browser-col">${renderBrowserPills(t)}</div>
         <div class="test-duration">${formatDuration(t.durationMs)}</div>
       </div>
     `).join('');
@@ -505,6 +602,7 @@ function renderHistory(runs) {
               <span class="pill pill-pass">${r.summary.passed} passed</span>
               ${r.summary.failed > 0 ? `<span class="pill pill-fail">${r.summary.failed} failed</span>` : ''}
               <span style="color:${r.passRate >= 80 ? 'var(--pass)' : 'var(--warn)'}; font-size:13px; font-weight:600">${r.passRate}%</span>
+              ${r.browsersTested && r.browsersTested.length ? `<span style="font-size:11px;color:var(--muted)">${formatBrowsersTested(r.browsersTested)}</span>` : ''}
             </div>
           </div>
         `).join('')}
