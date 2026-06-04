@@ -1,0 +1,151 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - region "Notifications alt+T"
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - img "Shunya Labs Logo" [ref=e11]
+      - generic [ref=e13]:
+        - generic [ref=e14]: Overview
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "Dashboard" [ref=e17]:
+              - /url: /dashboard
+              - img [ref=e18]
+              - generic [ref=e23]: Dashboard
+          - listitem [ref=e24]:
+            - button "Usage" [ref=e25]:
+              - img [ref=e26]
+              - generic [ref=e30]: Usage
+              - img [ref=e31]
+          - listitem [ref=e33]:
+            - link "API Keys" [ref=e34]:
+              - /url: /api-keys
+              - img [ref=e35]
+              - generic [ref=e37]: API Keys
+          - listitem [ref=e38]:
+            - link "Billing" [ref=e39]:
+              - /url: /billing
+              - img [ref=e40]
+              - generic [ref=e42]: Billing
+          - listitem [ref=e43]:
+            - link "Contact Us" [ref=e44]:
+              - /url: /feedback
+              - img [ref=e45]
+              - generic [ref=e48]: Contact Us
+          - listitem [ref=e49]:
+            - link "Settings" [ref=e50]:
+              - /url: /settings
+              - img [ref=e51]
+              - generic [ref=e54]: Settings
+      - button "Toggle Sidebar" [ref=e55]
+    - main [ref=e56]:
+      - generic [ref=e57]:
+        - navigation "breadcrumb" [ref=e60]:
+          - list [ref=e61]:
+            - listitem [ref=e62]:
+              - link "Dashboard" [ref=e63]:
+                - /url: /dashboard
+                - img [ref=e64]
+                - generic [ref=e68]: Dashboard
+            - listitem [ref=e69]:
+              - img [ref=e70]
+            - listitem [ref=e72]:
+              - link "API Keys" [disabled] [ref=e73]:
+                - img [ref=e74]
+                - generic [ref=e76]: API Keys
+        - generic [ref=e77]:
+          - link "Playground" [ref=e78]:
+            - /url: https://playground.shunyalabs.ai/
+            - generic [ref=e79]:
+              - img [ref=e80]
+              - generic [ref=e90]: Playground
+          - link "Docs" [ref=e91]:
+            - /url: https://docs.shunyalabs.ai/
+            - generic [ref=e92]:
+              - img [ref=e93]
+              - generic [ref=e95]: Docs
+          - button "Saira Automation Saira Automation" [ref=e96] [cursor=pointer]:
+            - img "Saira Automation" [ref=e99]
+            - text: Saira Automation
+            - img
+      - generic [ref=e104]:
+        - generic [ref=e105]:
+          - generic [ref=e106]:
+            - heading "API Keys" [level=2] [ref=e108]
+            - paragraph [ref=e109]: Create and manage your API keys for accessing the platform
+          - button "Create a new API key" [ref=e110] [cursor=pointer]:
+            - img
+            - text: Create New Key
+        - generic [ref=e112]:
+          - tablist [ref=e114]:
+            - tab "API Keys" [selected] [ref=e115]
+            - tab "Deactivated" [ref=e116]
+          - tabpanel "API Keys" [ref=e117]:
+            - generic [ref=e118]:
+              - table [ref=e122]:
+                - rowgroup [ref=e123]:
+                  - row "Name API Key Created Actions" [ref=e124]:
+                    - columnheader "Name" [ref=e125]
+                    - columnheader "API Key" [ref=e126]
+                    - columnheader "Created" [ref=e127]
+                    - columnheader "Actions" [ref=e128]:
+                      - generic [ref=e129]: Actions
+                - rowgroup [ref=e130]:
+                  - row "auto_key-1780565364904 sKTfeRZi************ Jun 4, 2026 9:29 AM Revoke API key auto_key-1780565364904" [ref=e131]:
+                    - cell "auto_key-1780565364904" [ref=e132]:
+                      - generic [ref=e134]: auto_key-1780565364904
+                    - cell "sKTfeRZi************" [ref=e135]:
+                      - code [ref=e137]:
+                        - generic [ref=e138]: sKTfeRZi************
+                    - cell "Jun 4, 2026 9:29 AM" [ref=e139]:
+                      - generic [ref=e140]:
+                        - generic [ref=e141]: Jun 4, 2026
+                        - generic [ref=e142]: 9:29 AM
+                    - cell "Revoke API key auto_key-1780565364904" [ref=e143]:
+                      - button "Revoke API key auto_key-1780565364904" [ref=e145] [cursor=pointer]:
+                        - img
+                  - row "auto_key-1780560304153 B6Ysttnp************ Jun 4, 2026 8:05 AM Revoke API key auto_key-1780560304153" [ref=e146]:
+                    - cell "auto_key-1780560304153" [ref=e147]:
+                      - generic [ref=e149]: auto_key-1780560304153
+                    - cell "B6Ysttnp************" [ref=e150]:
+                      - code [ref=e152]:
+                        - generic [ref=e153]: B6Ysttnp************
+                    - cell "Jun 4, 2026 8:05 AM" [ref=e154]:
+                      - generic [ref=e155]:
+                        - generic [ref=e156]: Jun 4, 2026
+                        - generic [ref=e157]: 8:05 AM
+                    - cell "Revoke API key auto_key-1780560304153" [ref=e158]:
+                      - button "Revoke API key auto_key-1780560304153" [ref=e160] [cursor=pointer]:
+                        - img
+                  - row "auto_key-1780560274576 RektLTq0************ Jun 4, 2026 8:04 AM Revoke API key auto_key-1780560274576" [ref=e161]:
+                    - cell "auto_key-1780560274576" [ref=e162]:
+                      - generic [ref=e164]: auto_key-1780560274576
+                    - cell "RektLTq0************" [ref=e165]:
+                      - code [ref=e167]:
+                        - generic [ref=e168]: RektLTq0************
+                    - cell "Jun 4, 2026 8:04 AM" [ref=e169]:
+                      - generic [ref=e170]:
+                        - generic [ref=e171]: Jun 4, 2026
+                        - generic [ref=e172]: 8:04 AM
+                    - cell "Revoke API key auto_key-1780560274576" [ref=e173]:
+                      - button "Revoke API key auto_key-1780560274576" [ref=e175] [cursor=pointer]:
+                        - img
+              - generic [ref=e177]:
+                - generic [ref=e178]: 3 row(s) total.
+                - generic [ref=e179]:
+                  - generic [ref=e180]: Page 1 of 1
+                  - generic [ref=e181]:
+                    - button "Go to first page" [disabled]:
+                      - img
+                    - button "Go to previous page" [disabled]:
+                      - img
+                    - button "Go to next page" [disabled]:
+                      - img
+                    - button "Go to last page" [disabled]:
+                      - img
+  - alert [ref=e184]
+```
