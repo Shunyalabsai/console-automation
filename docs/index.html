@@ -272,19 +272,41 @@ Promise.all([
   historyData = history || [];
 
   if (latestData) {
-    renderCurrentRun(latestData);
-    document.getElementById('lastRunLabel').textContent =
-      'Last run: ' + formatDate(latestData.startedAt);
-    document.getElementById('runCountLabel').textContent =
-      'Total Runs: ' + historyData.length;
-    updateBrowsersHeader(latestData);
+    try {
+      renderCurrentRun(latestData);
+      document.getElementById('lastRunLabel').textContent =
+        'Last run: ' + formatDate(latestData.startedAt);
+      document.getElementById('runCountLabel').textContent =
+        'Total Runs: ' + historyData.length;
+      updateBrowsersHeader(latestData);
+    } catch (err) {
+      console.error('renderCurrentRun failed:', err);
+      document.getElementById('currentTab').innerHTML =
+        '<div class="empty-state"><h3>Could not render current run</h3><p>' + esc(String(err)) + '</p><p>Check the browser console. History and calendar below should still work.</p></div>';
+    }
   } else {
     document.getElementById('currentTab').innerHTML =
       '<div class="empty-state"><h3>No Data Yet</h3><p>Run your tests first: <code>npm run dashboard:run</code></p></div>';
   }
 
-  renderHistory(historyData);
-  renderCalendar(historyData);
+  try {
+    renderHistory(historyData);
+    renderCalendar(historyData);
+  } catch (err) {
+    console.error('renderHistory/renderCalendar failed:', err);
+    document.getElementById('historyTab').innerHTML =
+      '<div class="empty-state"><h3>Could not load run history</h3><p>' + esc(String(err)) + '</p></div>';
+    document.getElementById('calendarTab').innerHTML =
+      '<div class="empty-state"><h3>Could not load calendar</h3><p>' + esc(String(err)) + '</p></div>';
+  }
+}).catch(err => {
+  console.error('Dashboard init failed:', err);
+  document.getElementById('currentTab').innerHTML =
+    '<div class="empty-state"><h3>Failed to load dashboard data</h3><p>' + esc(String(err)) + '</p></div>';
+  document.getElementById('historyTab').innerHTML =
+    '<div class="empty-state"><h3>Failed to load run history</h3></div>';
+  document.getElementById('calendarTab').innerHTML =
+    '<div class="empty-state"><h3>Failed to load calendar</h3></div>';
 });
 
 /* ══════════════════════════════════════════════════════════
@@ -537,7 +559,7 @@ function renderModules(data) {
         <div class="status-dot ${t.status}"></div>
         <div style="flex:1;min-width:180px">
           <div class="test-title" title="${esc(t.title)}">${esc(t.title)}</div>
-          ${t.failedBrowsers && t.failedBrowsers.length ? `<div style="font-size:11px;color:var(--fail);margin-top:4px">Failed in: ${t.failedBrowsers.map(formatBrowsersTested).join(', ')}</div>` : ''}
+          ${t.failedBrowsers && t.failedBrowsers.length ? `<div style="font-size:11px;color:var(--fail);margin-top:4px">Failed in: ${esc(formatBrowsersTested(t.failedBrowsers))}</div>` : ''}
         </div>
         <div class="browser-col">${renderBrowserPills(t)}</div>
         <div class="test-duration">${formatDuration(t.durationMs)}</div>
@@ -801,7 +823,7 @@ function renderModalTests(tests, filter) {
           <span>${formatDuration(t.durationMs)}</span>
         </div>
         ${renderBrowserPills(t)}
-        ${t.failedBrowsers && t.failedBrowsers.length ? `<div class="mt-error" style="margin-top:6px">Failed in: ${t.failedBrowsers.map(formatBrowsersTested).join(', ')}</div>` : ''}
+        ${t.failedBrowsers && t.failedBrowsers.length ? `<div class="mt-error" style="margin-top:6px">Failed in: ${esc(formatBrowsersTested(t.failedBrowsers))}</div>` : ''}
         ${t.error ? `<div class="mt-error">${esc(t.error)}</div>` : ''}
         ${attachHtml}
       </div>

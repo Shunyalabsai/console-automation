@@ -121,9 +121,15 @@ export class UsagePage extends BasePage {
   // ──────── Playground ────────
 
   async openPlayground(): Promise<Page> {
-    const popupPromise = this.page.waitForEvent('popup');
+    const context = this.page.context();
+    const newPagePromise = Promise.race([
+      this.page.waitForEvent('popup', { timeout: 45_000 }),
+      context.waitForEvent('page', { timeout: 45_000 }),
+    ]);
     await this.navPlayground.click();
-    return await popupPromise;
+    const target = await newPagePromise;
+    await target.waitForLoadState('domcontentloaded');
+    return target;
   }
 
   async runCustomerSupportAnalysis(popup: Page): Promise<void> {

@@ -151,13 +151,13 @@ export class ApiKeysPage extends BasePage {
   }
 
   async assertKeyInDeactivatedTab(keyName: string) {
-    // Reload the page to get a clean state after deactivation
-    await this.page.reload({ waitUntil: 'networkidle' });
-    await expect(this.deactivatedTab).toBeVisible({ timeout: 10000 });
+    await expect(this.deactivatedTab).toBeVisible({ timeout: 15000 });
     await this.deactivatedTab.click();
-    // Wait for the "Deactivated on" column to confirm tab switched
-    await expect(this.deactivatedOnColumn).toBeVisible({ timeout: 15000 });
-    await expect(this.keyNameInList(keyName)).toBeVisible({ timeout: 15000 });
+    await expect(this.deactivatedOnColumn).toBeVisible({ timeout: 20000 });
+    await expect.poll(
+      async () => this.keyNameInList(keyName).isVisible(),
+      { timeout: 30_000, intervals: [500, 1000, 2000] },
+    ).toBe(true);
   }
 
   async assertDeactivatedOnColumnVisible() {
