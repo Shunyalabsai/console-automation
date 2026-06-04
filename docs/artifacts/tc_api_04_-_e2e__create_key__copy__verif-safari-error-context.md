@@ -1,0 +1,251 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - region "Notifications alt+T"
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - img "Shunya Labs Logo" [ref=e11]
+      - generic [ref=e13]:
+        - generic [ref=e14]: Overview
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "Dashboard" [ref=e17]:
+              - /url: /dashboard
+              - img [ref=e18]
+              - generic [ref=e23]: Dashboard
+          - listitem [ref=e24]:
+            - button "Usage" [ref=e25]:
+              - img [ref=e26]
+              - generic [ref=e30]: Usage
+              - img [ref=e31]
+          - listitem [ref=e33]:
+            - link "API Keys" [ref=e34]:
+              - /url: /api-keys
+              - img [ref=e35]
+              - generic [ref=e37]: API Keys
+          - listitem [ref=e38]:
+            - link "Billing" [ref=e39]:
+              - /url: /billing
+              - img [ref=e40]
+              - generic [ref=e42]: Billing
+          - listitem [ref=e43]:
+            - link "Contact Us" [ref=e44]:
+              - /url: /feedback
+              - img [ref=e45]
+              - generic [ref=e48]: Contact Us
+          - listitem [ref=e49]:
+            - link "Settings" [ref=e50]:
+              - /url: /settings
+              - img [ref=e51]
+              - generic [ref=e54]: Settings
+      - button "Toggle Sidebar" [ref=e55]
+    - main [ref=e56]:
+      - generic [ref=e57]:
+        - navigation "breadcrumb" [ref=e60]:
+          - list [ref=e61]:
+            - listitem [ref=e62]:
+              - link "Dashboard" [ref=e63]:
+                - /url: /dashboard
+                - img [ref=e64]
+                - generic [ref=e68]: Dashboard
+            - listitem [ref=e69]:
+              - img [ref=e70]
+            - listitem [ref=e72]:
+              - link "API Keys" [disabled] [ref=e73]:
+                - img [ref=e74]
+                - generic [ref=e76]: API Keys
+        - generic [ref=e77]:
+          - link "Playground" [ref=e78]:
+            - /url: https://playground.shunyalabs.ai/
+            - generic [ref=e79]:
+              - img [ref=e80]
+              - generic [ref=e90]: Playground
+          - link "Docs" [ref=e91]:
+            - /url: https://docs.shunyalabs.ai/
+            - generic [ref=e92]:
+              - img [ref=e93]
+              - generic [ref=e95]: Docs
+          - button "Saira Automation Saira Automation" [ref=e96] [cursor=pointer]:
+            - img "Saira Automation" [ref=e99]
+            - text: Saira Automation
+            - img
+      - generic [ref=e104]:
+        - generic [ref=e105]:
+          - generic [ref=e106]:
+            - heading "API Keys" [level=2] [ref=e108]
+            - paragraph [ref=e109]: Create and manage your API keys for accessing the platform
+          - button "Create a new API key" [ref=e110] [cursor=pointer]:
+            - img
+            - text: Create New Key
+        - generic [ref=e112]:
+          - tablist [ref=e114]:
+            - tab "API Keys" [ref=e115]
+            - tab "Deactivated" [active] [selected] [ref=e116]
+          - tabpanel "Deactivated" [ref=e117]:
+            - generic [ref=e118]:
+              - table [ref=e122]:
+                - rowgroup [ref=e123]:
+                  - row "Name API Key Created Deactivated on" [ref=e124]:
+                    - columnheader "Name" [ref=e125]
+                    - columnheader "API Key" [ref=e126]
+                    - columnheader "Created" [ref=e127]
+                    - columnheader "Deactivated on" [ref=e128]
+                - rowgroup [ref=e129]:
+                  - row "auto_key-1780560036564 a2x2mIZv************ Jun 4, 2026 8:00 AM Jun 4, 2026 8:00 AM" [ref=e130]:
+                    - cell "auto_key-1780560036564" [ref=e131]:
+                      - generic [ref=e133]: auto_key-1780560036564
+                    - cell "a2x2mIZv************" [ref=e134]:
+                      - code [ref=e136]:
+                        - generic [ref=e137]: a2x2mIZv************
+                    - cell "Jun 4, 2026 8:00 AM" [ref=e138]:
+                      - generic [ref=e139]:
+                        - generic [ref=e140]: Jun 4, 2026
+                        - generic [ref=e141]: 8:00 AM
+                    - cell "Jun 4, 2026 8:00 AM" [ref=e142]:
+                      - generic [ref=e143]:
+                        - generic [ref=e144]: Jun 4, 2026
+                        - generic [ref=e145]: 8:00 AM
+                  - row "auto_key-1780553444249 yU6KxGjP************ Jun 4, 2026 6:10 AM Jun 4, 2026 6:10 AM" [ref=e146]:
+                    - cell "auto_key-1780553444249" [ref=e147]:
+                      - generic [ref=e149]: auto_key-1780553444249
+                    - cell "yU6KxGjP************" [ref=e150]:
+                      - code [ref=e152]:
+                        - generic [ref=e153]: yU6KxGjP************
+                    - cell "Jun 4, 2026 6:10 AM" [ref=e154]:
+                      - generic [ref=e155]:
+                        - generic [ref=e156]: Jun 4, 2026
+                        - generic [ref=e157]: 6:10 AM
+                    - cell "Jun 4, 2026 6:10 AM" [ref=e158]:
+                      - generic [ref=e159]:
+                        - generic [ref=e160]: Jun 4, 2026
+                        - generic [ref=e161]: 6:10 AM
+                  - row "auto_key-1780552826820 pOVNhmEL************ Jun 4, 2026 6:00 AM Jun 4, 2026 6:00 AM" [ref=e162]:
+                    - cell "auto_key-1780552826820" [ref=e163]:
+                      - generic [ref=e165]: auto_key-1780552826820
+                    - cell "pOVNhmEL************" [ref=e166]:
+                      - code [ref=e168]:
+                        - generic [ref=e169]: pOVNhmEL************
+                    - cell "Jun 4, 2026 6:00 AM" [ref=e170]:
+                      - generic [ref=e171]:
+                        - generic [ref=e172]: Jun 4, 2026
+                        - generic [ref=e173]: 6:00 AM
+                    - cell "Jun 4, 2026 6:00 AM" [ref=e174]:
+                      - generic [ref=e175]:
+                        - generic [ref=e176]: Jun 4, 2026
+                        - generic [ref=e177]: 6:00 AM
+                  - row "auto_key-1780545628059 G01PfqNd************ Jun 4, 2026 4:00 AM Jun 4, 2026 4:00 AM" [ref=e178]:
+                    - cell "auto_key-1780545628059" [ref=e179]:
+                      - generic [ref=e181]: auto_key-1780545628059
+                    - cell "G01PfqNd************" [ref=e182]:
+                      - code [ref=e184]:
+                        - generic [ref=e185]: G01PfqNd************
+                    - cell "Jun 4, 2026 4:00 AM" [ref=e186]:
+                      - generic [ref=e187]:
+                        - generic [ref=e188]: Jun 4, 2026
+                        - generic [ref=e189]: 4:00 AM
+                    - cell "Jun 4, 2026 4:00 AM" [ref=e190]:
+                      - generic [ref=e191]:
+                        - generic [ref=e192]: Jun 4, 2026
+                        - generic [ref=e193]: 4:00 AM
+                  - row "auto_key-1780538429228 LN6xafUW************ Jun 4, 2026 2:00 AM Jun 4, 2026 2:00 AM" [ref=e194]:
+                    - cell "auto_key-1780538429228" [ref=e195]:
+                      - generic [ref=e197]: auto_key-1780538429228
+                    - cell "LN6xafUW************" [ref=e198]:
+                      - code [ref=e200]:
+                        - generic [ref=e201]: LN6xafUW************
+                    - cell "Jun 4, 2026 2:00 AM" [ref=e202]:
+                      - generic [ref=e203]:
+                        - generic [ref=e204]: Jun 4, 2026
+                        - generic [ref=e205]: 2:00 AM
+                    - cell "Jun 4, 2026 2:00 AM" [ref=e206]:
+                      - generic [ref=e207]:
+                        - generic [ref=e208]: Jun 4, 2026
+                        - generic [ref=e209]: 2:00 AM
+                  - row "auto_key-1780531228453 4KLTrxzR************ Jun 4, 2026 12:00 AM Jun 4, 2026 12:00 AM" [ref=e210]:
+                    - cell "auto_key-1780531228453" [ref=e211]:
+                      - generic [ref=e213]: auto_key-1780531228453
+                    - cell "4KLTrxzR************" [ref=e214]:
+                      - code [ref=e216]:
+                        - generic [ref=e217]: 4KLTrxzR************
+                    - cell "Jun 4, 2026 12:00 AM" [ref=e218]:
+                      - generic [ref=e219]:
+                        - generic [ref=e220]: Jun 4, 2026
+                        - generic [ref=e221]: 12:00 AM
+                    - cell "Jun 4, 2026 12:00 AM" [ref=e222]:
+                      - generic [ref=e223]:
+                        - generic [ref=e224]: Jun 4, 2026
+                        - generic [ref=e225]: 12:00 AM
+                  - row "auto_key-1780524028841 0N98abSZ************ Jun 3, 2026 10:00 PM Jun 3, 2026 10:00 PM" [ref=e226]:
+                    - cell "auto_key-1780524028841" [ref=e227]:
+                      - generic [ref=e229]: auto_key-1780524028841
+                    - cell "0N98abSZ************" [ref=e230]:
+                      - code [ref=e232]:
+                        - generic [ref=e233]: 0N98abSZ************
+                    - cell "Jun 3, 2026 10:00 PM" [ref=e234]:
+                      - generic [ref=e235]:
+                        - generic [ref=e236]: Jun 3, 2026
+                        - generic [ref=e237]: 10:00 PM
+                    - cell "Jun 3, 2026 10:00 PM" [ref=e238]:
+                      - generic [ref=e239]:
+                        - generic [ref=e240]: Jun 3, 2026
+                        - generic [ref=e241]: 10:00 PM
+                  - row "auto_key-1780516829982 gidqzjS1************ Jun 3, 2026 8:00 PM Jun 3, 2026 8:00 PM" [ref=e242]:
+                    - cell "auto_key-1780516829982" [ref=e243]:
+                      - generic [ref=e245]: auto_key-1780516829982
+                    - cell "gidqzjS1************" [ref=e246]:
+                      - code [ref=e248]:
+                        - generic [ref=e249]: gidqzjS1************
+                    - cell "Jun 3, 2026 8:00 PM" [ref=e250]:
+                      - generic [ref=e251]:
+                        - generic [ref=e252]: Jun 3, 2026
+                        - generic [ref=e253]: 8:00 PM
+                    - cell "Jun 3, 2026 8:00 PM" [ref=e254]:
+                      - generic [ref=e255]:
+                        - generic [ref=e256]: Jun 3, 2026
+                        - generic [ref=e257]: 8:00 PM
+                  - row "auto_key-1780509629281 09JUbs6V************ Jun 3, 2026 6:00 PM Jun 3, 2026 6:00 PM" [ref=e258]:
+                    - cell "auto_key-1780509629281" [ref=e259]:
+                      - generic [ref=e261]: auto_key-1780509629281
+                    - cell "09JUbs6V************" [ref=e262]:
+                      - code [ref=e264]:
+                        - generic [ref=e265]: 09JUbs6V************
+                    - cell "Jun 3, 2026 6:00 PM" [ref=e266]:
+                      - generic [ref=e267]:
+                        - generic [ref=e268]: Jun 3, 2026
+                        - generic [ref=e269]: 6:00 PM
+                    - cell "Jun 3, 2026 6:00 PM" [ref=e270]:
+                      - generic [ref=e271]:
+                        - generic [ref=e272]: Jun 3, 2026
+                        - generic [ref=e273]: 6:00 PM
+                  - row "auto_key-1780502429110 SKadAaId************ Jun 3, 2026 4:00 PM Jun 3, 2026 4:00 PM" [ref=e274]:
+                    - cell "auto_key-1780502429110" [ref=e275]:
+                      - generic [ref=e277]: auto_key-1780502429110
+                    - cell "SKadAaId************" [ref=e278]:
+                      - code [ref=e280]:
+                        - generic [ref=e281]: SKadAaId************
+                    - cell "Jun 3, 2026 4:00 PM" [ref=e282]:
+                      - generic [ref=e283]:
+                        - generic [ref=e284]: Jun 3, 2026
+                        - generic [ref=e285]: 4:00 PM
+                    - cell "Jun 3, 2026 4:00 PM" [ref=e286]:
+                      - generic [ref=e287]:
+                        - generic [ref=e288]: Jun 3, 2026
+                        - generic [ref=e289]: 4:00 PM
+              - generic [ref=e291]:
+                - generic [ref=e292]: 868 row(s) total.
+                - generic [ref=e293]:
+                  - generic [ref=e294]: Page 1 of 87
+                  - generic [ref=e295]:
+                    - button "Go to first page" [disabled]:
+                      - img
+                    - button "Go to previous page" [disabled]:
+                      - img
+                    - button "Go to next page" [ref=e296] [cursor=pointer]:
+                      - img
+                    - button "Go to last page" [ref=e297] [cursor=pointer]:
+                      - img
+  - alert [ref=e300]
+```
