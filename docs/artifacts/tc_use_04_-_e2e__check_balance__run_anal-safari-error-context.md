@@ -1,0 +1,158 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - region "Notifications alt+T"
+  - generic [ref=e2]:
+    - generic [ref=e5]:
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - img "Shunya Labs Logo" [ref=e11]
+      - generic [ref=e13]:
+        - generic [ref=e14]: Overview
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "Dashboard" [ref=e17]:
+              - /url: /dashboard
+              - img [ref=e18]
+              - generic [ref=e23]: Dashboard
+          - listitem [ref=e24]:
+            - button "Usage" [ref=e25]:
+              - img [ref=e26]
+              - generic [ref=e30]: Usage
+              - img [ref=e31]
+          - listitem [ref=e33]:
+            - link "API Keys" [ref=e34]:
+              - /url: /api-keys
+              - img [ref=e35]
+              - generic [ref=e37]: API Keys
+          - listitem [ref=e38]:
+            - link "Billing" [ref=e39]:
+              - /url: /billing
+              - img [ref=e40]
+              - generic [ref=e42]: Billing
+          - listitem [ref=e43]:
+            - link "Contact Us" [ref=e44]:
+              - /url: /feedback
+              - img [ref=e45]
+              - generic [ref=e48]: Contact Us
+          - listitem [ref=e49]:
+            - link "Settings" [ref=e50]:
+              - /url: /settings
+              - img [ref=e51]
+              - generic [ref=e54]: Settings
+      - button "Toggle Sidebar" [ref=e55]
+    - main [ref=e56]:
+      - generic [ref=e57]:
+        - navigation "breadcrumb" [ref=e60]:
+          - list [ref=e61]:
+            - listitem [ref=e62]:
+              - link "Usage" [ref=e63]:
+                - /url: /usage
+                - img [ref=e64]
+                - generic [ref=e68]: Usage
+            - listitem [ref=e69]:
+              - img [ref=e70]
+            - listitem [ref=e72]:
+              - link "Overview" [disabled] [ref=e73]:
+                - generic [ref=e74]: Overview
+        - generic [ref=e75]:
+          - link "Playground" [active] [ref=e76]:
+            - /url: https://playground.shunyalabs.ai/
+            - generic [ref=e77]:
+              - img [ref=e78]
+              - generic [ref=e88]: Playground
+          - link "Docs" [ref=e89]:
+            - /url: https://docs.shunyalabs.ai/
+            - generic [ref=e90]:
+              - img [ref=e91]
+              - generic [ref=e93]: Docs
+          - button "Saira Automation Saira Automation" [ref=e94] [cursor=pointer]:
+            - img "Saira Automation" [ref=e97]
+            - text: Saira Automation
+            - img
+      - generic [ref=e102]:
+        - generic [ref=e104]:
+          - heading "Usage Analytics" [level=2] [ref=e106]
+          - paragraph [ref=e107]: Monitor your API usage and track consumption over time
+        - generic [ref=e108]:
+          - button "Today" [ref=e109] [cursor=pointer]
+          - button "This Week" [ref=e110] [cursor=pointer]
+          - button "This Month" [ref=e111] [cursor=pointer]
+          - button "Last 30 Days" [ref=e112] [cursor=pointer]
+        - generic [ref=e113]:
+          - generic [ref=e115]:
+            - generic [ref=e116]:
+              - generic [ref=e117]: Date range
+              - button "May 5, 2026 - Jun 4, 2026" [ref=e118] [cursor=pointer]:
+                - img
+                - text: May 5, 2026 - Jun 4, 2026
+            - generic [ref=e119]:
+              - generic [ref=e120]: Show by
+              - combobox [ref=e121]:
+                - generic: Day
+                - img
+            - generic [ref=e122]:
+              - generic [ref=e123]: Metric
+              - combobox [ref=e124]:
+                - generic: Requests
+                - img
+          - generic [ref=e125]:
+            - generic [ref=e126]: Filter by
+            - generic [ref=e127]:
+              - generic [ref=e128]:
+                - generic [ref=e129]: API Key
+                - combobox [ref=e130] [cursor=pointer]:
+                  - generic [ref=e131]: All
+                  - img
+              - generic [ref=e132]:
+                - generic [ref=e133]: Models
+                - combobox [ref=e134] [cursor=pointer]:
+                  - generic [ref=e135]: All
+                  - img
+          - button "Confirm" [ref=e137] [cursor=pointer]
+        - generic [ref=e138]:
+          - generic [ref=e139]:
+            - generic [ref=e140]:
+              - generic [ref=e141]: Total Requests
+              - img [ref=e142]
+            - generic [ref=e145]: "373"
+          - generic [ref=e146]:
+            - generic [ref=e147]:
+              - generic [ref=e148]: Total Credits
+              - img [ref=e149]
+            - generic [ref=e155]: $9.9577
+          - generic [ref=e156]:
+            - generic [ref=e157]:
+              - generic [ref=e158]: Total Duration
+              - img [ref=e159]
+            - generic [ref=e163]: 8.0h
+        - generic [ref=e165]:
+          - generic [ref=e167]: requests
+          - img "Line chart showing usage over time" [ref=e173]:
+            - generic [ref=e179]:
+              - generic [ref=e181]: May 5
+              - generic [ref=e183]: May 7
+              - generic [ref=e185]: May 9
+              - generic [ref=e187]: May 11
+              - generic [ref=e189]: May 13
+              - generic [ref=e191]: May 15
+              - generic [ref=e193]: May 17
+              - generic [ref=e195]: May 19
+              - generic [ref=e197]: May 21
+              - generic [ref=e199]: May 23
+              - generic [ref=e201]: May 25
+              - generic [ref=e203]: May 27
+              - generic [ref=e205]: May 29
+              - generic [ref=e207]: May 31
+              - generic [ref=e209]: Jun 2
+              - generic [ref=e211]: Jun 4
+            - generic [ref=e213]:
+              - generic [ref=e215]: "0"
+              - generic [ref=e217]: "4"
+              - generic [ref=e219]: "8"
+              - generic [ref=e221]: "12"
+              - generic [ref=e223]: "16"
+  - alert [ref=e226]
+  - generic [ref=e227]: "0"
+```
