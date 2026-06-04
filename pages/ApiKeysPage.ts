@@ -22,12 +22,14 @@ export class ApiKeysPage extends BasePage {
   readonly deactivateButton = this.page.getByRole('button', { name: 'Deactivate' });
 
   // ──────── Toasts ────────
-  readonly deactivatedToast = this.page.getByText('API key deactivated');
-  readonly revokedSuccessToast = this.page.getByText('API key revoked successfully');
+  readonly deactivatedToast = this.page.getByText('API key deactivated successfully', { exact: true });
+  readonly revokedSuccessToast = this.page.getByText('API key revoked successfully', { exact: true });
 
   // ──────── Tabs ────────
   readonly deactivatedTab = this.page.getByRole('tab', { name: 'Deactivated' });
   readonly apiKeysTab = this.page.getByRole('tab', { name: 'API Keys' });
+  readonly activeKeysPanel = this.page.getByRole('tabpanel', { name: 'API Keys' });
+  readonly deactivatedKeysPanel = this.page.getByRole('tabpanel', { name: 'Deactivated' });
 
   // ──────── Table Column Headers ────────
   readonly deactivatedOnColumn = this.page.getByText('Deactivated on');
@@ -87,17 +89,77 @@ export class ApiKeysPage extends BasePage {
     await this.revokeButton(keyName).click();
     await expect(this.deactivateDialog).toBeVisible();
     await this.deactivateButton.click();
-    // Wait for page to fully reload after deactivation
-    await this.pageHeading.waitFor({ state: 'visible', timeout: 15000 });
-    await this.page.waitForLoadState('networkidle');
-    // Ensure the active tab is loaded before trying to switch
-    await expect(this.apiKeysTab).toBeVisible({ timeout: 10000 });
+
+    await expect(this.deactivateDialog).toBeHidden({ timeout: 15000 });
+    await expect(this.deactivatedToast).toBeVisible({ timeout: 15000 });
+    await expect(this.revokedSuccessToast).toBeVisible({ timeout: 15000 });
+    await this.waitForKeyRemovedFromActiveList(keyName);
   }
 
   // ──────── Key List Helpers ────────
 
   keyNameInList(keyName: string): Locator {
     return this.page.getByText(keyName, { exact: true });
+  }
+
+  keyNameInActiveList(keyName: string): Locator {
+    return this.activeKeysPanel.getByText(keyName, { exact: true });
+  }
+
+  keyNameInDeactivatedList(keyName: string): Locator {
+    return this.deactivatedKeysPanel.getByText(keyName, { exact: true });
+  }
+
+  async openDeactivatedTab() {
+    await expect(this.deactivatedTab).toBeVisible({ timeout: 15000 });
+    await this.deactivatedTab.click();
+    await expect(this.deactivatedTab).toHaveAttribute('aria-selected', 'true', { timeout: 10000 });
+    await expect(this.deactivatedOnColumn).toBeVisible({ timeout: 20000 });
+  }
+
+  async waitForKeyRemovedFromActiveList(keyName: string) {
+    const revokeBtn = this.revokeButton(keyName);
+    const activeKey = this.keyNameInActiveList(keyName);
+
+    await expect.poll(
+      async () => {
+        const revokeVisible = await revokeBtn.isVisible().catch(() => false);
+        const stillActive = await activeKey.isVisible().catch(() => false);
+        return !revokeVisible && !stillActive;
+      },
+      {
+        timeout: 30_000,
+        intervals: [500, 1000, 2000],
+        message: `Expected "${keyName}" to disappear from the active API Keys list after deactivation`,
+      },
+    ).toBe(true);
+  }
+
+  async waitForKeyInDeactivatedList(keyName: string) {
+    const key = this.keyNameInDeactivatedList(keyName);
+
+    for (let attempt = 0; attempt < 2; attempt++) {
+      if (attempt > 0) {
+        await this.page.reload({ waitUntil: 'networkidle' });
+        await expect(this.pageHeading).toBeVisible({ timeout: 15000 });
+      }
+
+      await this.openDeactivatedTab();
+
+      try {
+        await expect.poll(
+          async () => key.isVisible(),
+          {
+            timeout: attempt === 0 ? 20_000 : 15_000,
+            intervals: [500, 1000, 2000],
+            message: `Expected "${keyName}" in the Deactivated tab`,
+          },
+        ).toBe(true);
+        return;
+      } catch (err) {
+        if (attempt === 1) throw err;
+      }
+    }
   }
 
   // ──────── Date/Time Helpers ────────
@@ -138,7 +200,7 @@ export class ApiKeysPage extends BasePage {
   }
 
   async assertKeyInActiveList(keyName: string) {
-    await expect(this.keyNameInList(keyName)).toBeVisible();
+    await expect(this.keyNameInActiveList(keyName)).toBeVisible();
   }
 
   async assertCreatedDateVisible() {
@@ -151,13 +213,8 @@ export class ApiKeysPage extends BasePage {
   }
 
   async assertKeyInDeactivatedTab(keyName: string) {
-    await expect(this.deactivatedTab).toBeVisible({ timeout: 15000 });
-    await this.deactivatedTab.click();
-    await expect(this.deactivatedOnColumn).toBeVisible({ timeout: 20000 });
-    await expect.poll(
-      async () => this.keyNameInList(keyName).isVisible(),
-      { timeout: 30_000, intervals: [500, 1000, 2000] },
-    ).toBe(true);
+    await this.waitForKeyRemovedFromActiveList(keyName);
+    await this.waitForKeyInDeactivatedList(keyName);
   }
 
   async assertDeactivatedOnColumnVisible() {
