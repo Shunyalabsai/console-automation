@@ -33,7 +33,7 @@ export class SettingsPage extends BasePage {
   // ──────── Navigation Actions ────────
 
   async navigateToSettings() {
-    await this.page.goto('/dashboard');
+    await this.goto('/dashboard');
     await this.waitForPageLoad();
     await this.navSettings.click();
     await this.waitForPageLoad();

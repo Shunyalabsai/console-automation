@@ -24,7 +24,7 @@ export class ContactUsPage extends BasePage {
   // ──────── Navigation ────────
 
   async navigateToContactUs() {
-    await this.page.goto('/dashboard');
+    await this.goto('/dashboard');
     await this.waitForPageLoad();
     await this.navContactUs.click();
     await this.waitForPageLoad();

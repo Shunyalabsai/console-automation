@@ -63,7 +63,7 @@ export class BillingPage extends BasePage {
   // ──────── Navigation ────────
 
   async navigateToBilling() {
-    await this.page.goto('/dashboard');
+    await this.goto('/dashboard');
     await this.waitForPageLoad();
     await this.navBilling.click();
     await this.waitForPageLoad();

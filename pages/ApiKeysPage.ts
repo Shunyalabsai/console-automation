@@ -45,7 +45,7 @@ export class ApiKeysPage extends BasePage {
   // ──────── Navigation ────────
 
   async navigateToApiKeys() {
-    await this.page.goto('/dashboard');
+    await this.goto('/dashboard');
     await this.waitForPageLoad();
     await this.navApiKeys.click();
     await this.waitForPageLoad();
@@ -140,7 +140,7 @@ export class ApiKeysPage extends BasePage {
 
     for (let attempt = 0; attempt < 2; attempt++) {
       if (attempt > 0) {
-        await this.page.reload({ waitUntil: 'networkidle' });
+        await this.reload({ waitUntil: 'networkidle' });
         await expect(this.pageHeading).toBeVisible({ timeout: 15000 });
       }
 

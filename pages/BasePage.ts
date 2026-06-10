@@ -1,4 +1,23 @@
-import { Page, Locator, expect } from '@playwright/test';
+import { Page, Locator, expect, type GotoOptions } from '@playwright/test';
+
+const TRANSIENT_NAV_PATTERNS = [
+  'ERR_NETWORK_CHANGED',
+  'ERR_INTERNET_DISCONNECTED',
+  'ERR_CONNECTION_RESET',
+  'ERR_CONNECTION_CLOSED',
+  'ERR_NETWORK_IO_SUSPENDED',
+  'ERR_ADDRESS_UNREACHABLE',
+  'NS_ERROR_NET_RESET',
+  'NS_ERROR_NET_TIMEOUT',
+] as const;
+
+const DEFAULT_NAV_RETRIES = 3;
+const DEFAULT_NAV_RETRY_DELAY_MS = 1500;
+
+function isTransientNavigationError(error: unknown): boolean {
+  const message = error instanceof Error ? error.message : String(error);
+  return TRANSIENT_NAV_PATTERNS.some((code) => message.includes(code));
+}
 
 export class BasePage {
   readonly page: Page;
@@ -7,8 +26,34 @@ export class BasePage {
     this.page = page;
   }
 
-  async goto(path: string = '') {
-    await this.page.goto(path);
+  private async retryNavigation<T>(
+    action: () => Promise<T>,
+    retries = DEFAULT_NAV_RETRIES,
+    baseDelayMs = DEFAULT_NAV_RETRY_DELAY_MS,
+  ): Promise<T> {
+    let lastError: unknown;
+
+    for (let attempt = 0; attempt < retries; attempt++) {
+      try {
+        return await action();
+      } catch (err) {
+        lastError = err;
+        if (attempt === retries - 1 || !isTransientNavigationError(err)) {
+          throw err;
+        }
+        await this.page.waitForTimeout(baseDelayMs * (attempt + 1));
+      }
+    }
+
+    throw lastError;
+  }
+
+  async goto(path: string = '', options?: GotoOptions) {
+    await this.retryNavigation(() => this.page.goto(path, options));
+  }
+
+  async reload(options?: Parameters<Page['reload']>[0]) {
+    await this.retryNavigation(() => this.page.reload(options));
   }
 
   async waitForPageLoad() {

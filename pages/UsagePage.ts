@@ -51,22 +51,22 @@ export class UsagePage extends BasePage {
   // ──────── Navigation ────────
 
   async navigateToDashboard() {
-    await this.page.goto('/dashboard', { waitUntil: 'domcontentloaded' });
+    await this.goto('/dashboard', { waitUntil: 'domcontentloaded' });
     await expect(this.dashboardHeading).toBeVisible({ timeout: 15000 });
   }
 
   async navigateToUsageOverview() {
-    await this.page.goto('/usage/overview', { waitUntil: 'domcontentloaded' });
+    await this.goto('/usage/overview', { waitUntil: 'domcontentloaded' });
     await expect(this.usageAnalyticsHeading).toBeVisible({ timeout: 15000 });
   }
 
   async navigateToUsageLogs() {
-    await this.page.goto('/usage/logs', { waitUntil: 'domcontentloaded' });
+    await this.goto('/usage/logs', { waitUntil: 'domcontentloaded' });
     await expect(this.usageLogsHeading).toBeVisible({ timeout: 15000 });
   }
 
   async navigateToBilling() {
-    await this.page.goto('/billing', { waitUntil: 'domcontentloaded' });
+    await this.goto('/billing', { waitUntil: 'domcontentloaded' });
     await this.page.waitForLoadState('networkidle');
   }
 
@@ -92,7 +92,7 @@ export class UsagePage extends BasePage {
 
   /** Reload dashboard and read balance — used with expect.poll() for retry */
   async getBalanceWithReload(): Promise<number> {
-    await this.page.goto('/dashboard', { waitUntil: 'domcontentloaded' });
+    await this.goto('/dashboard', { waitUntil: 'domcontentloaded' });
     await expect(this.dashboardHeading).toBeVisible({ timeout: 15000 });
     return this.getBalance();
   }
@@ -212,7 +212,7 @@ export class UsagePage extends BasePage {
 
   /** Reload logs page and get count — used with expect.poll() for retry */
   async getLogEntriesCountWithReload(): Promise<number> {
-    await this.page.goto('/usage/logs', { waitUntil: 'domcontentloaded' });
+    await this.goto('/usage/logs', { waitUntil: 'domcontentloaded' });
     await expect(this.usageLogsHeading).toBeVisible({ timeout: 15000 });
     await this.page.waitForTimeout(1000); // Let log entries render
     return this.getLogEntriesCountForToday();
@@ -228,7 +228,7 @@ export class UsagePage extends BasePage {
 
   /** Reload logs page and return top row Request ID — for expect.poll() usage. */
   async getLatestLogRequestIdWithReload(): Promise<string> {
-    await this.page.goto('/usage/logs', { waitUntil: 'domcontentloaded' });
+    await this.goto('/usage/logs', { waitUntil: 'domcontentloaded' });
     await expect(this.usageLogsHeading).toBeVisible({ timeout: 15000 });
     await this.page.waitForTimeout(1000);
     return this.getLatestLogRequestId();
@@ -255,7 +255,7 @@ export class UsagePage extends BasePage {
     await expect
       .poll(
         async () => {
-          await this.page.goto('/billing', { waitUntil: 'domcontentloaded' });
+          await this.goto('/billing', { waitUntil: 'domcontentloaded' });
           await this.page.waitForLoadState('networkidle');
           const txnHeading = this.page.getByRole('heading', { name: 'Transaction History' });
           await expect(txnHeading).toBeVisible({ timeout: 10000 });

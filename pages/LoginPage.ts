@@ -12,7 +12,7 @@ export class LoginPage extends BasePage {
   }
 
   async navigateToLogin() {
-    await this.page.goto('/auth/sign-in');
+    await this.goto('/auth/sign-in');
     await this.waitForPageLoad();
   }
 
