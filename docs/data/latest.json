@@ -1,7 +1,7 @@
 {
-  "id": "b41529c8-df1b-4436-a8dd-31e2ab86e462",
-  "startedAt": "2026-06-24T14:00:06.247Z",
-  "durationMs": 540184.006,
+  "id": "021a76d8-7349-45b0-a71e-2a7f3788b680",
+  "startedAt": "2026-06-24T16:00:06.276Z",
+  "durationMs": 766813.85,
   "browsersTested": [
     "chromium",
     "safari"
@@ -79,19 +79,19 @@
       "module": "api-keys",
       "moduleLabel": "API Keys",
       "status": "passed",
-      "durationMs": 9098,
+      "durationMs": 8445,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3996,
+          "durationMs": 3776,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5102,
+          "durationMs": 4669,
           "error": "",
           "attachments": []
         }
@@ -106,957 +106,12 @@
       "module": "api-keys",
       "moduleLabel": "API Keys",
       "status": "passed",
-      "durationMs": 9448,
+      "durationMs": 10047,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3904,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 5544,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_API_03 - Verify clicking Create opens key name form",
-      "file": "api-keys.spec.ts",
-      "module": "api-keys",
-      "moduleLabel": "API Keys",
-      "status": "passed",
-      "durationMs": 9388,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3823,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 5565,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_API_04 - E2E: Create key, copy, verify with date, deactivate, verify deactivated",
-      "file": "api-keys.spec.ts",
-      "module": "api-keys",
-      "moduleLabel": "API Keys",
-      "status": "passed",
-      "durationMs": 26214,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 11998,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 14216,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_BILL_01 - Verify Billing Overview page loads from dashboard",
-      "file": "billing.spec.ts",
-      "module": "billing",
-      "moduleLabel": "Billing",
-      "status": "passed",
-      "durationMs": 10806,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 5230,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 5576,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_BILL_02 - Verify Your Plan section shows Pay as you go with upgrade text",
-      "file": "billing.spec.ts",
-      "module": "billing",
-      "moduleLabel": "Billing",
-      "status": "passed",
-      "durationMs": 7145,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 2990,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 4155,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_BILL_03 - Verify Plans heading is visible",
-      "file": "billing.spec.ts",
-      "module": "billing",
-      "moduleLabel": "Billing",
-      "status": "passed",
-      "durationMs": 8603,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3611,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 4992,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_BILL_04 - Verify Pay as you go plan card with Active badge and features",
-      "file": "billing.spec.ts",
-      "module": "billing",
-      "moduleLabel": "Billing",
-      "status": "passed",
-      "durationMs": 9832,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3652,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 6180,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_BILL_05 - Verify Volume plan card with $500 price and features",
-      "file": "billing.spec.ts",
-      "module": "billing",
-      "moduleLabel": "Billing",
-      "status": "passed",
-      "durationMs": 11140,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 4863,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 6277,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_BILL_06 - Verify Enterprise plan card with custom pricing and all features",
-      "file": "billing.spec.ts",
-      "module": "billing",
-      "moduleLabel": "Billing",
-      "status": "passed",
-      "durationMs": 10798,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 4564,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 6234,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_BILL_07 - Verify Transaction History section is visible",
-      "file": "billing.spec.ts",
-      "module": "billing",
-      "moduleLabel": "Billing",
-      "status": "passed",
-      "durationMs": 8935,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3778,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 5157,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_BILL_08 - Verify View detailed pricing link opens Shunya Labs Plans page in new tab",
-      "file": "billing.spec.ts",
-      "module": "billing",
-      "moduleLabel": "Billing",
-      "status": "passed",
-      "durationMs": 11059,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 4378,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 6681,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_BILL_09 - Verify View payment history opens Stripe billing portal in new tab",
-      "file": "billing.spec.ts",
-      "module": "billing",
-      "moduleLabel": "Billing",
-      "status": "passed",
-      "durationMs": 20276,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 9075,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 11201,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_CONT_01 - Verify Contact Us page loads from dashboard",
-      "file": "contact-us.spec.ts",
-      "module": "contact-us",
-      "moduleLabel": "Contact Us",
-      "status": "passed",
-      "durationMs": 8863,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3836,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 5027,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_CONT_02 - Verify Message field is visible",
-      "file": "contact-us.spec.ts",
-      "module": "contact-us",
-      "moduleLabel": "Contact Us",
-      "status": "passed",
-      "durationMs": 8918,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3809,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 5109,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_CONT_03 - Verify Submit button is visible",
-      "file": "contact-us.spec.ts",
-      "module": "contact-us",
-      "moduleLabel": "Contact Us",
-      "status": "passed",
-      "durationMs": 9243,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3774,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 5469,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_CONT_04 - E2E: Fill message, submit, and verify success notification",
-      "file": "contact-us.spec.ts",
-      "module": "contact-us",
-      "moduleLabel": "Contact Us",
-      "status": "passed",
-      "durationMs": 9684,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3623,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 6061,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_01 - Verify dashboard heading and subtitle are visible",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 8247,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3667,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 4580,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_02 - Verify API Keys section is displayed on dashboard",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 8212,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3522,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 4690,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_03 - Verify Your Plan section is displayed on dashboard",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 7504,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3453,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 4051,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_04 - Verify Explore Playground section is visible",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 7972,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3471,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 4501,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_05 - Verify Documentation section is visible",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 8320,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3690,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 4630,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_06 - Verify Usage section is visible",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 7684,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3723,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 3961,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_07 - Verify Speech to Text link opens API Playground STT mode in new tab",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 14496,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 5839,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 8657,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_18 - Verify Text to Speech link opens API Playground TTS mode in new tab",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 13619,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 6060,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 7559,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_08 - Verify Transcribe audio link opens ASR overview docs in new tab",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 9647,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 4052,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 5595,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_09 - Verify See Features link opens ASR features docs in new tab",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 9608,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 4119,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 5489,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_19 - Verify Generate audio link opens TTS overview docs in new tab",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 9829,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 4136,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 5693,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_10 - Verify Usage Overview link navigates to Usage Analytics page",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 8980,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3947,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 5033,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_11 - Verify Dashboard link navigates back from Usage",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 7819,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3114,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 4705,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_12 - Verify Logs link navigates to Usage Logs page",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 8410,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3858,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 4552,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_13 - Verify Playground nav link opens API Playground in new tab",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 9771,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 4177,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 5594,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_14 - Verify Docs nav link opens Shunya Labs Docs home in new tab",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 9761,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 4257,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 5504,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_15 - Verify user menu opens and navigates to Settings",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 9582,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3695,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 5887,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_16 - Verify Settings page shows Personal Information section",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 9848,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3997,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 5851,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_DASH_17 - Verify Settings page shows Current Plan section",
-      "file": "dashboard.spec.ts",
-      "module": "dashboard",
-      "moduleLabel": "Dashboard",
-      "status": "passed",
-      "durationMs": 11305,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 4468,
-          "error": "",
-          "attachments": []
-        },
-        "safari": {
-          "label": "Safari",
-          "status": "passed",
-          "durationMs": 6837,
-          "error": "",
-          "attachments": []
-        }
-      },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
-    },
-    {
-      "title": "TC_SET_01 - Verify Settings page loads from dashboard with profile fields",
-      "file": "settings.spec.ts",
-      "module": "settings",
-      "moduleLabel": "Settings",
-      "status": "passed",
-      "durationMs": 8878,
-      "browsers": {
-        "chromium": {
-          "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 3735,
+          "durationMs": 4904,
           "error": "",
           "attachments": []
         },
@@ -1073,24 +128,969 @@
       "attachments": []
     },
     {
-      "title": "TC_SET_02 - Verify Save Changes button is visible",
-      "file": "settings.spec.ts",
-      "module": "settings",
-      "moduleLabel": "Settings",
+      "title": "TC_API_03 - Verify clicking Create opens key name form",
+      "file": "api-keys.spec.ts",
+      "module": "api-keys",
+      "moduleLabel": "API Keys",
       "status": "passed",
-      "durationMs": 8970,
+      "durationMs": 10234,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3777,
+          "durationMs": 4503,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5193,
+          "durationMs": 5731,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_API_04 - E2E: Create key, copy, verify with date, deactivate, verify deactivated",
+      "file": "api-keys.spec.ts",
+      "module": "api-keys",
+      "moduleLabel": "API Keys",
+      "status": "passed",
+      "durationMs": 24853,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 11067,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 13786,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_BILL_01 - Verify Billing Overview page loads from dashboard",
+      "file": "billing.spec.ts",
+      "module": "billing",
+      "moduleLabel": "Billing",
+      "status": "passed",
+      "durationMs": 10825,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 4277,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 6548,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_BILL_02 - Verify Your Plan section shows Pay as you go with upgrade text",
+      "file": "billing.spec.ts",
+      "module": "billing",
+      "moduleLabel": "Billing",
+      "status": "passed",
+      "durationMs": 6882,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 2789,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 4093,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_BILL_03 - Verify Plans heading is visible",
+      "file": "billing.spec.ts",
+      "module": "billing",
+      "moduleLabel": "Billing",
+      "status": "passed",
+      "durationMs": 11226,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 5179,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 6047,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_BILL_04 - Verify Pay as you go plan card with Active badge and features",
+      "file": "billing.spec.ts",
+      "module": "billing",
+      "moduleLabel": "Billing",
+      "status": "passed",
+      "durationMs": 9984,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 4784,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 5200,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_BILL_05 - Verify Volume plan card with $500 price and features",
+      "file": "billing.spec.ts",
+      "module": "billing",
+      "moduleLabel": "Billing",
+      "status": "passed",
+      "durationMs": 11759,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 5616,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 6143,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_BILL_06 - Verify Enterprise plan card with custom pricing and all features",
+      "file": "billing.spec.ts",
+      "module": "billing",
+      "moduleLabel": "Billing",
+      "status": "passed",
+      "durationMs": 10062,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 3766,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 6296,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_BILL_07 - Verify Transaction History section is visible",
+      "file": "billing.spec.ts",
+      "module": "billing",
+      "moduleLabel": "Billing",
+      "status": "passed",
+      "durationMs": 9864,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 4628,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 5236,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_BILL_08 - Verify View detailed pricing link opens Shunya Labs Plans page in new tab",
+      "file": "billing.spec.ts",
+      "module": "billing",
+      "moduleLabel": "Billing",
+      "status": "passed",
+      "durationMs": 11068,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 4852,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 6216,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_BILL_09 - Verify View payment history opens Stripe billing portal in new tab",
+      "file": "billing.spec.ts",
+      "module": "billing",
+      "moduleLabel": "Billing",
+      "status": "passed",
+      "durationMs": 23459,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 9673,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 13786,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_CONT_01 - Verify Contact Us page loads from dashboard",
+      "file": "contact-us.spec.ts",
+      "module": "contact-us",
+      "moduleLabel": "Contact Us",
+      "status": "passed",
+      "durationMs": 9214,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 4030,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 5184,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_CONT_02 - Verify Message field is visible",
+      "file": "contact-us.spec.ts",
+      "module": "contact-us",
+      "moduleLabel": "Contact Us",
+      "status": "passed",
+      "durationMs": 9448,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 4410,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 5038,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_CONT_03 - Verify Submit button is visible",
+      "file": "contact-us.spec.ts",
+      "module": "contact-us",
+      "moduleLabel": "Contact Us",
+      "status": "passed",
+      "durationMs": 9071,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 3971,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 5100,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_CONT_04 - E2E: Fill message, submit, and verify success notification",
+      "file": "contact-us.spec.ts",
+      "module": "contact-us",
+      "moduleLabel": "Contact Us",
+      "status": "passed",
+      "durationMs": 11883,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 6162,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 5721,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_01 - Verify dashboard heading and subtitle are visible",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 8165,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 3638,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 4527,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_02 - Verify API Keys section is displayed on dashboard",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 7912,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 2953,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 4959,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_03 - Verify Your Plan section is displayed on dashboard",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 7937,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 3430,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 4507,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_04 - Verify Explore Playground section is visible",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 8425,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 3704,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 4721,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_05 - Verify Documentation section is visible",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 7905,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 3072,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 4833,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_06 - Verify Usage section is visible",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 8116,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 3463,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 4653,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_07 - Verify Speech to Text link opens API Playground STT mode in new tab",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 14925,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 6682,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 8243,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_18 - Verify Text to Speech link opens API Playground TTS mode in new tab",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 14875,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 7312,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 7563,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_08 - Verify Transcribe audio link opens ASR overview docs in new tab",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 11336,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 5260,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 6076,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_09 - Verify See Features link opens ASR features docs in new tab",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 9603,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 3991,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 5612,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_19 - Verify Generate audio link opens TTS overview docs in new tab",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 9843,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 3907,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 5936,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_10 - Verify Usage Overview link navigates to Usage Analytics page",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 9314,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 3766,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 5548,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_11 - Verify Dashboard link navigates back from Usage",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 8267,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 3468,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 4799,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_12 - Verify Logs link navigates to Usage Logs page",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 8317,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 3253,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 5064,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_13 - Verify Playground nav link opens API Playground in new tab",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 9568,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 3821,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 5747,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_14 - Verify Docs nav link opens Shunya Labs Docs home in new tab",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 9878,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 4260,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 5618,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_15 - Verify user menu opens and navigates to Settings",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 9085,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 3642,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 5443,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_16 - Verify Settings page shows Personal Information section",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 9508,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 4115,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 5393,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_DASH_17 - Verify Settings page shows Current Plan section",
+      "file": "dashboard.spec.ts",
+      "module": "dashboard",
+      "moduleLabel": "Dashboard",
+      "status": "passed",
+      "durationMs": 13560,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 5866,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 7694,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_SET_01 - Verify Settings page loads from dashboard with profile fields",
+      "file": "settings.spec.ts",
+      "module": "settings",
+      "moduleLabel": "Settings",
+      "status": "passed",
+      "durationMs": 9058,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 3981,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 5077,
+          "error": "",
+          "attachments": []
+        }
+      },
+      "failedBrowsers": [],
+      "error": "",
+      "attachments": []
+    },
+    {
+      "title": "TC_SET_02 - Verify Save Changes button is visible",
+      "file": "settings.spec.ts",
+      "module": "settings",
+      "moduleLabel": "Settings",
+      "status": "passed",
+      "durationMs": 9729,
+      "browsers": {
+        "chromium": {
+          "label": "Chrome (Chromium)",
+          "status": "passed",
+          "durationMs": 4268,
+          "error": "",
+          "attachments": []
+        },
+        "safari": {
+          "label": "Safari",
+          "status": "passed",
+          "durationMs": 5461,
           "error": "",
           "attachments": []
         }
@@ -1105,19 +1105,19 @@
       "module": "settings",
       "moduleLabel": "Settings",
       "status": "passed",
-      "durationMs": 16747,
+      "durationMs": 17768,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 6899,
+          "durationMs": 7268,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 9848,
+          "durationMs": 10500,
           "error": "",
           "attachments": []
         }
@@ -1132,19 +1132,19 @@
       "module": "usage",
       "moduleLabel": "Usage",
       "status": "passed",
-      "durationMs": 2913,
+      "durationMs": 3043,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 912,
+          "durationMs": 1001,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 2001,
+          "durationMs": 2042,
           "error": "",
           "attachments": []
         }
@@ -1164,14 +1164,14 @@
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 1319,
+          "durationMs": 1345,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 2473,
+          "durationMs": 2447,
           "error": "",
           "attachments": []
         }
@@ -1186,19 +1186,19 @@
       "module": "usage",
       "moduleLabel": "Usage",
       "status": "passed",
-      "durationMs": 3188,
+      "durationMs": 3177,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 928,
+          "durationMs": 970,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 2260,
+          "durationMs": 2207,
           "error": "",
           "attachments": []
         }
@@ -1213,21 +1213,28 @@
       "module": "usage",
       "moduleLabel": "Usage",
       "status": "passed",
-      "durationMs": 95958,
+      "durationMs": 96952,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 45359,
+          "durationMs": 54520,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 50599,
+          "durationMs": 42432,
           "error": "",
-          "attachments": []
+          "attachments": [
+            {
+              "name": "trace",
+              "sourcePath": "/home/saira/Shunyalabs-console-automation/test-results/usage-Usage-Module-—-Analy-9426b--logs-and-billing-deduction-safari-retry1/trace.zip",
+              "path": "trace.zip",
+              "contentType": "application/zip"
+            }
+          ]
         }
       },
       "failedBrowsers": [],
@@ -1240,19 +1247,19 @@
       "module": "z-logout",
       "moduleLabel": "Logout",
       "status": "passed",
-      "durationMs": 11668,
+      "durationMs": 10548,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 4491,
+          "durationMs": 3854,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 7177,
+          "durationMs": 6694,
           "error": "",
           "attachments": []
         }
