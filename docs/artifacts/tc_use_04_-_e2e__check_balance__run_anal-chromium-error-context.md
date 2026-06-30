@@ -67,9 +67,9 @@
             - generic [ref=e90]:
               - img [ref=e91]
               - generic [ref=e93]: Docs
-          - button "Saira Automation Saira Automation" [ref=e94] [cursor=pointer]:
-            - img "Saira Automation" [ref=e97]
-            - text: Saira Automation
+          - button "Saira-test Automation-test Saira-test Automation-test" [ref=e94] [cursor=pointer]:
+            - img "Saira-test Automation-test" [ref=e97]
+            - text: Saira-test Automation-test
             - img
       - generic [ref=e102]:
         - generic [ref=e104]:
@@ -86,9 +86,9 @@
           - generic [ref=e115]:
             - generic [ref=e116]:
               - generic [ref=e117]: Date Range
-              - button "Jun 22, 2026 - Jun 29, 2026" [ref=e118] [cursor=pointer]:
+              - button "Jun 23, 2026 - Jun 30, 2026" [ref=e118] [cursor=pointer]:
                 - img
-                - text: Jun 22, 2026 - Jun 29, 2026
+                - text: Jun 23, 2026 - Jun 30, 2026
             - button "Submit" [ref=e119] [cursor=pointer]:
               - img
               - text: Submit
