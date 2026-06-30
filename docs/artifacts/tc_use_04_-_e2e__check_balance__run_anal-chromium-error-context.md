@@ -67,9 +67,9 @@
             - generic [ref=e90]:
               - img [ref=e91]
               - generic [ref=e93]: Docs
-          - button "Saira-test Automation-test Saira-test Automation-test" [ref=e94] [cursor=pointer]:
-            - img "Saira-test Automation-test" [ref=e97]
-            - text: Saira-test Automation-test
+          - button "Saira Automation Saira Automation" [ref=e94] [cursor=pointer]:
+            - img "Saira Automation" [ref=e97]
+            - text: Saira Automation
             - img
       - generic [ref=e102]:
         - generic [ref=e104]:
