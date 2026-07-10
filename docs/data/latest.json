@@ -1,19 +1,19 @@
 {
-  "id": "be0af99e-c5fe-46be-9841-502bc463e31f",
-  "startedAt": "2026-07-09T22:00:05.952Z",
-  "durationMs": 496270.37899999996,
+  "id": "f7aa29dd-8e00-4d32-b5b7-b282c4882e79",
+  "startedAt": "2026-07-10T00:00:05.430Z",
+  "durationMs": 944490.213,
   "browsersTested": [
     "chromium",
     "safari"
   ],
   "summary": {
     "total": 44,
-    "passed": 44,
-    "failed": 0,
+    "passed": 43,
+    "failed": 1,
     "skipped": 0,
     "timedOut": 0
   },
-  "passRate": 100,
+  "passRate": 98,
   "modules": {
     "api-keys": {
       "label": "API Keys",
@@ -58,8 +58,8 @@
     "usage": {
       "label": "Usage",
       "total": 4,
-      "passed": 4,
-      "failed": 0,
+      "passed": 3,
+      "failed": 1,
       "skipped": 0,
       "timedOut": 0
     },
@@ -79,19 +79,19 @@
       "module": "api-keys",
       "moduleLabel": "API Keys",
       "status": "passed",
-      "durationMs": 7835,
+      "durationMs": 8200,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3248,
+          "durationMs": 3646,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 4587,
+          "durationMs": 4554,
           "error": "",
           "attachments": []
         }
@@ -106,19 +106,19 @@
       "module": "api-keys",
       "moduleLabel": "API Keys",
       "status": "passed",
-      "durationMs": 8825,
+      "durationMs": 9236,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3711,
+          "durationMs": 3833,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5114,
+          "durationMs": 5403,
           "error": "",
           "attachments": []
         }
@@ -133,19 +133,19 @@
       "module": "api-keys",
       "moduleLabel": "API Keys",
       "status": "passed",
-      "durationMs": 9668,
+      "durationMs": 9836,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 4153,
+          "durationMs": 4462,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5515,
+          "durationMs": 5374,
           "error": "",
           "attachments": []
         }
@@ -160,19 +160,19 @@
       "module": "api-keys",
       "moduleLabel": "API Keys",
       "status": "passed",
-      "durationMs": 25406,
+      "durationMs": 22144,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 11298,
+          "durationMs": 9900,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 14108,
+          "durationMs": 12244,
           "error": "",
           "attachments": []
         }
@@ -187,19 +187,19 @@
       "module": "billing",
       "moduleLabel": "Billing",
       "status": "passed",
-      "durationMs": 11972,
+      "durationMs": 11398,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 5291,
+          "durationMs": 5998,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 6681,
+          "durationMs": 5400,
           "error": "",
           "attachments": []
         }
@@ -214,19 +214,19 @@
       "module": "billing",
       "moduleLabel": "Billing",
       "status": "passed",
-      "durationMs": 7305,
+      "durationMs": 7061,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3059,
+          "durationMs": 2980,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 4246,
+          "durationMs": 4081,
           "error": "",
           "attachments": []
         }
@@ -241,19 +241,19 @@
       "module": "billing",
       "moduleLabel": "Billing",
       "status": "passed",
-      "durationMs": 10951,
+      "durationMs": 9976,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 4987,
+          "durationMs": 4040,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5964,
+          "durationMs": 5936,
           "error": "",
           "attachments": []
         }
@@ -268,19 +268,19 @@
       "module": "billing",
       "moduleLabel": "Billing",
       "status": "passed",
-      "durationMs": 10523,
+      "durationMs": 8769,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 4538,
+          "durationMs": 3625,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5985,
+          "durationMs": 5144,
           "error": "",
           "attachments": []
         }
@@ -295,19 +295,19 @@
       "module": "billing",
       "moduleLabel": "Billing",
       "status": "passed",
-      "durationMs": 9030,
+      "durationMs": 10773,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3477,
+          "durationMs": 4759,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5553,
+          "durationMs": 6014,
           "error": "",
           "attachments": []
         }
@@ -322,19 +322,19 @@
       "module": "billing",
       "moduleLabel": "Billing",
       "status": "passed",
-      "durationMs": 9808,
+      "durationMs": 10675,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3484,
+          "durationMs": 4677,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 6324,
+          "durationMs": 5998,
           "error": "",
           "attachments": []
         }
@@ -349,19 +349,19 @@
       "module": "billing",
       "moduleLabel": "Billing",
       "status": "passed",
-      "durationMs": 10609,
+      "durationMs": 8529,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 4584,
+          "durationMs": 3566,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 6025,
+          "durationMs": 4963,
           "error": "",
           "attachments": []
         }
@@ -376,19 +376,19 @@
       "module": "billing",
       "moduleLabel": "Billing",
       "status": "passed",
-      "durationMs": 10199,
+      "durationMs": 11319,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3811,
+          "durationMs": 4413,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 6388,
+          "durationMs": 6906,
           "error": "",
           "attachments": []
         }
@@ -403,19 +403,19 @@
       "module": "billing",
       "moduleLabel": "Billing",
       "status": "passed",
-      "durationMs": 19543,
+      "durationMs": 20572,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 9100,
+          "durationMs": 9365,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 10443,
+          "durationMs": 11207,
           "error": "",
           "attachments": []
         }
@@ -430,19 +430,19 @@
       "module": "contact-us",
       "moduleLabel": "Contact Us",
       "status": "passed",
-      "durationMs": 8810,
+      "durationMs": 9252,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3824,
+          "durationMs": 4302,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 4986,
+          "durationMs": 4950,
           "error": "",
           "attachments": []
         }
@@ -457,19 +457,19 @@
       "module": "contact-us",
       "moduleLabel": "Contact Us",
       "status": "passed",
-      "durationMs": 8126,
+      "durationMs": 8175,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3197,
+          "durationMs": 3260,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 4929,
+          "durationMs": 4915,
           "error": "",
           "attachments": []
         }
@@ -484,19 +484,19 @@
       "module": "contact-us",
       "moduleLabel": "Contact Us",
       "status": "passed",
-      "durationMs": 8213,
+      "durationMs": 8089,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3205,
+          "durationMs": 3229,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5008,
+          "durationMs": 4860,
           "error": "",
           "attachments": []
         }
@@ -511,19 +511,19 @@
       "module": "contact-us",
       "moduleLabel": "Contact Us",
       "status": "passed",
-      "durationMs": 9969,
+      "durationMs": 10331,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 4052,
+          "durationMs": 4577,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5917,
+          "durationMs": 5754,
           "error": "",
           "attachments": []
         }
@@ -538,19 +538,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 8395,
+      "durationMs": 8347,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3956,
+          "durationMs": 3473,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 4439,
+          "durationMs": 4874,
           "error": "",
           "attachments": []
         }
@@ -565,19 +565,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 7501,
+      "durationMs": 7844,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3598,
+          "durationMs": 3307,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 3903,
+          "durationMs": 4537,
           "error": "",
           "attachments": []
         }
@@ -592,19 +592,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 7711,
+      "durationMs": 7457,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3372,
+          "durationMs": 3224,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 4339,
+          "durationMs": 4233,
           "error": "",
           "attachments": []
         }
@@ -619,19 +619,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 7745,
+      "durationMs": 7313,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3420,
+          "durationMs": 2839,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 4325,
+          "durationMs": 4474,
           "error": "",
           "attachments": []
         }
@@ -646,19 +646,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 7642,
+      "durationMs": 7910,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3533,
+          "durationMs": 3482,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 4109,
+          "durationMs": 4428,
           "error": "",
           "attachments": []
         }
@@ -673,19 +673,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 7843,
+      "durationMs": 7772,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3413,
+          "durationMs": 3370,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 4430,
+          "durationMs": 4402,
           "error": "",
           "attachments": []
         }
@@ -700,19 +700,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 14029,
+      "durationMs": 13054,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 6419,
+          "durationMs": 5824,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 7610,
+          "durationMs": 7230,
           "error": "",
           "attachments": []
         }
@@ -727,19 +727,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 13761,
+      "durationMs": 13423,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 6326,
+          "durationMs": 5957,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 7435,
+          "durationMs": 7466,
           "error": "",
           "attachments": []
         }
@@ -754,19 +754,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 11007,
+      "durationMs": 9674,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 5472,
+          "durationMs": 3997,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5535,
+          "durationMs": 5677,
           "error": "",
           "attachments": []
         }
@@ -781,19 +781,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 9581,
+      "durationMs": 9464,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 4058,
+          "durationMs": 3879,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5523,
+          "durationMs": 5585,
           "error": "",
           "attachments": []
         }
@@ -808,19 +808,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 9464,
+      "durationMs": 9277,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3756,
+          "durationMs": 3769,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5708,
+          "durationMs": 5508,
           "error": "",
           "attachments": []
         }
@@ -835,19 +835,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 8511,
+      "durationMs": 9073,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3237,
+          "durationMs": 3613,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5274,
+          "durationMs": 5460,
           "error": "",
           "attachments": []
         }
@@ -862,19 +862,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 7556,
+      "durationMs": 8402,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 2805,
+          "durationMs": 3445,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 4751,
+          "durationMs": 4957,
           "error": "",
           "attachments": []
         }
@@ -889,19 +889,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 8581,
+      "durationMs": 8335,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3609,
+          "durationMs": 3774,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 4972,
+          "durationMs": 4561,
           "error": "",
           "attachments": []
         }
@@ -916,19 +916,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 9098,
+      "durationMs": 8646,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3654,
+          "durationMs": 3429,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5444,
+          "durationMs": 5217,
           "error": "",
           "attachments": []
         }
@@ -943,19 +943,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 9285,
+      "durationMs": 9225,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3726,
+          "durationMs": 3674,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5559,
+          "durationMs": 5551,
           "error": "",
           "attachments": []
         }
@@ -970,19 +970,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 8737,
+      "durationMs": 10365,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3458,
+          "durationMs": 4358,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5279,
+          "durationMs": 6007,
           "error": "",
           "attachments": []
         }
@@ -997,19 +997,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 8856,
+      "durationMs": 8573,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3554,
+          "durationMs": 3364,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5302,
+          "durationMs": 5209,
           "error": "",
           "attachments": []
         }
@@ -1024,19 +1024,19 @@
       "module": "dashboard",
       "moduleLabel": "Dashboard",
       "status": "passed",
-      "durationMs": 12894,
+      "durationMs": 12167,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 5591,
+          "durationMs": 5560,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 7303,
+          "durationMs": 6607,
           "error": "",
           "attachments": []
         }
@@ -1051,19 +1051,19 @@
       "module": "settings",
       "moduleLabel": "Settings",
       "status": "passed",
-      "durationMs": 8735,
+      "durationMs": 8693,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3777,
+          "durationMs": 3693,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 4958,
+          "durationMs": 5000,
           "error": "",
           "attachments": []
         }
@@ -1078,19 +1078,19 @@
       "module": "settings",
       "moduleLabel": "Settings",
       "status": "passed",
-      "durationMs": 8963,
+      "durationMs": 8746,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3935,
+          "durationMs": 3865,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5028,
+          "durationMs": 4881,
           "error": "",
           "attachments": []
         }
@@ -1105,19 +1105,19 @@
       "module": "settings",
       "moduleLabel": "Settings",
       "status": "passed",
-      "durationMs": 16802,
+      "durationMs": 16738,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 7042,
+          "durationMs": 6659,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 9760,
+          "durationMs": 10079,
           "error": "",
           "attachments": []
         }
@@ -1132,19 +1132,19 @@
       "module": "usage",
       "moduleLabel": "Usage",
       "status": "passed",
-      "durationMs": 2826,
+      "durationMs": 2923,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 890,
+          "durationMs": 928,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 1936,
+          "durationMs": 1995,
           "error": "",
           "attachments": []
         }
@@ -1159,19 +1159,19 @@
       "module": "usage",
       "moduleLabel": "Usage",
       "status": "passed",
-      "durationMs": 3816,
+      "durationMs": 3765,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 1288,
+          "durationMs": 1205,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 2528,
+          "durationMs": 2560,
           "error": "",
           "attachments": []
         }
@@ -1186,19 +1186,19 @@
       "module": "usage",
       "moduleLabel": "Usage",
       "status": "passed",
-      "durationMs": 3138,
+      "durationMs": 2972,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 996,
+          "durationMs": 853,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 2142,
+          "durationMs": 2119,
           "error": "",
           "attachments": []
         }
@@ -1212,27 +1212,163 @@
       "file": "usage.spec.ts",
       "module": "usage",
       "moduleLabel": "Usage",
-      "status": "passed",
-      "durationMs": 58291,
+      "status": "failed",
+      "durationMs": 251522,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
-          "status": "passed",
-          "durationMs": 32696,
-          "error": "",
-          "attachments": []
+          "status": "failed",
+          "durationMs": 121478,
+          "error": "Error: Expected Transaction History to contain today's date \"Jul 10,\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 120000ms exceeded while waiting on the predicate\n\n   at ../pages/UsagePage.ts:255\n\n  253 |     // History on a delay (observed ~tens of seconds to a couple minutes\n  254 |     // after the API call returns). Poll with reload until the row shows up.\n> 255 |     await expect\n      |     ^\n  256 |       .poll(\n  257",
+          "attachments": [
+            {
+              "name": "screenshot",
+              "sourcePath": "/home/saira/Shunyalabs-console-automation/test-results/usage-Usage-Module-—-Analy-9426b--logs-and-billing-deduction-chromium-retry1/test-failed-1.png",
+              "path": "test-failed-1.png",
+              "contentType": "image/png"
+            },
+            {
+              "name": "video",
+              "sourcePath": "/home/saira/Shunyalabs-console-automation/test-results/usage-Usage-Module-—-Analy-9426b--logs-and-billing-deduction-chromium-retry1/video-1.webm",
+              "path": "video-1.webm",
+              "contentType": "video/webm"
+            },
+            {
+              "name": "video",
+              "sourcePath": "/home/saira/Shunyalabs-console-automation/test-results/usage-Usage-Module-—-Analy-9426b--logs-and-billing-deduction-chromium-retry1/video.webm",
+              "path": "video.webm",
+              "contentType": "video/webm"
+            },
+            {
+              "name": "error-context",
+              "sourcePath": "/home/saira/Shunyalabs-console-automation/test-results/usage-Usage-Module-—-Analy-9426b--logs-and-billing-deduction-chromium-retry1/error-context.md",
+              "path": "error-context.md",
+              "contentType": "text/markdown"
+            },
+            {
+              "name": "trace",
+              "sourcePath": "/home/saira/Shunyalabs-console-automation/test-results/usage-Usage-Module-—-Analy-9426b--logs-and-billing-deduction-chromium-retry1/trace.zip",
+              "path": "trace.zip",
+              "contentType": "application/zip"
+            }
+          ]
         },
         "safari": {
           "label": "Safari",
-          "status": "passed",
-          "durationMs": 25595,
-          "error": "",
-          "attachments": []
+          "status": "failed",
+          "durationMs": 130044,
+          "error": "Error: Expected Transaction History to contain today's date \"Jul 10,\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 120000ms exceeded while waiting on the predicate\n\n   at ../pages/UsagePage.ts:255\n\n  253 |     // History on a delay (observed ~tens of seconds to a couple minutes\n  254 |     // after the API call returns). Poll with reload until the row shows up.\n> 255 |     await expect\n      |     ^\n  256 |       .poll(\n  257",
+          "attachments": [
+            {
+              "name": "screenshot",
+              "sourcePath": "/home/saira/Shunyalabs-console-automation/test-results/usage-Usage-Module-—-Analy-9426b--logs-and-billing-deduction-safari-retry1/test-failed-1.png",
+              "path": "test-failed-1.png",
+              "contentType": "image/png"
+            },
+            {
+              "name": "video",
+              "sourcePath": "/home/saira/Shunyalabs-console-automation/test-results/usage-Usage-Module-—-Analy-9426b--logs-and-billing-deduction-safari-retry1/video-1.webm",
+              "path": "video-1.webm",
+              "contentType": "video/webm"
+            },
+            {
+              "name": "video",
+              "sourcePath": "/home/saira/Shunyalabs-console-automation/test-results/usage-Usage-Module-—-Analy-9426b--logs-and-billing-deduction-safari-retry1/video.webm",
+              "path": "video.webm",
+              "contentType": "video/webm"
+            },
+            {
+              "name": "error-context",
+              "sourcePath": "/home/saira/Shunyalabs-console-automation/test-results/usage-Usage-Module-—-Analy-9426b--logs-and-billing-deduction-safari-retry1/error-context.md",
+              "path": "error-context.md",
+              "contentType": "text/markdown"
+            },
+            {
+              "name": "trace",
+              "sourcePath": "/home/saira/Shunyalabs-console-automation/test-results/usage-Usage-Module-—-Analy-9426b--logs-and-billing-deduction-safari-retry1/trace.zip",
+              "path": "trace.zip",
+              "contentType": "application/zip"
+            }
+          ]
         }
       },
-      "failedBrowsers": [],
-      "error": "",
-      "attachments": []
+      "failedBrowsers": [
+        "chromium",
+        "safari"
+      ],
+      "error": "Chrome (Chromium): Error: Expected Transaction History to contain today's date \"Jul 10,\" | Safari: Error: Expected Transaction History to contain today's date \"Jul 10,\"",
+      "attachments": [
+        {
+          "name": "screenshot",
+          "path": "test-failed-1.png",
+          "contentType": "image/png",
+          "webPath": "./artifacts/tc_use_04_-_e2e__check_balance__run_anal-chromium-screenshot.png",
+          "browser": "chromium"
+        },
+        {
+          "name": "video",
+          "path": "video-1.webm",
+          "contentType": "video/webm",
+          "webPath": "./artifacts/tc_use_04_-_e2e__check_balance__run_anal-chromium-video.webm",
+          "browser": "chromium"
+        },
+        {
+          "name": "video",
+          "path": "video.webm",
+          "contentType": "video/webm",
+          "webPath": "./artifacts/tc_use_04_-_e2e__check_balance__run_anal-chromium-video.webm",
+          "browser": "chromium"
+        },
+        {
+          "name": "error-context",
+          "path": "error-context.md",
+          "contentType": "text/markdown",
+          "webPath": "./artifacts/tc_use_04_-_e2e__check_balance__run_anal-chromium-error-context.md",
+          "browser": "chromium"
+        },
+        {
+          "name": "trace",
+          "path": "trace.zip",
+          "contentType": "application/zip",
+          "webPath": "./artifacts/tc_use_04_-_e2e__check_balance__run_anal-chromium-trace.zip",
+          "browser": "chromium"
+        },
+        {
+          "name": "screenshot",
+          "path": "test-failed-1.png",
+          "contentType": "image/png",
+          "webPath": "./artifacts/tc_use_04_-_e2e__check_balance__run_anal-safari-screenshot.png",
+          "browser": "safari"
+        },
+        {
+          "name": "video",
+          "path": "video-1.webm",
+          "contentType": "video/webm",
+          "webPath": "./artifacts/tc_use_04_-_e2e__check_balance__run_anal-safari-video.webm",
+          "browser": "safari"
+        },
+        {
+          "name": "video",
+          "path": "video.webm",
+          "contentType": "video/webm",
+          "webPath": "./artifacts/tc_use_04_-_e2e__check_balance__run_anal-safari-video.webm",
+          "browser": "safari"
+        },
+        {
+          "name": "error-context",
+          "path": "error-context.md",
+          "contentType": "text/markdown",
+          "webPath": "./artifacts/tc_use_04_-_e2e__check_balance__run_anal-safari-error-context.md",
+          "browser": "safari"
+        },
+        {
+          "name": "trace",
+          "path": "trace.zip",
+          "contentType": "application/zip",
+          "webPath": "./artifacts/tc_use_04_-_e2e__check_balance__run_anal-safari-trace.zip",
+          "browser": "safari"
+        }
+      ]
     },
     {
       "title": "TC_LOGOUT_01 - Verify user can log out and is redirected to sign-in",
@@ -1240,19 +1376,19 @@
       "module": "z-logout",
       "moduleLabel": "Logout",
       "status": "passed",
-      "durationMs": 9751,
+      "durationMs": 10668,
       "browsers": {
         "chromium": {
           "label": "Chrome (Chromium)",
           "status": "passed",
-          "durationMs": 3786,
+          "durationMs": 4395,
           "error": "",
           "attachments": []
         },
         "safari": {
           "label": "Safari",
           "status": "passed",
-          "durationMs": 5965,
+          "durationMs": 6273,
           "error": "",
           "attachments": []
         }
