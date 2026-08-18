@@ -7,10 +7,14 @@ export class DashboardPage extends BasePage {
   readonly dashboardSubtitle = this.page.getByText('Overview of your account and');
 
   // ──────── API Keys Section ────────
-  readonly apiKeysSection = this.page.getByText('API KeysAPI KeysGenerate an API keyGenerate');
+  readonly apiKeysCardLabel = this.page.getByRole('main').getByText('API Keys', { exact: true }).first();
+  readonly apiKeysCardDescription = this.page.getByText('Generate an API key and access token');
+  readonly generateApiKeyButton = this.page.getByRole('link', { name: 'Generate API key and access token' });
 
   // ──────── Your Plan Section ────────
-  readonly yourPlanSection = this.page.getByText('Your PlanPay as you goUpgrade your plan to receive better ratesUpgrade');
+  readonly yourPlanCardLabel = this.page.getByRole('main').getByText('Your Plan', { exact: true });
+  readonly yourPlanName = this.page.getByRole('main').getByText('Pay as you go', { exact: true });
+  readonly upgradePlanButton = this.page.getByRole('link', { name: 'Upgrade plan' });
 
   // ──────── Explore Playground Section ────────
   readonly explorePlaygroundHeading = this.page.getByRole('heading', { name: 'Explore Playground' });
@@ -175,11 +179,15 @@ export class DashboardPage extends BasePage {
   }
 
   async assertApiKeysSectionVisible() {
-    await expect(this.apiKeysSection).toBeVisible();
+    await expect(this.apiKeysCardLabel).toBeVisible();
+    await expect(this.apiKeysCardDescription).toBeVisible();
+    await expect(this.generateApiKeyButton).toBeVisible();
   }
 
   async assertYourPlanSectionVisible() {
-    await expect(this.yourPlanSection).toBeVisible();
+    await expect(this.yourPlanCardLabel).toBeVisible();
+    await expect(this.yourPlanName).toBeVisible();
+    await expect(this.upgradePlanButton).toBeVisible();
   }
 
   async assertExplorePlaygroundVisible() {
