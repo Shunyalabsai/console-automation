@@ -21,7 +21,7 @@ const LATEST_PATH = path.join(ROOT, 'docs', 'data', 'latest.json');
 const HISTORY_PATH = path.join(ROOT, 'docs', 'history', 'runs.json');
 const EMAIL_URL = process.env.EMAIL_WEB_APP_URL || '';
 const RECIPIENTS = process.env.REPORT_RECIPIENTS || '';
-const DASHBOARD_URL = 'https://saira-uwc.github.io/Shunyalabs_console/';
+const DASHBOARD_URL = 'https://shunyalabsai.github.io/console-automation/';
 const SHEETS_URL = process.env.GOOGLE_SHEETS_URL || 'https://docs.google.com/spreadsheets/d/1GfMd1xcNuaagSpjvAENlZrBrWbYr2JsIXHSvFwK0rHo/edit?gid=0#gid=0';
 
 function main() {

@@ -12,7 +12,7 @@ SSH in, then:
 ```bash
 # Example: clone into your home (HTTPS or SSH — match how you authenticate to GitHub)
 cd ~
-git clone https://github.com/saira-uwc/Shunyalabs_console.git Shunyalabs-console-automation
+git clone https://github.com/Shunyalabsai/console-automation.git Shunyalabs-console-automation
 cd Shunyalabs-console-automation
 ```
 

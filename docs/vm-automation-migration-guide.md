@@ -62,7 +62,7 @@ git pull origin main
 For this project:
 
 ```bash
-git clone https://github.com/saira-uwc/Shunyalabs_console.git Shunyalabs-console-automation
+git clone https://github.com/Shunyalabsai/console-automation.git Shunyalabs-console-automation
 ```
 
 ### A3. Install Node.js 20 (nvm — no sudo)
@@ -300,7 +300,7 @@ Host github.com-registration
 Then per clone:
 
 ```bash
-git remote set-url origin git@github.com-console:ORG/Shunyalabs_console.git
+git remote set-url origin git@github.com-console:Shunyalabsai/console-automation.git
 # or
 git remote set-url origin git@github.com-registration:ORG/Other_Repo.git
 ```
@@ -329,7 +329,7 @@ Edit with `crontab -e`. List all jobs: `crontab -l`.
 
 | Project | Clone path | Repo | Deploy key added | `.env` done | First push OK | Cron line | Apps Script trigger off |
 |---------|------------|------|------------------|-------------|---------------|-----------|-------------------------|
-| Console | `~/Shunyalabs-console-automation` | `saira-uwc/Shunyalabs_console` | Yes | Yes | Yes | `0 */2` | Yes |
+| Console | `~/Shunyalabs-console-automation` | `Shunyalabsai/console-automation` | Yes | Yes | Yes | `0 */2` | Yes |
 | Project 2 | `~/...` | `ORG/REPO` | | | | `15 */2` | |
 | Project 3 | `~/...` | `ORG/REPO` | | | | `30 */2` | |
 

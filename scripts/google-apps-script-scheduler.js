@@ -8,8 +8,8 @@
  * 1. Create a new Google Apps Script project
  * 2. Paste this code into Code.gs
  * 3. Go to Project Settings > Script Properties and add:
- *    - GITHUB_OWNER  → saira-uwc
- *    - GITHUB_REPO   → Shunyalabs_console
+ *    - GITHUB_OWNER  → Shunyalabsai
+ *    - GITHUB_REPO   → console-automation
  *    - GITHUB_PAT    → your GitHub Personal Access Token (needs "repo" scope)
  * 4. Go to Triggers > Add Trigger:
  *
