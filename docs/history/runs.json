@@ -1,5 +1,79 @@
 [
   {
+    "id": "14228f0e-3931-47e3-a987-0e92844fe127",
+    "startedAt": "2026-09-02T11:30:06.444Z",
+    "durationMs": 301645.164,
+    "browsersTested": [
+      "chromium"
+    ],
+    "summary": {
+      "total": 44,
+      "passed": 44,
+      "failed": 0,
+      "skipped": 0,
+      "timedOut": 0
+    },
+    "passRate": 100,
+    "modules": {
+      "api-keys": {
+        "label": "API Keys",
+        "total": 4,
+        "passed": 4,
+        "failed": 0,
+        "skipped": 0,
+        "timedOut": 0
+      },
+      "billing": {
+        "label": "Billing",
+        "total": 9,
+        "passed": 9,
+        "failed": 0,
+        "skipped": 0,
+        "timedOut": 0
+      },
+      "contact-us": {
+        "label": "Contact Us",
+        "total": 4,
+        "passed": 4,
+        "failed": 0,
+        "skipped": 0,
+        "timedOut": 0
+      },
+      "dashboard": {
+        "label": "Dashboard",
+        "total": 19,
+        "passed": 19,
+        "failed": 0,
+        "skipped": 0,
+        "timedOut": 0
+      },
+      "settings": {
+        "label": "Settings",
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "timedOut": 0
+      },
+      "usage": {
+        "label": "Usage",
+        "total": 4,
+        "passed": 4,
+        "failed": 0,
+        "skipped": 0,
+        "timedOut": 0
+      },
+      "z-logout": {
+        "label": "Logout",
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "timedOut": 0
+      }
+    }
+  },
+  {
     "id": "f5a2909a-885e-4573-931e-88c2db78e0b6",
     "startedAt": "2026-09-01T22:30:05.063Z",
     "durationMs": 318893.749,
@@ -17328,456 +17402,6 @@
     "id": "5cf861e6-39c9-41f5-8292-9601a176621b",
     "startedAt": "2026-08-03T12:00:05.843Z",
     "durationMs": 531725.696,
-    "browsersTested": [
-      "chromium",
-      "safari"
-    ],
-    "summary": {
-      "total": 44,
-      "passed": 44,
-      "failed": 0,
-      "skipped": 0,
-      "timedOut": 0
-    },
-    "passRate": 100,
-    "modules": {
-      "api-keys": {
-        "label": "API Keys",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "billing": {
-        "label": "Billing",
-        "total": 9,
-        "passed": 9,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "contact-us": {
-        "label": "Contact Us",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "dashboard": {
-        "label": "Dashboard",
-        "total": 19,
-        "passed": 19,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "settings": {
-        "label": "Settings",
-        "total": 3,
-        "passed": 3,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "usage": {
-        "label": "Usage",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "z-logout": {
-        "label": "Logout",
-        "total": 1,
-        "passed": 1,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      }
-    }
-  },
-  {
-    "id": "62fb3c45-b9eb-4e9e-8b6b-d7febc8f2ebc",
-    "startedAt": "2026-08-03T10:00:05.616Z",
-    "durationMs": 518775.665,
-    "browsersTested": [
-      "chromium",
-      "safari"
-    ],
-    "summary": {
-      "total": 44,
-      "passed": 44,
-      "failed": 0,
-      "skipped": 0,
-      "timedOut": 0
-    },
-    "passRate": 100,
-    "modules": {
-      "api-keys": {
-        "label": "API Keys",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "billing": {
-        "label": "Billing",
-        "total": 9,
-        "passed": 9,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "contact-us": {
-        "label": "Contact Us",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "dashboard": {
-        "label": "Dashboard",
-        "total": 19,
-        "passed": 19,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "settings": {
-        "label": "Settings",
-        "total": 3,
-        "passed": 3,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "usage": {
-        "label": "Usage",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "z-logout": {
-        "label": "Logout",
-        "total": 1,
-        "passed": 1,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      }
-    }
-  },
-  {
-    "id": "f15e55a3-05ce-4c4b-801e-64ab496d0625",
-    "startedAt": "2026-08-03T08:00:05.348Z",
-    "durationMs": 526938.5480000001,
-    "browsersTested": [
-      "chromium",
-      "safari"
-    ],
-    "summary": {
-      "total": 44,
-      "passed": 44,
-      "failed": 0,
-      "skipped": 0,
-      "timedOut": 0
-    },
-    "passRate": 100,
-    "modules": {
-      "api-keys": {
-        "label": "API Keys",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "billing": {
-        "label": "Billing",
-        "total": 9,
-        "passed": 9,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "contact-us": {
-        "label": "Contact Us",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "dashboard": {
-        "label": "Dashboard",
-        "total": 19,
-        "passed": 19,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "settings": {
-        "label": "Settings",
-        "total": 3,
-        "passed": 3,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "usage": {
-        "label": "Usage",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "z-logout": {
-        "label": "Logout",
-        "total": 1,
-        "passed": 1,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      }
-    }
-  },
-  {
-    "id": "27cc2def-d089-4262-9243-3e3b379a8897",
-    "startedAt": "2026-08-03T06:00:05.425Z",
-    "durationMs": 549373.799,
-    "browsersTested": [
-      "chromium",
-      "safari"
-    ],
-    "summary": {
-      "total": 44,
-      "passed": 44,
-      "failed": 0,
-      "skipped": 0,
-      "timedOut": 0
-    },
-    "passRate": 100,
-    "modules": {
-      "api-keys": {
-        "label": "API Keys",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "billing": {
-        "label": "Billing",
-        "total": 9,
-        "passed": 9,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "contact-us": {
-        "label": "Contact Us",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "dashboard": {
-        "label": "Dashboard",
-        "total": 19,
-        "passed": 19,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "settings": {
-        "label": "Settings",
-        "total": 3,
-        "passed": 3,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "usage": {
-        "label": "Usage",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "z-logout": {
-        "label": "Logout",
-        "total": 1,
-        "passed": 1,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      }
-    }
-  },
-  {
-    "id": "d6459ada-ae77-4bfb-a81d-fc368f68131a",
-    "startedAt": "2026-08-03T04:00:05.609Z",
-    "durationMs": 527553.133,
-    "browsersTested": [
-      "chromium",
-      "safari"
-    ],
-    "summary": {
-      "total": 44,
-      "passed": 44,
-      "failed": 0,
-      "skipped": 0,
-      "timedOut": 0
-    },
-    "passRate": 100,
-    "modules": {
-      "api-keys": {
-        "label": "API Keys",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "billing": {
-        "label": "Billing",
-        "total": 9,
-        "passed": 9,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "contact-us": {
-        "label": "Contact Us",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "dashboard": {
-        "label": "Dashboard",
-        "total": 19,
-        "passed": 19,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "settings": {
-        "label": "Settings",
-        "total": 3,
-        "passed": 3,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "usage": {
-        "label": "Usage",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "z-logout": {
-        "label": "Logout",
-        "total": 1,
-        "passed": 1,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      }
-    }
-  },
-  {
-    "id": "63a876e7-1ddc-43ea-ab69-4f1d06f937eb",
-    "startedAt": "2026-08-03T02:00:05.582Z",
-    "durationMs": 515484.716,
-    "browsersTested": [
-      "chromium",
-      "safari"
-    ],
-    "summary": {
-      "total": 44,
-      "passed": 44,
-      "failed": 0,
-      "skipped": 0,
-      "timedOut": 0
-    },
-    "passRate": 100,
-    "modules": {
-      "api-keys": {
-        "label": "API Keys",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "billing": {
-        "label": "Billing",
-        "total": 9,
-        "passed": 9,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "contact-us": {
-        "label": "Contact Us",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "dashboard": {
-        "label": "Dashboard",
-        "total": 19,
-        "passed": 19,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "settings": {
-        "label": "Settings",
-        "total": 3,
-        "passed": 3,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "usage": {
-        "label": "Usage",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "z-logout": {
-        "label": "Logout",
-        "total": 1,
-        "passed": 1,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      }
-    }
-  },
-  {
-    "id": "1aaffa04-e45b-4105-92cf-e76d9597e6f3",
-    "startedAt": "2026-08-03T00:00:06.226Z",
-    "durationMs": 529719.557,
     "browsersTested": [
       "chromium",
       "safari"
