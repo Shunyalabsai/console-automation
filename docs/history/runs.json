@@ -1,5 +1,20 @@
 [
   {
+    "id": "5246519a-72ff-4f78-a7b8-9211000bad4f",
+    "startedAt": "2026-10-12T22:30:05.483Z",
+    "durationMs": 87161.145,
+    "browsersTested": [],
+    "summary": {
+      "total": 0,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "timedOut": 0
+    },
+    "passRate": 0,
+    "modules": {}
+  },
+  {
     "id": "5c7527f2-933e-444d-a8cf-40d878fc6c7e",
     "startedAt": "2026-10-12T11:30:05.452Z",
     "durationMs": 87587.638,
@@ -4118,80 +4133,6 @@
     "id": "dec377ea-95f5-4b57-9a55-d45eaf22e285",
     "startedAt": "2026-09-13T11:30:04.724Z",
     "durationMs": 310242.168,
-    "browsersTested": [
-      "chromium"
-    ],
-    "summary": {
-      "total": 44,
-      "passed": 44,
-      "failed": 0,
-      "skipped": 0,
-      "timedOut": 0
-    },
-    "passRate": 100,
-    "modules": {
-      "api-keys": {
-        "label": "API Keys",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "billing": {
-        "label": "Billing",
-        "total": 9,
-        "passed": 9,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "contact-us": {
-        "label": "Contact Us",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "dashboard": {
-        "label": "Dashboard",
-        "total": 19,
-        "passed": 19,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "settings": {
-        "label": "Settings",
-        "total": 3,
-        "passed": 3,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "usage": {
-        "label": "Usage",
-        "total": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      },
-      "z-logout": {
-        "label": "Logout",
-        "total": 1,
-        "passed": 1,
-        "failed": 0,
-        "skipped": 0,
-        "timedOut": 0
-      }
-    }
-  },
-  {
-    "id": "bb643a4a-f109-4502-bb30-a3cca3c3e798",
-    "startedAt": "2026-09-12T22:30:05.169Z",
-    "durationMs": 311367.505,
     "browsersTested": [
       "chromium"
     ],
